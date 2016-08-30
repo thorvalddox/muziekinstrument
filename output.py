@@ -1,0 +1,83 @@
+import pyaudio
+import numpy as np
+import time
+
+
+fs = 44100
+volume = 1.0
+
+
+def get_start(beginstrenght,endstrenght,ticks,fadeframes):
+    return beginstrenght + np.minimum(np.arange(ticks),np.ones((ticks,))*fadeframes).astype(np.float32)/fadeframes * (endstrenght - beginstrenght)
+
+
+
+class Soundhandler():
+    def __init__(self):
+        self.p = pyaudio.PyAudio()
+        self.stream = self.p.open(format=pyaudio.paFloat32,
+                                  channels=1,
+                                  rate=fs,
+                                  output=True,
+                                  stream_callback=self.callback)
+        self.w = open("test.txt","w")
+
+        self.freqlist = set() #contains tuples: id,freq
+        self.freqprev = set()
+        self.index = 0
+
+    def get_next_data(self, ticks, fadeframes=80):
+        self.index += ticks
+        try:
+            prevvol = 1/len(self.freqprev)
+        except ZeroDivisionError:
+            prevvol = 0
+        try:
+            nowvol = 1 / len(self.freqlist)
+        except ZeroDivisionError:
+            nowvol = 0
+
+        for id_,freq in self.freqlist | self.freqprev:
+            now = (id_,freq) in self.freqlist
+            prev = (id_,freq) in self.freqprev
+            fade = prev and not now
+            rase = now and not prev
+            start = get_start(prevvol *(not rase),nowvol*(not fade),ticks,fadeframes)
+
+            yield (np.cos(2 * np.pi * (np.arange(ticks) + self.index) * freq / fs) * start * min(1,(220/freq)**2)).astype(np.float32)
+        self.freqprev = self.freqlist.copy()
+    def callback(self, in_data, frame_count, time_info, status):
+        fulldata = list(self.get_next_data(frame_count))
+        if fulldata:
+            data = sum(fulldata)
+        else:
+            data = ((np.arange(frame_count)) * 0).astype(np.float32)
+        #self.w.write(str(list(data))+"\n")
+
+        return data, pyaudio.paContinue
+
+    def finish(self):
+        self.stream.stop_stream()
+        self.stream.close()
+        self.p.terminate()
+        self.w.close()
+
+    def play(self,freqid_):
+        self.freqlist.add(freqid_)
+
+    def stop(self,freqid_):
+        try:
+            self.freqlist.remove(freqid_)
+        except KeyError:
+            pass
+
+if __name__ == "__main__":
+    s = Soundhandler()
+    for i in range(10):
+
+        time.sleep(1)
+        s.play(i*20+400)
+        time.sleep(1)
+        s.stop()
+    #s.finish()
+
