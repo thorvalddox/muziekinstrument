@@ -41,7 +41,7 @@ class Soundhandler():
     def update_next_wave(self):
         self.next_wave = get_next_data(1024)
     def get_next_data(self, ticks, invoke, fadetime=1/16):
-        pass
+        self.index += ticks
         """
         self.prevtime = self.invoketime
         self.invoketime = invoke
@@ -91,7 +91,7 @@ class Soundhandler():
         previndex = 0
         while True:
             maxindex = (time.time() - self.starttime  + buffersize)*self.fs
-            self.stream.write(self.get_new_data_list((maxindex - previndex)*2,(maxindex-previndex)*2))
+            self.stream.write(self.get_new_data_list((maxindex - previndex)*4,(maxindex-previndex)*4))
             print("{:>8.2f} {:>8.2f} {:>8.2f}".format(maxindex - previndex,maxindex/self.fs,(time.time() - self.starttime)))
             previndex = maxindex
             time.sleep(0.05)

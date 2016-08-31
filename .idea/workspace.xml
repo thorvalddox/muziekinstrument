@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45303866">
-              <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.5524862">
+              <caret line="93" column="100" selection-start-line="93" selection-start-column="100" selection-end-line="93" selection-end-column="100" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00063" summary="fixed AttributeError">
-      <created>1472648294626</created>
-      <option name="number" value="00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1472648294627</updated>
-    </task>
     <task id="LOCAL-00064" summary="fixed AttributeError">
       <created>1472648338043</created>
       <option name="number" value="00064" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472654492896</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="fixed stream has no lenght">
+      <created>1472654513970</created>
+      <option name="number" value="00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1472654513970</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added ticks correctly" />
     <MESSAGE value="fixed arguments" />
     <MESSAGE value="added free framespeed" />
     <MESSAGE value="fixes" />
@@ -752,7 +751,8 @@
     <MESSAGE value="added }" />
     <MESSAGE value="fixed buffer definition" />
     <MESSAGE value="doubled buffer size" />
-    <option name="LAST_COMMIT_MESSAGE" value="doubled buffer size" />
+    <MESSAGE value="fixed stream has no lenght" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed stream has no lenght" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45303866">
-          <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.5524862">
+          <caret line="93" column="100" selection-start-line="93" selection-start-column="100" selection-end-line="93" selection-end-column="100" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
