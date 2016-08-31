@@ -122,7 +122,7 @@ def main():
         print(key)
 
 
-        if key == "b12":
+        if key == "d12":
             z = j.get_axis_pole(1)
             print(z)
             if z >= 0:
