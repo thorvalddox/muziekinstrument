@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5524862">
-              <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.40331492">
+              <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -416,12 +416,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00092" summary="even removed opeing file">
-      <created>1472652814503</created>
-      <option name="number" value="00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1472652814504</updated>
-    </task>
     <task id="LOCAL-00093" summary="fixed buffer">
       <created>1472652881816</created>
       <option name="number" value="00093" />
@@ -710,7 +704,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472657399959</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Added buffer multiplier">
+      <created>1472657521812</created>
+      <option name="number" value="00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1472657521812</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -743,7 +743,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed threading" />
     <MESSAGE value="Added debug info" />
     <MESSAGE value="added sleep" />
     <MESSAGE value="better debug info" />
@@ -768,7 +767,8 @@
     <MESSAGE value="Added shift for noncanonical values" />
     <MESSAGE value="fixed correct use of multiplier" />
     <MESSAGE value="locked fs" />
-    <option name="LAST_COMMIT_MESSAGE" value="locked fs" />
+    <MESSAGE value="Added buffer multiplier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added buffer multiplier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -873,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5524862">
-          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.40331492">
+          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
