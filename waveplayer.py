@@ -4,7 +4,7 @@ import wave
 import threading
 import numpy
 
-CHUNK = 1024
+CHUNK = 1024*8
 class WavePlayer():
     def __init__(self,filename):
         self.wf = wave.open(filename, 'rb')
@@ -20,7 +20,6 @@ class WavePlayer():
 
         # read data
         self.data = self.wf.readframes(CHUNK)
-        print(self.data)
         self.active = True
 
         self.playthread = threading.Thread(None,self.play)

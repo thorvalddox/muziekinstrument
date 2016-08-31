@@ -67,9 +67,11 @@
       <file leaf-file-name="waveplayer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/waveplayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6819788">
-              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="0.41342756">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <folding>
+                <element signature="e#1#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -591,7 +593,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472644577157</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added waveplayer test">
+      <created>1472644728355</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1472644728355</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -624,7 +632,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed stupid error" />
     <MESSAGE value="more rpints" />
     <MESSAGE value="Key handling is stuck in a seperate thread" />
     <MESSAGE value="Fixed infinite loop" />
@@ -649,7 +656,8 @@
     <MESSAGE value="changed fs" />
     <MESSAGE value="lowered framespeed" />
     <MESSAGE value="changed speed test" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed speed test" />
+    <MESSAGE value="Added waveplayer test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added waveplayer test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -698,9 +706,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/waveplayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6819788">
-          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="0.41342756">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="e#1#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
