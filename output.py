@@ -17,7 +17,7 @@ def get_start(beginstrenght,endstrenght,ticks,fadeframes):
 
 
 class Soundhandler():
-    def __init__(self,fs,callback=True):
+    def __init__(self,fs,callback=False):
         print("Setup output device")
         self.fs = fs
         self.index = 0
@@ -104,7 +104,7 @@ class Soundhandler():
         previndex = 0
         while True:
             maxindex = (time.time() - self.starttime  + buffersize)*self.fs
-            self.stream.write(self.get_new_data_list((maxindex - previndex)*4,(maxindex-previndex)*4))
+            self.stream.write(self.get_new_data_list((maxindex - previndex)*3,(maxindex-previndex)*3))
             print("{:>8.2f} {:>8.2f} {:>8.2f}".format(maxindex - previndex,maxindex/self.fs,(time.time() - self.starttime)))
             previndex = maxindex
             time.sleep(0.05)
