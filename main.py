@@ -117,6 +117,7 @@ def main():
     sh = Soundhandler()
     with open("tunes.json") as file:
         songs = json.load(file)
+    play_chord(sh,[Tune("a",0,0)])
     print("READY")
     for key in j.process():
         print(key)

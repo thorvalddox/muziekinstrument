@@ -37,7 +37,7 @@ class Joystick:
                 if event.code >= 16:
                     self.axisvalues[axisindex] = event.value
                 else:
-                    self.axisvalues[axisindex] = -(event.value<63) + (event.value<192)
+                    self.axisvalues[axisindex] = -(event.value<63) + (event.value>192)
 
 
 
