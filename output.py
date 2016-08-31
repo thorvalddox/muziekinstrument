@@ -56,7 +56,7 @@ class Soundhandler():
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
         print(frame_count)
-        fulldata = list(get_next_data(frame_count))
+        fulldata = list(self.get_next_data(frame_count))
 
         if fulldata:
             data = sum(fulldata)
