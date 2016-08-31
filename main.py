@@ -120,7 +120,7 @@ def main():
     print("Playtest")
     tune = Tune("a",0,0)
     play_chord(sh,[tune])
-    spinsleep(1)
+    sleep(1)
     stop_chord(sh,[tune])
     print("READY")
     for key in j.process():
