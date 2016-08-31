@@ -5,14 +5,14 @@ import threading
 
 
 
-
 fs = 10000
+fs = 44100
 
 volume = 1.0
 
 
 def get_start(beginstrenght,endstrenght,ticks,fadeframes):
-    return 1.0
+
     return beginstrenght + np.minimum(np.arange(ticks),np.ones((ticks,))*fadeframes).astype(np.float32)/fadeframes * (endstrenght - beginstrenght)
 
 
@@ -39,7 +39,7 @@ class Soundhandler():
 
     def update_next_wave(self):
         self.next_wave = get_next_data(1024)
-    def get_next_data(self, ticks, fadeframes=fs/20):
+    def get_next_data(self, ticks, fadeframes=fs/10):
         self.index += ticks
         try:
             prevvol = 0.9/len(self.freqprev)
