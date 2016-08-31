@@ -33,8 +33,7 @@ class Soundhandler():
                                   channels=1,
                                   rate=self.fs,
                                   output=True,
-                                  stream_callback=self.callback,
-                                  frames_per_buffer=2048
+                                  stream_callback=self.callback
                                       )
 
         self.freqlist = set() #contains tuples: id,freq
@@ -84,7 +83,7 @@ class Soundhandler():
             """
             start = 1.0
             wavecount = int(freq*ticks / self.fs)
-            yield (np.cos(2 * np.pi * (np.arange(ticks))/self.fs * 512) * start * min(1,(220/freq)**2)).astype(np.float32)
+            yield (np.sin(2 * np.pi * (np.arange(ticks))/self.fs * 512) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
         data = self.next_wave[:frame_count]
