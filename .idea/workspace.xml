@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.py" afterPath="$PROJECT_DIR$/input.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tunes.json" afterPath="$PROJECT_DIR$/tunes.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="muziekinstrument.iws" />
@@ -31,8 +33,8 @@
       <file leaf-file-name="input.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.5">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.071429">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -43,11 +45,21 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22261484">
-              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.73144877">
+              <caret line="143" column="40" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tunes.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tunes.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.3333333">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,6 +98,7 @@
       <list>
         <option value="$PROJECT_DIR$/waveplayer.py" />
         <option value="$PROJECT_DIR$/output.py" />
+        <option value="$PROJECT_DIR$/tunes.json" />
         <option value="$PROJECT_DIR$/input.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
@@ -389,12 +402,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00012" summary="Fixed slow down by print statements">
-      <created>1472641808128</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1472641808128</updated>
-    </task>
     <task id="LOCAL-00013" summary="Fixed slow down by print statements">
       <created>1472641855636</created>
       <option name="number" value="00013" />
@@ -683,7 +690,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472647267052</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="removed spinsleep">
+      <created>1472647360002</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1472647360003</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -716,7 +729,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Splitted calculating and displaying sound" />
     <MESSAGE value="removed threading again" />
     <MESSAGE value="fixed output test" />
     <MESSAGE value="fixed nameerror" />
@@ -741,7 +753,8 @@
     <MESSAGE value="more fixed" />
     <MESSAGE value="fixed time name mismatch" />
     <MESSAGE value="red mismatch" />
-    <option name="LAST_COMMIT_MESSAGE" value="red mismatch" />
+    <MESSAGE value="removed spinsleep" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed spinsleep" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -768,16 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.5">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-45.285713">
@@ -788,10 +791,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tunes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.071429">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22261484">
-          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.73144877">
+          <caret line="143" column="40" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

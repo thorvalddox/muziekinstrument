@@ -48,16 +48,13 @@ def forceplay_tune(sh,tune,seconds):
     sleep(seconds)
     stop_chord(sh,[tune])
 
-def play_chord(sh,tunes):
-    ground = tunes[0]
+def play_chord(sh, keyid,tunes):
     for tune in tunes:
-        sh.play(ground,get_frequency(tune))
+        sh.play(keyid,get_frequency(tune))
 
 
-def stop_chord(sh, tunes):
-    ground = tunes[0]
-    for tune in tunes:
-        sh.stop(ground, get_frequency(tune))
+def stop_chord(sh, keyid):
+    sh.stop(keyid)
 
 def spinsleep(seconds):
     start = time()
@@ -105,7 +102,8 @@ def auto_tune_player(sh,string):
             breaknote = 0
 
 
-
+def say(text):
+    os.system("espeak {}".format(text))
 
 
 
@@ -117,7 +115,9 @@ def main():
     sh = Soundhandler()
     with open("tunes.json") as file:
         songs = json.load(file)
-    print("READY")
+    mode = 0
+    modenames = "default","spread","close","reordered"
+    say("the instrument is ready")
     for key in j.process():
         print(key)
 
@@ -131,24 +131,23 @@ def main():
                 except IndexError:
                     s = "100:4+cccccccc"
                 auto_tune_player(sh, s)
+        elif key == "d9":
+            mode = (mode+1)%len(modenames)
+            say("mode {}".format(modenames[mode]))
+
+        if mode == 0:
+            if key in "d1,d2,d3,d4,d6,d8":
+                o = j.test_key(5) - j.test_key(7)
+                c = j.axis(5)
+                keyindex = int(key[1:])
+                l = " cdef g a".index(keyindex)
+                play_chord(sh,keyindex,[Tune(l,o,c)])
+            elif key in "u1,u2,u3,u4,u6,u8":
+                keyindex = int(key[1:])
+                stop_chord(keyindex)
 
 
-        """
-        for t in all_tunes(-1,2):
-            if t.octave != j.get_free("b5") - j.get_free("b7"):
-                stop_chord(sh,[t])
-            elif not j.get_free({"c":"b1","d":"b2","e":"b3","f":"b4","g":"b6","a":"b8"}[t.letter]):
-                stop_chord(sh, [t])
-            elif t.change != j.get_hat(0,True) - j.get_hat(0,False):
-                stop_chord(sh, [t])
-            else:
-                if j.get_hat(1,True):
-                    play_chord(sh,list(build_mayor(t)))
-                elif j.get_hat(1,False):
-                    play_chord(sh, list(build_minor(t)))
-                else:
-                    play_chord(sh, [t])
-        """
+
 
 
 

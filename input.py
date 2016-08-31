@@ -24,6 +24,7 @@ class Joystick:
         print("Setting up Joystick")
         self.device = seach_joystick()
         self.axisvalues = [0,0,0,0,0,0]
+        self.keys = [0]*12
         #self.proc = threading.Thread(None, self.process)
         #self.proc.start()
 
@@ -31,7 +32,8 @@ class Joystick:
     def process(self):
         for event in self.device.read_loop():
             if event.type == 1 and 288 <= event.code < 300:
-                yield "{}{:02}".format("ud"[event.value],event.code-287)
+                self.keys[event.code-288] = event.value
+                yield "{}{}".format("ud"[event.value],event.code-287)
             elif event.type == 3:
                 axisindex = [0,1,2,5,16,17].index(event.code)
                 if event.code >= 16:
@@ -39,7 +41,11 @@ class Joystick:
                 else:
                     self.axisvalues[axisindex] = -(event.value<63) + (event.value>192)
 
+    def test_key(self,index):
+        return self.keys[index-1]
 
+    def axis(self,index):
+        return self.axisvalues[index]
 
 
     def get_axis_pole(self,index):
