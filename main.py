@@ -44,9 +44,9 @@ def all_tunes(low,high):
                 yield Tune(t,o,c)
 
 def forceplay_tune(sh,tune,seconds):
-    play_chord(sh,[tune])
+    play_chord(sh,0,[tune])
     sleep(seconds)
-    stop_chord(sh,[tune])
+    stop_chord(sh,0)
 
 def play_chord(sh, keyid,tunes):
     for tune in tunes:
