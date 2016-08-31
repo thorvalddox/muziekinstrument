@@ -39,6 +39,7 @@ class Soundhandler():
         self.next_wave = get_next_data(1024)
     def get_next_data(self, ticks, fadeframes=fs/10):
         self.index += ticks
+        self.index = self.index % 10*fs
         try:
             prevvol = 0.9/len(self.freqprev)
         except ZeroDivisionError:
