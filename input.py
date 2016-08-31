@@ -1,27 +1,47 @@
-import pygame
 import time
+import sys
+from evdev import InputDevice, list_devices, ecodes
 
-pygame.init()
-pygame.joystick.init()
 
-pygame.event.set_blocked([pygame.VIDEORESIZE,pygame.VIDEOEXPOSE])
+def seach_joystick():
+    found = False
+    devices = [InputDevice(fn) for fn in list_devices()]
+    for dev in devices:
+        print(dev.name)
+        if "Joystick" in dev.name or "Dual" in dev.name:
+            found = True
+            return dev
+
+    if not found:
+        print('Joystick not found. Aborting ...')
+        sys.exit()
+
+
 
 class Joystick:
     def __init__(self,index=0):
-        self.pjoy = pygame.joystick.Joystick(index)
-        self.pjoy.init()
+        self.device = seach_joystick()
+        self.codes = {}
 
     def process(self):
-        pygame.event.wait()
+        for event in self.device.read_loop():
+            self.codes[(event.code,event.type)] = event.value
+            print((event.code,event.type),event.value)
+
+    def get_code(self,code,type_):
+        return self.codes.get((code,type),0)
+
 
     def get_hat(self,index,up):
-        return self.pjoy.get_hat(0)[index] == [-1,1][up]
+        return self.get_code(16+index, 3) == [-1,1][up]
 
     def get_axis(self,index,up):
-        return self.pjoy.get_axis(index)*[-1,1][up] > 0.7
+        axis = [0,1,2,5][index]
+        return (self.get_code(axis,3)-127)/255* [-1,1][up] > 0.7
+
 
     def get_key(self,index):
-        return self.pjoy.get_button(index)
+        return self.get_code(287+index, 1)
 
     def get_free(self,idstring):
         if idstring[0] == "b":
@@ -32,6 +52,7 @@ class Joystick:
             return self.get_axis(2, idstring[1] in "+dl") and self.get_axis(3, idstring[1] in "+dl")
         elif idstring[0] == "h":
             return self.get_hat(0, idstring[1] in "+dl") and self.get_axis(1, idstring[1] in "+dl")
+
 
     def get_axis_pole(self,axis):
         if axis == "l":
@@ -44,4 +65,11 @@ class Joystick:
             x = self.get_hat(0, True) - self.get_hat(0, False)
             y = self.get_hat(1, True) - self.get_hat(1, False)
         return ((0,0),(0,-1),(1,-1),(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,1)).index((x,y)) - 1
+
+
+
+if __name__ == "__main__":
+    s = Joystick()
+    while True:
+        s.process()
 
