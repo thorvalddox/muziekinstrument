@@ -26,7 +26,8 @@ class Soundhandler():
                                   channels=1,
                                   rate=self.fs,
                                   output=True,
-                                  stream_callback=self.callback)
+                                  stream_callback=self.callback,
+                                  frames_per_buffer = 2**11)
         self.stream.frames_per_buffer = 1024
         self.w = open("test.txt","w")
 
@@ -67,6 +68,7 @@ class Soundhandler():
             rase = now and not prev
             start = get_start(prevvol *(not rase),nowvol*(not fade),ticks,fadeframes)
             """
+            start = 1.0
             yield (np.sin(2 * np.pi * (np.arange(ticks) + self.index) * freq / self.fs) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
