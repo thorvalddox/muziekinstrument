@@ -4,7 +4,7 @@ import time
 import threading
 
 
-fs = 1000
+fs = 44100
 volume = 1.0
 
 
@@ -86,9 +86,10 @@ if __name__ == "__main__":
     s = Soundhandler()
     for i in range(10):
 
-        time.sleep(10)
+
         s.play(0,i*20+400)
         time.sleep(10)
         s.stop(0)
+        time.sleep(10)
     s.finish()
 
