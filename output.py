@@ -4,11 +4,12 @@ import time
 import threading
 
 
-fs = 45000
+fs = 44100
 volume = 1.0
 
 
 def get_start(beginstrenght,endstrenght,ticks,fadeframes):
+    return 1.0
     return beginstrenght + np.minimum(np.arange(ticks),np.ones((ticks,))*fadeframes).astype(np.float32)/fadeframes * (endstrenght - beginstrenght)
 
 
