@@ -677,7 +677,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472646480170</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="changed framspeed">
+      <created>1472646577943</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1472646577943</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -710,7 +716,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Typing error" />
     <MESSAGE value="Added code printer" />
     <MESSAGE value="Increased buffer size" />
     <MESSAGE value="Input back to threading" />
@@ -735,7 +740,8 @@
     <MESSAGE value="really fixed buttons i thinks" />
     <MESSAGE value="really fixed buttons i think thistime" />
     <MESSAGE value="changed button key" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed button key" />
+    <MESSAGE value="changed framspeed" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed framspeed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
