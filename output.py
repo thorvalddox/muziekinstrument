@@ -129,7 +129,7 @@ class Soundhandler():
 
 
 if __name__ == "__main__":
-    s = Soundhandler()
+    s = Soundhandler(8850)
     for i in range(10):
         s.play(0, i*20+400)
         time.sleep(1)

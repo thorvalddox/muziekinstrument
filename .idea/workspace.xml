@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.py" afterPath="$PROJECT_DIR$/output.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -40,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.357142">
-              <caret line="124" column="24" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.35359117">
+              <caret line="118" column="46" selection-start-line="118" selection-start-column="46" selection-end-line="118" selection-end-column="46" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -62,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="output.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7016575">
-              <caret line="107" column="107" selection-start-line="107" selection-start-column="107" selection-end-line="107" selection-end-column="107" />
+            <state vertical-scroll-proportion="-5.214286">
+              <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -97,8 +98,8 @@
         <option value="$PROJECT_DIR$/waveplayer.py" />
         <option value="$PROJECT_DIR$/tunes.json" />
         <option value="$PROJECT_DIR$/input.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/output.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -416,12 +417,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00090" summary="decreased frames per buffer to test if it helps">
-      <created>1472652468480</created>
-      <option name="number" value="00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1472652468480</updated>
-    </task>
     <task id="LOCAL-00091" summary="ereased writhing to file to see if there is speedup">
       <created>1472652797406</created>
       <option name="number" value="00091" />
@@ -710,7 +705,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472657291146</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="fixed correct use of multiplier">
+      <created>1472657359554</created>
+      <option name="number" value="00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1472657359555</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -743,7 +744,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added time." />
     <MESSAGE value="put buffer handling in seperate thread" />
     <MESSAGE value="fixed threading" />
     <MESSAGE value="Added debug info" />
@@ -768,7 +768,8 @@
     <MESSAGE value="doubled framespeed" />
     <MESSAGE value="removed callback" />
     <MESSAGE value="Added shift for noncanonical values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added shift for noncanonical values" />
+    <MESSAGE value="fixed correct use of multiplier" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed correct use of multiplier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -851,12 +852,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.357142">
-          <caret line="124" column="24" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
+        <state vertical-scroll-proportion="-5.214286">
+          <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -871,12 +872,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7016575">
-          <caret line="107" column="107" selection-start-line="107" selection-start-column="107" selection-end-line="107" selection-end-column="107" />
+        <state vertical-scroll-proportion="0.35359117">
+          <caret line="118" column="46" selection-start-line="118" selection-start-column="46" selection-end-line="118" selection-end-column="46" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
