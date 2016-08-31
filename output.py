@@ -5,7 +5,7 @@ import threading
 
 
 
-fs = 44100
+fs = 4410
 volume = 1.0
 
 
