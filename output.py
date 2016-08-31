@@ -78,9 +78,15 @@ class Soundhandler():
             data = sum(fulldata)
         else:
             data = ((np.arange(frame_count)) * 0).astype(np.float32)
-        self.w.write(str(list(data))+"\n")
 
         return data, pyaudio.paContinue
+
+    def add_to_buffer(self,buffersize):
+        self.starttime = time.time()
+        while True:
+            self.currentindex = (time.time() - self.starttime)
+            self.maxindex = self.currentindex + buffersize
+
 
     def finish(self):
         self.stream.stop_stream()
