@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6519337">
-              <caret line="106" column="89" selection-start-line="106" selection-start-column="89" selection-end-line="106" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.7016575">
+              <caret line="107" column="107" selection-start-line="107" selection-start-column="107" selection-end-line="107" selection-end-column="107" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -416,12 +416,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00089" summary="increased frames per buffer to test if it helps">
-      <created>1472652420695</created>
-      <option name="number" value="00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1472652420695</updated>
-    </task>
     <task id="LOCAL-00090" summary="decreased frames per buffer to test if it helps">
       <created>1472652468480</created>
       <option name="number" value="00090" />
@@ -710,7 +704,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472657174586</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Added shift for noncanonical values">
+      <created>1472657291146</created>
+      <option name="number" value="00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1472657291146</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -743,7 +743,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed frame_count" />
     <MESSAGE value="added time." />
     <MESSAGE value="put buffer handling in seperate thread" />
     <MESSAGE value="fixed threading" />
@@ -768,7 +767,8 @@
     <MESSAGE value="added frequentie" />
     <MESSAGE value="doubled framespeed" />
     <MESSAGE value="removed callback" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed callback" />
+    <MESSAGE value="Added shift for noncanonical values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added shift for noncanonical values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -873,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6519337">
-          <caret line="106" column="89" selection-start-line="106" selection-start-column="89" selection-end-line="106" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.7016575">
+          <caret line="107" column="107" selection-start-line="107" selection-start-column="107" selection-end-line="107" selection-end-column="107" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
