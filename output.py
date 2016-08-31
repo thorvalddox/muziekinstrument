@@ -51,6 +51,7 @@ class Soundhandler():
 
     def update_next_wave(self):
         self.next_wave = self.get_new_data_list(1024)
+        print(self.next_wave)
 
     def get_next_data(self, ticks, invoke=0, fadetime=1/16):
         self.index += ticks
@@ -82,7 +83,7 @@ class Soundhandler():
             """
             start = 1.0
             wavecount = int(freq*ticks / self.fs)
-            yield (np.sin(2 * np.pi * (np.arange(ticks)) / wavecount / ticks) * start * min(1,(220/freq)**2)).astype(np.float32)
+            yield (np.sin(2 * np.pi * (np.arange(ticks)) * wavecount / ticks) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
         data = self.next_wave
