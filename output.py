@@ -84,11 +84,10 @@ class Soundhandler():
             """
             start = 1.0
             wavecount = int(freq*ticks / self.fs)
-            yield (np.sin(2 * np.pi * (np.arange(ticks)) * wavecount / ticks) * start * min(1,(220/freq)**2)).astype(np.float32)
+            yield (np.cos(2 * np.pi * (np.arange(ticks)) * wavecount / ticks) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
         data = self.next_wave[:frame_count]
-        print(frame_count)
         return data, pyaudio.paContinue
 
     def get_new_data_list(self,ticks,invoke=1):
