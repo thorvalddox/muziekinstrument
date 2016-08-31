@@ -92,7 +92,7 @@ class Soundhandler():
         while True:
             maxindex = (time.time() - self.starttime)*self.fs + buffersize
             self.stream.write(self.get_new_data_list(maxindex - previndex,maxindex-previndex))
-            print("{:>8.2} {:>8.2} {:>8.2} {:>8.2".format(maxindex - previndex,maxindex,maxindex/self.fs,(time.time() - self.starttime)))
+            print("{:>8.2} {:>8.2} {:>8.2} {:>8.2}".format(maxindex - previndex,maxindex,maxindex/self.fs,(time.time() - self.starttime)))
             previndex = maxindex
             time.sleep(0.05)
 
