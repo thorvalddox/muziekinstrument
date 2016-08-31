@@ -25,10 +25,7 @@ class Soundhandler():
         self.stream = self.p.open(format=pyaudio.paFloat32,
                                   channels=1,
                                   rate=self.fs,
-                                  output=True,
-                                  stream_callback=self.callback,
-                                  frames_per_buffer = 1024)
-        self.stream.frames_per_buffer = 1024
+                                  output=True)
 
         self.freqlist = set() #contains tuples: id,freq
         self.freqprev = set()

@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6022099">
-              <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.7016575">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00047" summary="changed button key">
-      <created>1472646433330</created>
-      <option name="number" value="00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1472646433330</updated>
-    </task>
     <task id="LOCAL-00048" summary="changed button key">
       <created>1472646480170</created>
       <option name="number" value="00048" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472653265338</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="fixed frame_count">
+      <created>1472653316556</created>
+      <option name="number" value="00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1472653316557</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added default sceme" />
     <MESSAGE value="fixed AttributeError" />
     <MESSAGE value="fixed missing argument" />
     <MESSAGE value="fixed speach information" />
@@ -752,7 +751,8 @@
     <MESSAGE value="fixed buffer" />
     <MESSAGE value="decoupled play buffer and adding buffer." />
     <MESSAGE value="added self." />
-    <option name="LAST_COMMIT_MESSAGE" value="added self." />
+    <MESSAGE value="fixed frame_count" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed frame_count" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6022099">
-          <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.7016575">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
