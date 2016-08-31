@@ -29,7 +29,7 @@ class Joystick:
 
 
     def process(self):
-        event = next(elf.device.read_loop())
+        event = next(self.device.read_loop())
         self.codes[(event.code,event.type)] = event.value
 
 
