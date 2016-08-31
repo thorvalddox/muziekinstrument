@@ -45,7 +45,7 @@ def all_tunes(low,high):
 
 def forceplay_tune(sh,tune,seconds):
     play_chord(sh,[tune])
-    spinsleep(seconds)
+    sleep(seconds)
     stop_chord(sh,[tune])
 
 def play_chord(sh,tunes):
@@ -72,7 +72,7 @@ def auto_tune_player(sh,string):
         os.system("aplay {}".format(string[1:]))
         return
     speed,keys = string.split(":")
-    timeset = 60/int(speed)*4
+    timeset = 60/int(speed)*2
     octave = 0
     octavechange = 0
     change = 0
@@ -100,7 +100,7 @@ def auto_tune_player(sh,string):
         elif l in "o'*":
             speed = 1 / {"o":16,"'":32,"*":64}
         elif l in "/":
-            spinsleep(speed*timeset)
+            sleep(speed*timeset)
         elif l in "_":
             breaknote = 0
 
@@ -117,11 +117,6 @@ def main():
     sh = Soundhandler()
     with open("tunes.json") as file:
         songs = json.load(file)
-    print("Playtest")
-    tune = Tune("a",0,0)
-    play_chord(sh,[tune])
-    sleep(1)
-    stop_chord(sh,[tune])
     print("READY")
     for key in j.process():
         print(key)

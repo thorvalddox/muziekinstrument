@@ -43,8 +43,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30035335">
-              <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.22261484">
+              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -389,12 +389,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00011" summary="Fixed run ipv start">
-      <created>1472641725102</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1472641725102</updated>
-    </task>
     <task id="LOCAL-00012" summary="Fixed slow down by print statements">
       <created>1472641808128</created>
       <option name="number" value="00012" />
@@ -683,7 +677,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472647224838</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="red mismatch">
+      <created>1472647267051</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1472647267052</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -716,7 +716,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added frame_wount handle" />
     <MESSAGE value="Splitted calculating and displaying sound" />
     <MESSAGE value="removed threading again" />
     <MESSAGE value="fixed output test" />
@@ -741,7 +740,8 @@
     <MESSAGE value="fixed a not defined" />
     <MESSAGE value="more fixed" />
     <MESSAGE value="fixed time name mismatch" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed time name mismatch" />
+    <MESSAGE value="red mismatch" />
+    <option name="LAST_COMMIT_MESSAGE" value="red mismatch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -790,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30035335">
-          <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.22261484">
+          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
