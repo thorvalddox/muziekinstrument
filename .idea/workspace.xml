@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6519337">
-              <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+              <caret line="86" column="70" selection-start-line="86" selection-start-column="70" selection-end-line="86" selection-end-column="70" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00081" summary="fixed arguments">
-      <created>1472651705739</created>
-      <option name="number" value="00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1472651705739</updated>
-    </task>
     <task id="LOCAL-00082" summary="added free framespeed">
       <created>1472651885457</created>
       <option name="number" value="00082" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472656251219</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="no freq test">
+      <created>1472656331215</created>
+      <option name="number" value="00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1472656331216</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ereased writhing to file to see if there is speedup" />
     <MESSAGE value="even removed opeing file" />
     <MESSAGE value="fixed buffer" />
     <MESSAGE value="decoupled play buffer and adding buffer." />
@@ -752,7 +751,8 @@
     <MESSAGE value="fixed waves fitting in 1024 buffer" />
     <MESSAGE value="fixed prevlist" />
     <MESSAGE value="added buffer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added buffer" />
+    <MESSAGE value="no freq test" />
+    <option name="LAST_COMMIT_MESSAGE" value="no freq test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -858,7 +858,7 @@
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6519337">
-          <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+          <caret line="86" column="70" selection-start-line="86" selection-start-column="70" selection-end-line="86" selection-end-column="70" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
