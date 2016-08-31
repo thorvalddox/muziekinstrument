@@ -50,7 +50,7 @@ class Soundhandler():
         print("Output ready")
 
     def update_next_wave(self):
-        self.next_wave = self.get_new_data_list(1024)
+        self.next_wave = self.get_new_data_list(2048)
         print(self.next_wave)
 
     def get_next_data(self, ticks, invoke=0, fadetime=1/16):
@@ -73,7 +73,7 @@ class Soundhandler():
         except ZeroDivisionError:
             nowvol = 0
         """
-        for id_,freq in self.freqlist | self.freqprev:
+        for id_,freq in self.freqlist:# | self.freqprev:
             """
             now = (id_,freq) in self.freqlist
             prev = (id_,freq) in self.freqprev
@@ -86,7 +86,7 @@ class Soundhandler():
             yield (np.sin(2 * np.pi * (np.arange(ticks)) * wavecount / ticks) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
-        data = self.next_wave
+        data = self.next_wave[:frame_count]
 
         return data, pyaudio.paContinue
 
