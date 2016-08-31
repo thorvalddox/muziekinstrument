@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74585634">
-              <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.64640886">
+              <caret line="94" column="58" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00055" summary="fixed a not defined">
-      <created>1472646994270</created>
-      <option name="number" value="00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1472646994271</updated>
-    </task>
     <task id="LOCAL-00056" summary="fixed a not defined">
       <created>1472647083090</created>
       <option name="number" value="00056" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472653904219</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="added sleep">
+      <created>1472654014841</created>
+      <option name="number" value="00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1472654014841</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed start for testing" />
     <MESSAGE value="changed fs" />
     <MESSAGE value="added index resetter" />
     <MESSAGE value="changed index based to timebased sync" />
@@ -752,7 +751,8 @@
     <MESSAGE value="put buffer handling in seperate thread" />
     <MESSAGE value="fixed threading" />
     <MESSAGE value="Added debug info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added debug info" />
+    <MESSAGE value="added sleep" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sleep" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74585634">
-          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.64640886">
+          <caret line="94" column="58" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
