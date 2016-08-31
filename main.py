@@ -43,9 +43,9 @@ def all_tunes(low,high):
             for c in [-1,0,1]:
                 yield Tune(t,o,c)
 
-def forceplay_tune(sh,tune,time):
+def forceplay_tune(sh,tune,seconds):
     play_chord(sh,[tune])
-    spinsleep(time)
+    spinsleep(seconds)
     stop_chord(sh,[tune])
 
 def play_chord(sh,tunes):

@@ -43,8 +43,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8409894">
-              <caret line="135" column="34" selection-start-line="135" selection-start-column="34" selection-end-line="135" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.36395758">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -389,12 +389,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00009" summary="Key handling is stuck in a seperate thread">
-      <created>1472641497293</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1472641497293</updated>
-    </task>
     <task id="LOCAL-00010" summary="Fixed infinite loop">
       <created>1472641557944</created>
       <option name="number" value="00010" />
@@ -683,7 +677,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472647139000</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="more fixed">
+      <created>1472647176275</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1472647176276</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -716,7 +716,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed syntaxerror" />
     <MESSAGE value="fixed gkey checking" />
     <MESSAGE value="Added frame_wount handle" />
     <MESSAGE value="Splitted calculating and displaying sound" />
@@ -741,7 +740,8 @@
     <MESSAGE value="Added chord" />
     <MESSAGE value="remove chord, added single tune" />
     <MESSAGE value="fixed a not defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed a not defined" />
+    <MESSAGE value="more fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="more fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -790,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8409894">
-          <caret line="135" column="34" selection-start-line="135" selection-start-column="34" selection-end-line="135" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.36395758">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
