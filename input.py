@@ -30,17 +30,15 @@ class Joystick:
 
     def process(self):
         for event in self.device.read_loop():
-            try:
-                if event.type_ == 0 and 288 <= event.code < 300:
-                    yield "b{}".format(event.code),event.value
-                if event.type == 3:
-                    axisindex = [0,1,2,5,16,17].index(event.code)
-                    if event.code >= 16:
-                        self.axisvalues[axisindex] = event.value
-                    else:
-                        self.axisvalues[axisindex] = -(event.value<63) + (event.value<192)
-            except AttributeError:
-                print(event)
+            if event.type == 0 and 288 <= event.code < 300:
+                yield "b{}".format(event.code),event.value
+            if event.type == 3:
+                axisindex = [0,1,2,5,16,17].index(event.code)
+                if event.code >= 16:
+                    self.axisvalues[axisindex] = event.value
+                else:
+                    self.axisvalues[axisindex] = -(event.value<63) + (event.value<192)
+
 
 
     def get_axis_pole(self,index):
