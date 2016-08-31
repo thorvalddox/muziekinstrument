@@ -41,12 +41,12 @@ class Soundhandler():
 
     def update_next_wave(self):
         self.next_wave = get_next_data(1024)
-    def get_next_data(self, invoke, fadeframes=fs/10):
+    def get_next_data(self, ticks, invoke, fadeframes=fs/10):
         self.prevtime = self.invoketime
         self.invoketime = invoke
-        ticks = fs * (self.invoketime - self.prevtime)
-        self.index += ticks
-        self.index = self.index % 10*fs
+        ticklen = fs * (self.invoketime - self.prevtime)
+        self.index += ticklen
+        print(ticklen)
         try:
             prevvol = 0.9/len(self.freqprev)
         except ZeroDivisionError:
