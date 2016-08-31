@@ -27,7 +27,7 @@ class Soundhandler():
                                   rate=self.fs,
                                   output=True,
                                   stream_callback=self.callback,
-                                  frames_per_buffer = 50)
+                                  frames_per_buffer = 1024)
         self.stream.frames_per_buffer = 1024
 
         self.freqlist = set() #contains tuples: id,freq
