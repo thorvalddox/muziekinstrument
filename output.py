@@ -83,7 +83,7 @@ class Soundhandler():
             """
             start = 1.0
             wavecount = int(freq*ticks / self.fs)
-            yield (np.sin(2 * np.pi * (np.arange(ticks))/self.fs * 512) * start * min(1,(220/freq)**2)).astype(np.float32)
+            yield (np.sin(2 * np.pi * (np.arange(ticks))/self.fs * 511) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
         data = self.next_wave[:frame_count]
