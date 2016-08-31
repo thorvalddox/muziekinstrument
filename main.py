@@ -112,7 +112,7 @@ def say(text):
 
 def main():
     j = Joystick()
-    sh = Soundhandler()
+    sh = Soundhandler(int(input("frame speed: ")))
     with open("tunes.json") as file:
         songs = json.load(file)
     mode = 0

@@ -5,7 +5,7 @@ import threading
 
 
 
-fs = 44100
+
 
 volume = 1.0
 
@@ -17,13 +17,14 @@ def get_start(beginstrenght,endstrenght,ticks,fadeframes):
 
 
 class Soundhandler():
-    def __init__(self):
+    def __init__(self,fs):
         print("Setup output device")
+        self.fs = fs
         self.index = 0
         self.p = pyaudio.PyAudio()
         self.stream = self.p.open(format=pyaudio.paFloat32,
                                   channels=1,
-                                  rate=fs,
+                                  rate=self.fs,
                                   output=True,
                                   stream_callback=self.callback)
         self.stream.frames_per_buffer = 1024
@@ -41,11 +42,12 @@ class Soundhandler():
 
     def update_next_wave(self):
         self.next_wave = get_next_data(1024)
-    def get_next_data(self, ticks, invoke, fadeframes=fs/10):
+    def get_next_data(self, ticks, invoke, fadetime=1/16):
         self.prevtime = self.invoketime
         self.invoketime = invoke
         ticklen = fs * (self.invoketime - self.prevtime)
         self.index += ticklen
+        fadeframes = self.fs*fadetime
         print(ticklen)
         try:
             prevvol = 0.9/len(self.freqprev)
