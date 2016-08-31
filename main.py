@@ -4,6 +4,7 @@ from collections import namedtuple
 from math import floor
 from time import sleep,time
 import json
+import os
 from waveplayer import WavePlayer
 
 Tune = namedtuple("Tune","letter,octave,change")
@@ -68,9 +69,7 @@ def spinsleep(seconds):
 
 def auto_tune_player(sh,string):
     if string.startswith("$"):
-        w = WavePlayer(string[1:])
-        w.play()
-        w.wait()
+        os.system("aplay {}".format(string[1:]))
         return
     speed,keys = string.split(":")
     timeset = 60/int(speed)*4
