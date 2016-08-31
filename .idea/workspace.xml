@@ -55,8 +55,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22261484">
-              <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.6501767">
+              <caret line="89" column="28" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -538,7 +538,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472643989495</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fixed nameerror">
+      <created>1472644193795</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1472644193795</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -571,7 +577,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed video not initalised error" />
     <MESSAGE value="Maybe really fixed error" />
     <MESSAGE value="Changed input library" />
     <MESSAGE value="Added debug symbol" />
@@ -596,7 +601,8 @@
     <MESSAGE value="Splitted calculating and displaying sound" />
     <MESSAGE value="removed threading again" />
     <MESSAGE value="fixed output test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed output test" />
+    <MESSAGE value="fixed nameerror" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed nameerror" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -635,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22261484">
-          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.6501767">
+          <caret line="89" column="28" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

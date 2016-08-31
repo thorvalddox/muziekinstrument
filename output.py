@@ -87,7 +87,7 @@ if __name__ == "__main__":
     for i in range(10):
 
         time.sleep(10)
-        s.play(i*20+400)
+        s.play((0,i*20+400))
         time.sleep(10)
         s.stop()
     s.finish()
