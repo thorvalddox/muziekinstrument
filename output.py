@@ -100,7 +100,7 @@ class Soundhandler():
 
     def add_to_buffer(self):
         buffersize=1
-        multiplier = 4
+        multiplier = 8
         self.starttime = time.time()
         previndex = 0
         while True:
