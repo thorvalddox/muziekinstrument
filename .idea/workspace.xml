@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6519337">
-              <caret line="92" column="20" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.45303866">
+              <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00070" summary="changed fs">
-      <created>1472648683213</created>
-      <option name="number" value="00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1472648683214</updated>
-    </task>
     <task id="LOCAL-00071" summary="removed start for testing">
       <created>1472648954902</created>
       <option name="number" value="00071" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472655202645</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="fixed recuresion">
+      <created>1472655261814</created>
+      <option name="number" value="00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1472655261815</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed stating and ending data to see if lost frames are improved" />
     <MESSAGE value="added loop" />
     <MESSAGE value="added frames per buffer to test if it helps" />
     <MESSAGE value="increased frames per buffer to test if it helps" />
@@ -752,7 +751,8 @@
     <MESSAGE value="reinstated callback but moved wave calculation to event queue" />
     <MESSAGE value="fixed not defined" />
     <MESSAGE value="fixed defualt argument" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed defualt argument" />
+    <MESSAGE value="fixed recuresion" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed recuresion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6519337">
-          <caret line="92" column="20" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.45303866">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
