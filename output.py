@@ -84,8 +84,8 @@ if __name__ == "__main__":
     s = Soundhandler()
     for i in range(10):
         s.play(0, i*20+400)
-        time.sleep(10)
+        time.sleep(1)
         s.stop(0)
-        time.sleep(10)
+        time.sleep(1)
     s.finish()
 
