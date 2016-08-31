@@ -140,7 +140,7 @@ def main():
                 o = j.test_key(5) - j.test_key(7)
                 c = j.axis(5)
                 keyindex = int(key[1:])
-                l = " cdef g a".index(keyindex)
+                l = " cdef g a"[keyindex]
                 play_chord(sh,keyindex,[Tune(l,o,c)])
             elif key in "u1,u2,u3,u4,u6,u8":
                 keyindex = int(key[1:])
