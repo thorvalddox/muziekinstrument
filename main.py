@@ -45,7 +45,7 @@ def all_tunes(low,high):
 
 def forceplay_tune(sh,tune,time):
     play_chord(sh,[tune])
-    spinsleep(time*(0.5))
+    spinsleep(time)
     stop_chord(sh,[tune])
 
 def play_chord(sh,tunes):
@@ -117,6 +117,7 @@ def main():
     sh = Soundhandler()
     with open("tunes.json") as file:
         songs = json.load(file)
+    print("Playtest")
     forceplay_tune(sh,Tune("a",0,0),1)
     print("READY")
     for key in j.process():
