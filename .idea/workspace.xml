@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5966851">
-              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.44751382">
+              <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00027" summary="fixed output test">
-      <created>1472643989495</created>
-      <option name="number" value="00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1472643989495</updated>
-    </task>
     <task id="LOCAL-00028" summary="fixed nameerror">
       <created>1472644193795</created>
       <option name="number" value="00028" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472650813323</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="changed index based to timebased sync">
+      <created>1472651205150</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1472651205150</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed waveplayer, os.system(&quot;aplay&quot;) instead" />
     <MESSAGE value="Changed state system to event system" />
     <MESSAGE value="fixed attributeError" />
     <MESSAGE value="fixed buttons" />
@@ -752,7 +751,8 @@
     <MESSAGE value="removed start for testing" />
     <MESSAGE value="changed fs" />
     <MESSAGE value="added index resetter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added index resetter" />
+    <MESSAGE value="changed index based to timebased sync" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed index based to timebased sync" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5966851">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.44751382">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

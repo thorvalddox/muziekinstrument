@@ -32,8 +32,7 @@ class Soundhandler():
         self.freqlist = set() #contains tuples: id,freq
         self.freqprev = set()
         self.prevtime = 0
-        self.index += ticks
-        self.index = self.index % 10*fs
+
         self.invoketime = 0
 
 
@@ -46,6 +45,8 @@ class Soundhandler():
         self.prevtime = self.invoketime
         self.invoketime = invoke
         ticks = fs * (self.invoketime - self.prevtime)
+        self.index += ticks
+        self.index = self.index % 10*fs
         try:
             prevvol = 0.9/len(self.freqprev)
         except ZeroDivisionError:
