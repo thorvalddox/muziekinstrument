@@ -31,6 +31,10 @@ class Soundhandler():
 
         self.freqlist = set() #contains tuples: id,freq
         self.freqprev = set()
+        self.prevtime = 0
+        self.index += ticks
+        self.index = self.index % 10*fs
+        self.invoketime = 0
 
 
 
@@ -38,9 +42,10 @@ class Soundhandler():
 
     def update_next_wave(self):
         self.next_wave = get_next_data(1024)
-    def get_next_data(self, ticks, fadeframes=fs/10):
-        self.index += ticks
-        self.index = self.index % 10*fs
+    def get_next_data(self, invoke, fadeframes=fs/10):
+        self.prevtime = self.invoketime
+        self.invoketime = invoke
+        ticks = fs * (self.invoketime - self.prevtime)
         try:
             prevvol = 0.9/len(self.freqprev)
         except ZeroDivisionError:
@@ -60,7 +65,7 @@ class Soundhandler():
             yield (np.sin(2 * np.pi * (np.arange(ticks) + self.index) * freq / fs) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
-        fulldata = list(self.get_next_data(frame_count))
+        fulldata = list(self.get_next_data(time_info.output_buffer_dac_time))
 
         if fulldata:
             data = sum(fulldata)

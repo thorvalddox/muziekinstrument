@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24861878">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.5966851">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,18 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00025" summary="Splitted calculating and displaying sound">
-      <created>1472643300674</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1472643300674</updated>
-    </task>
-    <task id="LOCAL-00026" summary="removed threading again">
-      <created>1472643684262</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1472643684262</updated>
-    </task>
     <task id="LOCAL-00027" summary="fixed output test">
       <created>1472643989495</created>
       <option name="number" value="00027" />
@@ -694,7 +682,19 @@
       <option name="project" value="LOCAL" />
       <updated>1472650126030</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="added index resetter">
+      <created>1472650783679</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1472650783679</updated>
+    </task>
+    <task id="LOCAL-00075" summary="added index resetter">
+      <created>1472650813322</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1472650813323</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added waveplayer test" />
     <MESSAGE value="Removed waveplayer, os.system(&quot;aplay&quot;) instead" />
     <MESSAGE value="Changed state system to event system" />
     <MESSAGE value="fixed attributeError" />
@@ -752,7 +751,8 @@
     <MESSAGE value="fixed play_chord and lowered fs" />
     <MESSAGE value="removed start for testing" />
     <MESSAGE value="changed fs" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed fs" />
+    <MESSAGE value="added index resetter" />
+    <option name="LAST_COMMIT_MESSAGE" value="added index resetter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24861878">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.5966851">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
