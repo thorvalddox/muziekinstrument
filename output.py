@@ -29,7 +29,6 @@ class Soundhandler():
                                   stream_callback=self.callback,
                                   frames_per_buffer = 50)
         self.stream.frames_per_buffer = 1024
-        self.w = open("test.txt","w")
 
         self.freqlist = set() #contains tuples: id,freq
         self.freqprev = set()
