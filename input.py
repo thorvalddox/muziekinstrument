@@ -23,7 +23,7 @@ class Joystick:
     def __init__(self,index=0):
         self.device = seach_joystick()
         self.codes = {}
-        self.proc = threading.Thread(None,self.process())
+        self.proc = threading.Thread(None,self.process)
         self.proc.run()
 
     def process(self):
