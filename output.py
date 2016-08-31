@@ -84,7 +84,7 @@ class Soundhandler():
         if fulldata:
             return sum(fulldata)
         else:
-            return ((np.arange(frame_count)) * 0).astype(np.float32)
+            return ((np.arange(ticks)) * 0).astype(np.float32)
 
 
     def add_to_buffer(self,buffersize):
