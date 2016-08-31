@@ -40,7 +40,7 @@ class Soundhandler():
         self.prevtime = 0
 
         self.invoketime = 0
-        self.next_wave = get_new_data_list(1024)
+        self.update_next_wave()
 
         if not callback:
             self.bufferer = threading.Thread(None,self.add_to_buffer)
@@ -48,7 +48,7 @@ class Soundhandler():
         print("Output ready")
 
     def update_next_wave(self):
-        self.next_wave = get_new_data_list(1024)
+        self.next_wave = self.get_new_data_list(1024)
 
     def get_next_data(self, ticks, invoke=0, fadetime=1/16):
         self.index += ticks
@@ -79,7 +79,7 @@ class Soundhandler():
             start = get_start(prevvol *(not rase),nowvol*(not fade),ticks,fadeframes)
             """
             start = 1.0
-            yield (np.sin(2 * np.pi * (np.arange(ticks) + self.index) * freq / self.fs) * start * min(1,(220/freq)**2)).astype(np.float32)
+            yield (np.sin(2 * np.pi * (np.arange(ticks)) * freq / self.fs) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
         data = get_new_data_list(frame_count,time_info["output_buffer_dac_time"])

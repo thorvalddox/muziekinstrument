@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6022099">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.80110496">
+              <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00065" summary="fixed missing argument">
-      <created>1472648380098</created>
-      <option name="number" value="00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1472648380098</updated>
-    </task>
     <task id="LOCAL-00066" summary="fixed speach information">
       <created>1472648440755</created>
       <option name="number" value="00066" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472654583197</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="reinstated callback but moved wave calculation to event queue">
+      <created>1472654937656</created>
+      <option name="number" value="00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1472654937656</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed arguments" />
     <MESSAGE value="added free framespeed" />
     <MESSAGE value="fixes" />
     <MESSAGE value="removed stating and ending data to see if lost frames are improved" />
@@ -752,7 +751,8 @@
     <MESSAGE value="fixed buffer definition" />
     <MESSAGE value="doubled buffer size" />
     <MESSAGE value="fixed stream has no lenght" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed stream has no lenght" />
+    <MESSAGE value="reinstated callback but moved wave calculation to event queue" />
+    <option name="LAST_COMMIT_MESSAGE" value="reinstated callback but moved wave calculation to event queue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6022099">
-          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.80110496">
+          <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
