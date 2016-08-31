@@ -21,10 +21,12 @@ def seach_joystick():
 
 class Joystick:
     def __init__(self,index=0):
+        print("Setting up Joystick")
         self.device = seach_joystick()
         self.codes = {}
-        self.proc = threading.Thread(None,self.process)
-        self.proc.run()
+        self.proc = threading.Thread(None, self.process)
+        self.proc.start()
+
 
     def process(self):
         for event in self.device.read_loop():
