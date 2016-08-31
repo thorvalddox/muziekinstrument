@@ -86,12 +86,12 @@ class Soundhandler():
 
         return data, pyaudio.paContinue
 
-    def get_new_data_list(self,ticks,invoke):
+    def get_new_data_list(self,ticks,invoke=1):
         fulldata = self.next_wave
 
         if fulldata:
             return sum(fulldata)
-        else:
+        else:1
             return ((np.arange(ticks)) * 0).astype(np.float32)
 
 

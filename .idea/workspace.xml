@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80110496">
-              <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.45303866">
+              <caret line="88" column="45" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00066" summary="fixed speach information">
-      <created>1472648440755</created>
-      <option name="number" value="00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1472648440756</updated>
-    </task>
     <task id="LOCAL-00067" summary="fixed play_chord and lowered fs">
       <created>1472648535905</created>
       <option name="number" value="00067" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472654937656</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="fixed not defined">
+      <created>1472655072459</created>
+      <option name="number" value="00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1472655072459</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added free framespeed" />
     <MESSAGE value="fixes" />
     <MESSAGE value="removed stating and ending data to see if lost frames are improved" />
     <MESSAGE value="added loop" />
@@ -752,7 +751,8 @@
     <MESSAGE value="doubled buffer size" />
     <MESSAGE value="fixed stream has no lenght" />
     <MESSAGE value="reinstated callback but moved wave calculation to event queue" />
-    <option name="LAST_COMMIT_MESSAGE" value="reinstated callback but moved wave calculation to event queue" />
+    <MESSAGE value="fixed not defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed not defined" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80110496">
-          <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.45303866">
+          <caret line="88" column="45" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
