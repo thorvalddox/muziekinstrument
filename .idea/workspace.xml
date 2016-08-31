@@ -31,8 +31,8 @@
       <file leaf-file-name="input.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/input.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5865724">
-              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.49116609">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -617,7 +617,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472645770390</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fixed attributeError">
+      <created>1472645849796</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1472645849797</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -650,7 +656,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed infinite loop" />
     <MESSAGE value="Fixed run ipv start" />
     <MESSAGE value="Fixed slow down by print statements" />
     <MESSAGE value="Changed buffer lenght to auto" />
@@ -675,7 +680,8 @@
     <MESSAGE value="Added waveplayer test" />
     <MESSAGE value="Removed waveplayer, os.system(&quot;aplay&quot;) instead" />
     <MESSAGE value="Changed state system to event system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed state system to event system" />
+    <MESSAGE value="fixed attributeError" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed attributeError" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -724,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5865724">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.49116609">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
