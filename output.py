@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 
-fs = 44100
+fs = 8000
 volume = 1.0
 
 
@@ -26,14 +26,14 @@ class Soundhandler():
         self.freqprev = set()
         self.index = 0
 
-    def get_next_data(self, ticks, fadeframes=80):
+    def get_next_data(self, ticks, fadeframes=fs/20):
         self.index += ticks
         try:
-            prevvol = 1/len(self.freqprev)
+            prevvol = 0.9/len(self.freqprev)
         except ZeroDivisionError:
             prevvol = 0
         try:
-            nowvol = 1 / len(self.freqlist)
+            nowvol = 0.9 / len(self.freqlist)
         except ZeroDivisionError:
             nowvol = 0
 
@@ -44,7 +44,7 @@ class Soundhandler():
             rase = now and not prev
             start = get_start(prevvol *(not rase),nowvol*(not fade),ticks,fadeframes)
 
-            yield (np.cos(2 * np.pi * (np.arange(ticks) + self.index) * freq / fs) * start * min(1,(220/freq)**2)).astype(np.float32)
+            yield (np.sin(2 * np.pi * (np.arange(ticks) + self.index) * freq / fs) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
         fulldata = list(self.get_next_data(frame_count))
@@ -62,14 +62,14 @@ class Soundhandler():
         self.p.terminate()
         self.w.close()
 
-    def play(self,freqid_):
+    def play(self,*freqid_):
+        #self.freqlist = {f for f in self.freqlist if f[0] != freqid_[0]}
         self.freqlist.add(freqid_)
 
-    def stop(self,freqid_):
-        try:
-            self.freqlist.remove(freqid_)
-        except KeyError:
-            pass
+    def stop(self,*freqid_):
+
+        self.freqlist = {f for f in self.freqlist if f[0] != freqid_[0]}
+
 
 if __name__ == "__main__":
     s = Soundhandler()
