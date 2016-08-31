@@ -35,7 +35,7 @@ class Joystick:
 
 
     def get_code(self,code,type_):
-        print(self.device.active_keys())
+        print()
         return self.codes.get((code,type_),0)
 
 
@@ -47,8 +47,8 @@ class Joystick:
         return (self.get_code(axis,3)-127)/255* [-1,1][up] > 0.7
 
 
-    def get_key(self,index):
-        return self.get_code(287+index, 1)
+    def get_key(self, index):
+        return 287 + index in self.device.active_keys()
 
     def get_free(self,idstring):
         if idstring[0] == "b":

@@ -31,8 +31,8 @@
       <file leaf-file-name="input.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/input.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.204947">
-              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.74558306">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -502,7 +502,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472642872763</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fixed syntaxerror">
+      <created>1472642903665</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1472642903665</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -554,7 +560,8 @@
     <MESSAGE value="Increased buffer size" />
     <MESSAGE value="Input back to threading" />
     <MESSAGE value="Removed threading and added active keys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed threading and added active keys" />
+    <MESSAGE value="fixed syntaxerror" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed syntaxerror" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -593,8 +600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.204947">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.74558306">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
