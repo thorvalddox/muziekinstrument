@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24861878">
-              <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.49723756">
+              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00035" summary="Added waveplayer test">
-      <created>1472644728355</created>
-      <option name="number" value="00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1472644728355</updated>
-    </task>
     <task id="LOCAL-00036" summary="Added waveplayer test">
       <created>1472644822774</created>
       <option name="number" value="00036" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472651892577</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="fixes">
+      <created>1472651936827</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1472651936827</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="really fixed buttons i think thistime" />
     <MESSAGE value="changed button key" />
     <MESSAGE value="changed framspeed" />
     <MESSAGE value="changed fs test speed" />
@@ -752,7 +751,8 @@
     <MESSAGE value="Added ticks correctly" />
     <MESSAGE value="fixed arguments" />
     <MESSAGE value="added free framespeed" />
-    <option name="LAST_COMMIT_MESSAGE" value="added free framespeed" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24861878">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.49723756">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
