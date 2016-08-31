@@ -43,8 +43,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54063606">
-              <caret line="146" column="30" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.09540636">
+              <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00016" summary="Added event processing">
-      <created>1472642068813</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1472642068813</updated>
-    </task>
     <task id="LOCAL-00017" summary="Typing error">
       <created>1472642096274</created>
       <option name="number" value="00017" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472648338043</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="fixed missing argument">
+      <created>1472648380098</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1472648380098</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed nameerror" />
     <MESSAGE value="fixed textcase valueerror" />
     <MESSAGE value="lowered framespeed" />
     <MESSAGE value="changed speed test" />
@@ -752,7 +751,8 @@
     <MESSAGE value="removed spinsleep" />
     <MESSAGE value="Added default sceme" />
     <MESSAGE value="fixed AttributeError" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed AttributeError" />
+    <MESSAGE value="fixed missing argument" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed missing argument" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -809,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54063606">
-          <caret line="146" column="30" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.09540636">
+          <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

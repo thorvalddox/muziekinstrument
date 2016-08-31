@@ -103,7 +103,7 @@ def auto_tune_player(sh,string):
 
 
 def say(text):
-    os.system("espeak {}".format(text))
+    os.system("espeak \"{}\"".format(text))
 
 
 
