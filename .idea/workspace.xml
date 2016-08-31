@@ -44,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.42756185">
-              <caret line="119" column="35" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+              <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -389,12 +389,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added debug symbol">
-      <created>1472640782069</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1472640782069</updated>
-    </task>
     <task id="LOCAL-00006" summary="Added tunes in print log">
       <created>1472640877797</created>
       <option name="number" value="00006" />
@@ -683,7 +677,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472646897639</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="remove chord, added single tune">
+      <created>1472646964198</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1472646964198</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -716,7 +716,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Input back to threading" />
     <MESSAGE value="Removed threading and added active keys" />
     <MESSAGE value="fixed syntaxerror" />
     <MESSAGE value="fixed gkey checking" />
@@ -741,7 +740,8 @@
     <MESSAGE value="changed fs" />
     <MESSAGE value="changed fs test speed" />
     <MESSAGE value="Added chord" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added chord" />
+    <MESSAGE value="remove chord, added single tune" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove chord, added single tune" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -791,7 +791,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42756185">
-          <caret line="119" column="35" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

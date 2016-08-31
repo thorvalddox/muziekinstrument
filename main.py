@@ -117,7 +117,7 @@ def main():
     sh = Soundhandler()
     with open("tunes.json") as file:
         songs = json.load(file)
-    forceplay_tune(sh,Tune(a,0,0),1)
+    forceplay_tune(sh,Tune("a",0,0),1)
     print("READY")
     for key in j.process():
         print(key)
