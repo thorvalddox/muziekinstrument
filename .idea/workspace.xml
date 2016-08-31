@@ -43,8 +43,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39575973">
-              <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.8409894">
+              <caret line="135" column="34" selection-start-line="135" selection-start-column="34" selection-end-line="135" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -389,12 +389,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00008" summary="more rpints">
-      <created>1472641166388</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1472641166388</updated>
-    </task>
     <task id="LOCAL-00009" summary="Key handling is stuck in a seperate thread">
       <created>1472641497293</created>
       <option name="number" value="00009" />
@@ -683,7 +677,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472647083090</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fixed a not defined">
+      <created>1472647139000</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1472647139000</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -790,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39575973">
-          <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.8409894">
+          <caret line="135" column="34" selection-start-line="135" selection-start-column="34" selection-end-line="135" selection-end-column="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
