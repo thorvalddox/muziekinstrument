@@ -24,13 +24,13 @@ class Joystick:
         print("Setting up Joystick")
         self.device = seach_joystick()
         self.codes = {}
-        self.proc = threading.Thread(None, self.process)
-        self.proc.start()
+        #self.proc = threading.Thread(None, self.process)
+        #self.proc.start()
 
 
     def process(self):
-        for event in self.device.read_loop():
-            self.codes[(event.code,event.type)] = event.value
+        event = next(elf.device.read_loop())
+        self.codes[(event.code,event.type)] = event.value
 
 
     def get_code(self,code,type_):
