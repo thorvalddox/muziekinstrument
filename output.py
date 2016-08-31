@@ -34,7 +34,7 @@ class Soundhandler():
         self.invoketime = 0
 
 
-        self.bufferer = threading.Thread(None,self.add_to_buffer(1024))
+        self.bufferer = threading.Thread(None,self.add_to_buffer)
         self.bufferer.start()
         print("Output ready")
 
@@ -85,14 +85,15 @@ class Soundhandler():
             return ((np.arange(ticks)) * 0).astype(np.float32)
 
 
-    def add_to_buffer(self,buffersize):
+    def add_to_buffer(self):
+        buffersize=self.fs/10
         self.starttime = time.time()
         previndex = 0
         while True:
             maxindex = (time.time() - self.starttime)*self.fs + buffersize
             self.stream.write(self.get_new_data_list(maxindex - previndex,maxindex-previndex))
             previndex = maxindex
-            time.sleep(0.1)
+            time.sleep(0.05)
 
 
     def finish(self):
