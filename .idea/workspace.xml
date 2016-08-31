@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40331492">
-              <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.50276244">
+              <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00076" summary="changed index based to timebased sync">
-      <created>1472651205150</created>
-      <option name="number" value="00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1472651205150</updated>
-    </task>
     <task id="LOCAL-00077" summary="changed index based to timebased sync">
       <created>1472651265173</created>
       <option name="number" value="00077" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472655680557</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="fixed prevlist">
+      <created>1472655776421</created>
+      <option name="number" value="00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1472655776421</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="increased frames per buffer to test if it helps" />
     <MESSAGE value="decreased frames per buffer to test if it helps" />
     <MESSAGE value="ereased writhing to file to see if there is speedup" />
     <MESSAGE value="even removed opeing file" />
@@ -752,7 +751,8 @@
     <MESSAGE value="fixed recuresion" />
     <MESSAGE value="fixes" />
     <MESSAGE value="fixed waves fitting in 1024 buffer" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed waves fitting in 1024 buffer" />
+    <MESSAGE value="fixed prevlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed prevlist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40331492">
-          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.50276244">
+          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
