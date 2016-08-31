@@ -144,7 +144,7 @@ def main():
                 play_chord(sh,keyindex,[Tune(l,o,c)])
             elif key in "u1,u2,u3,u4,u6,u8":
                 keyindex = int(key[1:])
-                stop_chord(keyindex)
+                stop_chord(sh,keyindex)
 
 
 
