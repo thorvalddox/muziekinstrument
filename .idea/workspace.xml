@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="fixed threading">
+    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.py" afterPath="$PROJECT_DIR$/output.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49723756">
-              <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.74585634">
+              <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00054" summary="remove chord, added single tune">
-      <created>1472646964198</created>
-      <option name="number" value="00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1472646964198</updated>
-    </task>
     <task id="LOCAL-00055" summary="fixed a not defined">
       <created>1472646994270</created>
       <option name="number" value="00055" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472653800648</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Added debug info">
+      <created>1472653904218</created>
+      <option name="number" value="00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1472653904219</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed play_chord and lowered fs" />
     <MESSAGE value="removed start for testing" />
     <MESSAGE value="changed fs" />
     <MESSAGE value="added index resetter" />
@@ -752,7 +751,8 @@
     <MESSAGE value="added time." />
     <MESSAGE value="put buffer handling in seperate thread" />
     <MESSAGE value="fixed threading" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed threading" />
+    <MESSAGE value="Added debug info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added debug info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49723756">
-          <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.74585634">
+          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
