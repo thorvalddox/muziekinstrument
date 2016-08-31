@@ -117,7 +117,7 @@ def main():
         songs = json.load(file)
     mode = 0
     modenames = "default","spread","close","reordered"
-    say("the instrument is ready")
+    print("READY")
     for key in j.process():
         print(key)
 
