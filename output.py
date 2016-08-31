@@ -17,30 +17,40 @@ def get_start(beginstrenght,endstrenght,ticks,fadeframes):
 
 
 class Soundhandler():
-    def __init__(self,fs):
+    def __init__(self,fs,callback=True):
         print("Setup output device")
         self.fs = fs
         self.index = 0
         self.p = pyaudio.PyAudio()
-        self.stream = self.p.open(format=pyaudio.paFloat32,
+        if not callback:
+            self.stream = self.p.open(format=pyaudio.paFloat32,
                                   channels=1,
                                   rate=self.fs,
                                   output=True)
+        else:
+            self.stream = self.p.open(format=pyaudio.paFloat32,
+                                  channels=1,
+                                  rate=self.fs,
+                                  output=True,
+                                  stream_callback=self.callback,
+                                      )
 
         self.freqlist = set() #contains tuples: id,freq
         self.freqprev = set()
         self.prevtime = 0
 
         self.invoketime = 0
+        self.next_wave = get_new_data_list(1024)
 
-
-        self.bufferer = threading.Thread(None,self.add_to_buffer)
-        self.bufferer.start()
+        if not callback:
+            self.bufferer = threading.Thread(None,self.add_to_buffer)
+            self.bufferer.start()
         print("Output ready")
 
     def update_next_wave(self):
-        self.next_wave = get_next_data(1024)
-    def get_next_data(self, ticks, invoke, fadetime=1/16):
+        self.next_wave = get_new_data_list(1024)
+
+    def get_next_data(self, ticks, invoke=0, fadetime=1/16):
         self.index += ticks
         """
         self.prevtime = self.invoketime
@@ -77,7 +87,7 @@ class Soundhandler():
         return data, pyaudio.paContinue
 
     def get_new_data_list(self,ticks,invoke):
-        fulldata = list(self.get_next_data(ticks,invoke))
+        fulldata = self.next_wave
 
         if fulldata:
             return sum(fulldata)
@@ -106,10 +116,12 @@ class Soundhandler():
     def play(self,*freqid_):
         #self.freqlist = {f for f in self.freqlist if f[0] != freqid_[0]}
         self.freqlist.add(freqid_)
+        self.update_next_wave()
 
     def stop(self,*freqid_):
 
         self.freqlist = {f for f in self.freqlist if f[0] != freqid_[0]}
+        self.update_next_wave()
 
 
 if __name__ == "__main__":

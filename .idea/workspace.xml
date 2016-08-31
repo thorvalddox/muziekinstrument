@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5524862">
-              <caret line="93" column="100" selection-start-line="93" selection-start-column="100" selection-end-line="93" selection-end-column="100" />
+            <state vertical-scroll-proportion="0.6022099">
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00064" summary="fixed AttributeError">
-      <created>1472648338043</created>
-      <option name="number" value="00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1472648338043</updated>
-    </task>
     <task id="LOCAL-00065" summary="fixed missing argument">
       <created>1472648380098</created>
       <option name="number" value="00065" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472654513970</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="fixed stream has no lenght">
+      <created>1472654583197</created>
+      <option name="number" value="00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1472654583197</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5524862">
-          <caret line="93" column="100" selection-start-line="93" selection-start-column="100" selection-end-line="93" selection-end-column="100" />
+        <state vertical-scroll-proportion="0.6022099">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
