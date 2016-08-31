@@ -3,6 +3,8 @@ import time
 
 pygame.init()
 pygame.joystick.init()
+pygame.display.set_mode((100, 100))
+
 
 pygame.event.set_blocked([pygame.VIDEORESIZE,pygame.VIDEOEXPOSE])
 
