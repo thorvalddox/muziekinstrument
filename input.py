@@ -30,7 +30,7 @@ class Joystick:
 
     def process(self):
         for event in self.device.read_loop():
-            if event.type == 0 and 288 <= event.code < 300:
+            if event.type == 1 and 288 <= event.code < 300:
                 yield "b{}".format(event.code),event.value
                 print(event.value)
             elif event.type == 3:
