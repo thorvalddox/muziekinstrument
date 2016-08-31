@@ -1,6 +1,7 @@
 import pyaudio
 import numpy as np
 import time
+import threading
 
 
 fs = 8000
@@ -27,7 +28,11 @@ class Soundhandler():
         self.freqlist = set() #contains tuples: id,freq
         self.freqprev = set()
         self.index = 0
+        self.next_wave = []
         print("Output ready")
+
+    def update_next_wave(self):
+        self.next_wave = get_next_data()
     def get_next_data(self, ticks, fadeframes=fs/20):
         self.index += ticks
         try:
@@ -49,6 +54,7 @@ class Soundhandler():
             yield (np.sin(2 * np.pi * (np.arange(ticks) + self.index) * freq / fs) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
+        print(frame_count)
         fulldata = list(self.get_next_data(frame_count))
         if fulldata:
             data = sum(fulldata)
