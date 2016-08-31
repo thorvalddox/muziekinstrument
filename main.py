@@ -120,7 +120,6 @@ def main():
         songs = json.load(file)
     print("READY")
     while True:
-        j.process()
 
         if j.get_free("b12"):
             z = j.get_axis_pole("r")

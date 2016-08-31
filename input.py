@@ -1,5 +1,6 @@
 import time
 import sys
+import threading
 from evdev import InputDevice, list_devices, ecodes
 
 
@@ -22,11 +23,12 @@ class Joystick:
     def __init__(self,index=0):
         self.device = seach_joystick()
         self.codes = {}
+        self.proc = threading.Thread(None,self.process())
+        self.proc.run()
 
     def process(self):
         for event in self.device.read_loop():
             self.codes[(event.code,event.type)] = event.value
-            print(self.codes)
 
 
     def get_code(self,code,type_):
