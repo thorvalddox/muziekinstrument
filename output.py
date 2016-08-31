@@ -66,7 +66,7 @@ class Soundhandler():
             yield (np.sin(2 * np.pi * (np.arange(ticks) + self.index) * freq / fs) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
-        fulldata = list(self.get_next_data(time_info.output_buffer_dac_time))
+        fulldata = list(self.get_next_data(time_info["output_buffer_dac_time"]))
 
         if fulldata:
             data = sum(fulldata)
