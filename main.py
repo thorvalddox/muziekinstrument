@@ -2,7 +2,9 @@ from input import Joystick
 from output import Soundhandler
 from collections import namedtuple
 from math import floor
-from time import sleep
+from time import sleep,time
+import json
+from waveplayer import WavePlayer
 
 Tune = namedtuple("Tune","letter,octave,change")
 
@@ -15,7 +17,7 @@ def get_tune_idc(tune):
 
 def get_frequency(tune):
 
-    return int(440 * 2**(get_tune_idc(tune)/12))
+    return floor(440 * 2**(get_tune_idc(tune)/12))
 
 def get_tune(diff):
     for t in all_tunes(-3,+3):
@@ -42,7 +44,7 @@ def all_tunes(low,high):
 
 def forceplay_tune(sh,tune,time):
     play_chord(sh,[tune])
-    sleep(time*(0.5))
+    spinsleep(time*(0.5))
     stop_chord(sh,[tune])
 
 def play_chord(sh,tunes):
@@ -56,47 +58,78 @@ def stop_chord(sh, tunes):
     for tune in tunes:
         sh.stop(ground, get_frequency(tune))
 
+def spinsleep(seconds):
+    start = time()
+    if seconds > 1:
+        sleep(seconds - 1)
+    while time() < start + seconds:
+        pass
+
+
+def auto_tune_player(sh,string):
+    if string.startswith("$"):
+        w = WavePlayer(string[1:])
+        w.play()
+        w.wait()
+        return
+    speed,keys = string.split(":")
+    timeset = 60/int(speed)*4
+    octave = 0
+    octavechange = 0
+    change = 0
+    speed = 4
+    breaknote = 1
+    for l in string:
+        if l in "abcdefg":
+            if breaknote:
+                spinsleep(0.1)
+            forceplay_tune(sh,Tune(l,octave+octavechange,change),speed*timeset-0.1*breaknote)
+
+            #print(Tune(l, octave + octavechange, change))
+            change = 0
+            octavechange = 0
+            breaknote = 1
+
+        elif l in "x#$%":
+            change = 2-"x# $%".index(l)
+        elif l in "+-":
+            octave += 1 if l=="+" else -1
+        elif l in "^v":
+            octavechange += 1 if l == "^" else -1
+        elif l in "1248":
+            speed = 1/int(l)
+        elif l in "o'*":
+            speed = 1 / {"o":16,"'":32,"*":64}
+        elif l in "/":
+            spinsleep(speed*timeset)
+        elif l in "_":
+            breaknote = 0
+
+
+
+
+
+
+
+
 
 def main():
     j = Joystick()
     sh = Soundhandler()
+    with open("tunes.json") as file:
+        songs = json.load(file)
     print("READY")
     while True:
         j.process()
-        if j.get_free("b10"):
-            forceplay_tune(sh, Tune("c", 0, 0), 1)
-            forceplay_tune(sh, Tune("d", 0, 0), 1)
-            forceplay_tune(sh, Tune("e", 0, 0), 1)
-            forceplay_tune(sh, Tune("c", 0, 0), 1)
-            forceplay_tune(sh, Tune("c", 0, 0), 1)
-            forceplay_tune(sh, Tune("d", 0, 0), 1)
-            forceplay_tune(sh, Tune("e", 0, 0), 1)
-            forceplay_tune(sh, Tune("c", 0, 0), 1)
-            forceplay_tune(sh, Tune("e", 0, 0), 1)
-            forceplay_tune(sh, Tune("f", 0, 0), 1)
-            forceplay_tune(sh, Tune("g", 0, 0), 2)
-            forceplay_tune(sh, Tune("e", 0, 0), 1)
-            forceplay_tune(sh, Tune("f", 0, 0), 1)
-            forceplay_tune(sh, Tune("g", 0, 0), 2)
-            forceplay_tune(sh, Tune("g", 0, 0), 0.5)
-            forceplay_tune(sh, Tune("a", 0, 0), 0.5)
-            forceplay_tune(sh, Tune("g", 0, 0), 0.5)
-            forceplay_tune(sh, Tune("f", 0, 0), 0.5)
-            forceplay_tune(sh, Tune("e", 0, 0), 1)
-            forceplay_tune(sh, Tune("c", 0, 0), 1)
-            forceplay_tune(sh, Tune("g", 0, 0), 0.5)
-            forceplay_tune(sh, Tune("a", 0, 0), 0.5)
-            forceplay_tune(sh, Tune("g", 0, 0), 0.5)
-            forceplay_tune(sh, Tune("f", 0, 0), 0.5)
-            forceplay_tune(sh, Tune("e", 0, 0), 1)
-            forceplay_tune(sh, Tune("c", 0, 0), 1)
-            forceplay_tune(sh, Tune("c", 0, 0), 1)
-            forceplay_tune(sh, Tune("g", -1, 0), 1)
-            forceplay_tune(sh, Tune("c", 0, 0), 2)
-            forceplay_tune(sh, Tune("c", 0, 0), 1)
-            forceplay_tune(sh, Tune("g", -1, 0), 1)
-            forceplay_tune(sh, Tune("c", 0, 0), 2)
 
+        if j.get_free("b12"):
+            z = j.get_axis_pole("r")
+            if z >= 0:
+                try:
+                    s = songs[z]
+                except IndexError:
+                    s = "100:4+cccccccc"
+                auto_tune_player(sh, s)
 
 
 
