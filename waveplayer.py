@@ -41,3 +41,8 @@ class WavePlayer():
         self.p.terminate()
     def wait(self):
         self.stop(True)
+
+if __name__ == "__main__":
+    p = WavePlayer("hobbit.wav")
+    p.play()
+    p.wait()
