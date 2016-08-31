@@ -16,6 +16,7 @@ def get_start(beginstrenght,endstrenght,ticks,fadeframes):
 class Soundhandler():
     def __init__(self):
         print("Setup output device")
+        self.index = 0
         self.p = pyaudio.PyAudio()
         self.stream = self.p.open(format=pyaudio.paFloat32,
                                   channels=1,
@@ -27,7 +28,7 @@ class Soundhandler():
 
         self.freqlist = set() #contains tuples: id,freq
         self.freqprev = set()
-        self.index = 0
+
 
 
         print("Output ready")

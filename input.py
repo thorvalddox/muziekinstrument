@@ -25,6 +25,7 @@ class Joystick:
         self.device = seach_joystick()
         self.axisvalues = [0,0,0,0,0,0]
         self.keys = [0]*12
+
         #self.proc = threading.Thread(None, self.process)
         #self.proc.start()
 
