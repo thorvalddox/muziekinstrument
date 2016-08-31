@@ -118,11 +118,10 @@ def main():
     with open("tunes.json") as file:
         songs = json.load(file)
     print("READY")
-    while True:
-        j.process()
+    for key in j.process():
 
-        if j.get_free("b12"):
-            z = j.get_axis_pole("r")
+        if key == "b12":
+            z = j.get_axis_pole(2)
             if z >= 0:
                 try:
                     s = songs[z]
@@ -131,7 +130,7 @@ def main():
                 auto_tune_player(sh, s)
 
 
-
+        """
         for t in all_tunes(-1,2):
             if t.octave != j.get_free("b5") - j.get_free("b7"):
                 stop_chord(sh,[t])
@@ -146,6 +145,7 @@ def main():
                     play_chord(sh, list(build_minor(t)))
                 else:
                     play_chord(sh, [t])
+        """
 
 
 
