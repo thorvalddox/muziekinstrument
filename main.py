@@ -118,7 +118,10 @@ def main():
     with open("tunes.json") as file:
         songs = json.load(file)
     print("Playtest")
-    forceplay_tune(sh,Tune("a",0,0),1)
+    tune = Tune("a",0,0)
+    play_chord(sh,[tune])
+    spinsleep(time)
+    stop_chord(sh,[tune])
     print("READY")
     for key in j.process():
         print(key)
