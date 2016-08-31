@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40331492">
-              <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.6519337">
+              <caret line="109" column="61" selection-start-line="109" selection-start-column="61" selection-end-line="109" selection-end-column="61" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -416,12 +416,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00093" summary="fixed buffer">
-      <created>1472652881816</created>
-      <option name="number" value="00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1472652881816</updated>
-    </task>
     <task id="LOCAL-00094" summary="decoupled play buffer and adding buffer.">
       <created>1472653241507</created>
       <option name="number" value="00094" />
@@ -710,7 +704,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472657521812</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Added buffer multiplier">
+      <created>1472657566041</created>
+      <option name="number" value="00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1472657566042</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -873,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40331492">
-          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.6519337">
+          <caret line="109" column="61" selection-start-line="109" selection-start-column="61" selection-end-line="109" selection-end-column="61" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

@@ -83,7 +83,7 @@ class Soundhandler():
             """
             start = 1.0
             wavecount = int(freq / self.fs * ticks)
-            yield (np.sin(4 * np.pi * (np.arange(ticks) + shift)/ticks * wavecount) * start * min(1,(220/freq)**2)).astype(np.float32)
+            yield (np.sin(2 * np.pi * (np.arange(ticks) + shift)/ticks * wavecount) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
         data = self.next_wave[:frame_count]
@@ -104,7 +104,7 @@ class Soundhandler():
         self.starttime = time.time()
         previndex = 0
         while True:
-            maxindex = (time.time() - self.starttime  + buffersize)*self.fs
+            maxindex = (time.time() - self.starttime  + buffersize*multiplier)*self.fs
             if self.freqlist:
                 self.stream.write(self.get_new_data_list((maxindex - previndex)*multiplier,previndex*multiplier))
             #print("{:>8.2f} {:>8.2f} {:>8.2f}".format(maxindex - previndex,maxindex/self.fs,(time.time() - self.starttime)))
