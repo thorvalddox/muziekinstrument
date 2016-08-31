@@ -147,6 +147,7 @@ def main():
                     play_chord(sh, list(build_minor(t)))
                 else:
                     play_chord(sh, [t])
+                    print("play",t)
 
 
 
