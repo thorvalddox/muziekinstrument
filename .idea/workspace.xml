@@ -20,7 +20,7 @@
     <SUITE FILE_PATH="coverage/muziekinstrument$input.coverage" NAME="input Coverage Results" MODIFIED="1472636198508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -43,7 +43,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-42.714287">
+            <state vertical-scroll-proportion="-81.0">
               <caret line="156" column="10" selection-start-line="156" selection-start-column="10" selection-end-line="156" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -55,8 +55,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6501767">
-              <caret line="89" column="28" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+            <state vertical-scroll-proportion="1.0318022">
+              <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -544,7 +544,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472644193795</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fixed textcase valueerror">
+      <created>1472644240292</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1472644240292</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -577,7 +583,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Maybe really fixed error" />
     <MESSAGE value="Changed input library" />
     <MESSAGE value="Added debug symbol" />
     <MESSAGE value="Added tunes in print log" />
@@ -602,7 +607,8 @@
     <MESSAGE value="removed threading again" />
     <MESSAGE value="fixed output test" />
     <MESSAGE value="fixed nameerror" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed nameerror" />
+    <MESSAGE value="fixed textcase valueerror" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed textcase valueerror" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -631,7 +637,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-42.714287">
+        <state vertical-scroll-proportion="-81.0">
           <caret line="156" column="10" selection-start-line="156" selection-start-column="10" selection-end-line="156" selection-end-column="10" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -641,8 +647,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6501767">
-          <caret line="89" column="28" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+        <state vertical-scroll-proportion="1.0318022">
+          <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
