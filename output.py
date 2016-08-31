@@ -91,7 +91,7 @@ class Soundhandler():
 
         if fulldata:
             return sum(fulldata)
-        else:1
+        else:
             return ((np.arange(ticks)) * 0).astype(np.float32)
 
 
