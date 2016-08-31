@@ -5,7 +5,9 @@ import threading
 
 
 
+fs = 10000
 fs = 44100
+
 volume = 1.0
 
 
