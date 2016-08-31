@@ -30,7 +30,7 @@ class Joystick:
 
 
     def get_code(self,code,type_):
-        return self.codes.get((code,type),0)
+        return self.codes.get((code,type_),0)
 
 
     def get_hat(self,index,up):
