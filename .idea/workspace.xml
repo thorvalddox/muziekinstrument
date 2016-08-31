@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.64640886">
-              <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
+              <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00058" summary="more fixed">
-      <created>1472647176275</created>
-      <option name="number" value="00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1472647176276</updated>
-    </task>
     <task id="LOCAL-00059" summary="fixed time name mismatch">
       <created>1472647224838</created>
       <option name="number" value="00059" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472654163191</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="added }">
+      <created>1472654191471</created>
+      <option name="number" value="00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1472654191471</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed index based to timebased sync" />
     <MESSAGE value="removed say in favor of print" />
     <MESSAGE value="fixed attributeError" />
     <MESSAGE value="Added ticks correctly" />
@@ -752,7 +751,8 @@
     <MESSAGE value="added sleep" />
     <MESSAGE value="better debug info" />
     <MESSAGE value="fixed )" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed )" />
+    <MESSAGE value="added }" />
+    <option name="LAST_COMMIT_MESSAGE" value="added }" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -858,7 +858,7 @@
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64640886">
-          <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
+          <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

@@ -86,11 +86,11 @@ class Soundhandler():
 
 
     def add_to_buffer(self):
-        buffersize=self.fs
+        buffersize=1
         self.starttime = time.time()
         previndex = 0
         while True:
-            maxindex = (time.time() - self.starttime)*self.fs + buffersize
+            maxindex = (time.time() - self.starttime  + buffersize)*self.fs
             self.stream.write(self.get_new_data_list(maxindex - previndex,maxindex-previndex))
             print("{:>8.2} {:>8.2} {:>8.2} {:>8.2}".format(maxindex - previndex,maxindex,maxindex/self.fs,(time.time() - self.starttime)))
             previndex = maxindex
