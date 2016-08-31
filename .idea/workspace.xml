@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.py" afterPath="$PROJECT_DIR$/output.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="muziekinstrument.iws" />
@@ -400,12 +399,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00036" summary="Added waveplayer test">
-      <created>1472644822774</created>
-      <option name="number" value="00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1472644822774</updated>
-    </task>
     <task id="LOCAL-00037" summary="Removed waveplayer, os.system(&quot;aplay&quot;) instead">
       <created>1472644990858</created>
       <option name="number" value="00037" />
@@ -694,7 +687,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472651936827</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="removed stating and ending data to see if lost frames are improved">
+      <created>1472652062402</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1472652062402</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +726,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed button key" />
     <MESSAGE value="changed framspeed" />
     <MESSAGE value="changed fs test speed" />
     <MESSAGE value="Added chord" />
@@ -752,7 +750,8 @@
     <MESSAGE value="fixed arguments" />
     <MESSAGE value="added free framespeed" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="removed stating and ending data to see if lost frames are improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed stating and ending data to see if lost frames are improved" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
