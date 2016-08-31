@@ -3,10 +3,10 @@ import time
 
 pygame.init()
 pygame.joystick.init()
-pygame.display.set_mode((100, 100))
+#pygame.display.set_mode((100, 100))
 
 
-pygame.event.set_blocked([pygame.VIDEORESIZE,pygame.VIDEOEXPOSE])
+#pygame.event.set_blocked([pygame.VIDEORESIZE,pygame.VIDEOEXPOSE])
 
 class Joystick:
     def __init__(self,index=0):
