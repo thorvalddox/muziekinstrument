@@ -34,7 +34,8 @@ class Soundhandler():
         self.invoketime = 0
 
 
-        self.add_to_buffer(1024)
+        self.bufferer = threading.Thread(None,self.add_to_buffer(1024))
+        self.bufferer.start()
         print("Output ready")
 
     def update_next_wave(self):
