@@ -4,7 +4,7 @@ import time
 import threading
 
 
-fs = 45000
+fs = 44000
 volume = 1.0
 
 
