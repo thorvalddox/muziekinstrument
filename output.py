@@ -4,7 +4,7 @@ import time
 import threading
 
 
-fs = 8000
+fs = 44100
 volume = 1.0
 
 
@@ -89,6 +89,6 @@ if __name__ == "__main__":
         time.sleep(10)
         s.play(0,i*20+400)
         time.sleep(10)
-        s.stop()
+        s.stop(0)
     s.finish()
 
