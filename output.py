@@ -100,13 +100,14 @@ class Soundhandler():
 
     def add_to_buffer(self):
         buffersize=1
-        multiplier = 3
+        multiplier = 3.5
         self.starttime = time.time()
         previndex = 0
         while True:
             maxindex = (time.time() - self.starttime  + buffersize)*self.fs
-            self.stream.write(self.get_new_data_list((maxindex - previndex)*multiplier,previndex*multiplier))
-            print("{:>8.2f} {:>8.2f} {:>8.2f}".format(maxindex - previndex,maxindex/self.fs,(time.time() - self.starttime)))
+            if self.freqlist:
+                self.stream.write(self.get_new_data_list((maxindex - previndex)*multiplier,previndex*multiplier))
+            #print("{:>8.2f} {:>8.2f} {:>8.2f}".format(maxindex - previndex,maxindex/self.fs,(time.time() - self.starttime)))
             previndex = maxindex
             time.sleep(0.05)
 
