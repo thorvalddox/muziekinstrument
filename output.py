@@ -37,19 +37,22 @@ class Soundhandler():
         self.invoketime = 0
 
 
-
+        self.add_to_buffer(1024)
         print("Output ready")
 
     def update_next_wave(self):
         self.next_wave = get_next_data(1024)
     def get_next_data(self, ticks, invoke, fadetime=1/16):
+        pass
+        """
         self.prevtime = self.invoketime
         self.invoketime = invoke
         ticklen = self.fs * (self.invoketime - self.prevtime)
         self.index += ticklen
+
         fadeframes = self.fs*fadetime
-        print("lost:",ticklen - ticks,"frames")
-        """
+        #print("lost:",ticklen - ticks,"frames")
+
         try:
             prevvol = 0.9/len(self.freqprev)
         except ZeroDivisionError:
@@ -71,20 +74,27 @@ class Soundhandler():
             yield (np.sin(2 * np.pi * (np.arange(ticks) + self.index) * freq / self.fs) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
-        fulldata = list(self.get_next_data(frame_count,time_info["output_buffer_dac_time"]))
-
-        if fulldata:
-            data = sum(fulldata)
-        else:
-            data = ((np.arange(frame_count)) * 0).astype(np.float32)
+        data = get_new_data_list(frame_count,time_info["output_buffer_dac_time"])
 
         return data, pyaudio.paContinue
 
+    def get_new_data_list(self,ticks,invoke):
+        fulldata = list(self.get_next_data(ticks,invoke))
+
+        if fulldata:
+            return sum(fulldata)
+        else:
+            return ((np.arange(frame_count)) * 0).astype(np.float32)
+
+
     def add_to_buffer(self,buffersize):
         self.starttime = time.time()
+        previndex = 0
         while True:
-            self.currentindex = (time.time() - self.starttime)
-            self.maxindex = self.currentindex + buffersize
+            maxindex = (time.time() - self.starttime)*self.fs + buffersize
+            self.stream.write(get_new_data_list(maxindex - previndex,maxindex-previndex))
+            previndex = maxindex
+            sleep(0.1)
 
 
     def finish(self):

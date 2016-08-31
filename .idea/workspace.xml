@@ -65,8 +65,8 @@
       <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45303866">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.50276244">
+              <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00044" summary="really fixed buttons i thinks">
-      <created>1472646187062</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1472646187062</updated>
-    </task>
     <task id="LOCAL-00045" summary="really fixed buttons i think thistime">
       <created>1472646327304</created>
       <option name="number" value="00045" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472652814504</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="fixed buffer">
+      <created>1472652881816</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1472652881816</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed time name mismatch" />
     <MESSAGE value="red mismatch" />
     <MESSAGE value="removed spinsleep" />
     <MESSAGE value="Added default sceme" />
@@ -752,7 +751,8 @@
     <MESSAGE value="decreased frames per buffer to test if it helps" />
     <MESSAGE value="ereased writhing to file to see if there is speedup" />
     <MESSAGE value="even removed opeing file" />
-    <option name="LAST_COMMIT_MESSAGE" value="even removed opeing file" />
+    <MESSAGE value="fixed buffer" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed buffer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45303866">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.50276244">
+          <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
