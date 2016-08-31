@@ -124,6 +124,7 @@ def main():
 
         if key == "b12":
             z = j.get_axis_pole(1)
+            print(z)
             if z >= 0:
                 try:
                     s = songs[z]

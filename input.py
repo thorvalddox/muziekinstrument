@@ -31,7 +31,7 @@ class Joystick:
     def process(self):
         for event in self.device.read_loop():
             if event.type == 1 and 288 <= event.code < 300:
-                yield "b{:02}".format(event.code-287),event.value
+                yield "{}{:02}".format("ud"[event.value],event.code-287),event.value
             elif event.type == 3:
                 axisindex = [0,1,2,5,16,17].index(event.code)
                 if event.code >= 16:
