@@ -42,11 +42,12 @@ class Joystick:
 
 
     def get_key(self,index):
+        print((287+index, 1))
         return self.get_code(287+index, 1)
 
     def get_free(self,idstring):
         if idstring[0] == "b":
-            return self.get_key(int(idstring[1:])-1)
+            return self.get_key(int(idstring[1:]))
         elif idstring[0] == "l":
             return self.get_axis(0,idstring[1] in "+dl") and self.get_axis(1,idstring[1] in "+dl")
         elif idstring[0] == "r":
