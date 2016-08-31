@@ -27,7 +27,7 @@ class Soundhandler():
                                   rate=self.fs,
                                   output=True,
                                   stream_callback=self.callback,
-                                  frames_per_buffer = 2**11)
+                                  frames_per_buffer = 2**16)
         self.stream.frames_per_buffer = 1024
         self.w = open("test.txt","w")
 

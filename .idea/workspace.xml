@@ -400,12 +400,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00039" summary="fixed attributeError">
-      <created>1472645849796</created>
-      <option name="number" value="00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1472645849797</updated>
-    </task>
     <task id="LOCAL-00040" summary="fixed buttons">
       <created>1472645898724</created>
       <option name="number" value="00040" />
@@ -694,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472652126630</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="added frames per buffer to test if it helps">
+      <created>1472652377910</created>
+      <option name="number" value="00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1472652377910</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed fs test speed" />
     <MESSAGE value="Added chord" />
     <MESSAGE value="remove chord, added single tune" />
     <MESSAGE value="fixed a not defined" />
@@ -752,7 +751,8 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="removed stating and ending data to see if lost frames are improved" />
     <MESSAGE value="added loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="added loop" />
+    <MESSAGE value="added frames per buffer to test if it helps" />
+    <option name="LAST_COMMIT_MESSAGE" value="added frames per buffer to test if it helps" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
