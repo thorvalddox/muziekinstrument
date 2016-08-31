@@ -119,9 +119,11 @@ def main():
         songs = json.load(file)
     print("READY")
     for key in j.process():
+        print(key)
+
 
         if key == "b12":
-            z = j.get_axis_pole(2)
+            z = j.get_axis_pole(1)
             if z >= 0:
                 try:
                     s = songs[z]
