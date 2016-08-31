@@ -416,12 +416,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00085" summary="removed stating and ending data to see if lost frames are improved">
-      <created>1472652062402</created>
-      <option name="number" value="00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1472652062402</updated>
-    </task>
     <task id="LOCAL-00086" summary="removed stating and ending data to see if lost frames are improved">
       <created>1472652081436</created>
       <option name="number" value="00086" />
@@ -710,7 +704,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472656500792</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="added frequentie">
+      <created>1472656584714</created>
+      <option name="number" value="00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1472656584715</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -743,7 +743,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed buffer" />
     <MESSAGE value="decoupled play buffer and adding buffer." />
     <MESSAGE value="added self." />
     <MESSAGE value="fixed frame_count" />
@@ -768,7 +767,8 @@
     <MESSAGE value="added buffer" />
     <MESSAGE value="no freq test" />
     <MESSAGE value="cos -&gt; sin" />
-    <option name="LAST_COMMIT_MESSAGE" value="cos -&gt; sin" />
+    <MESSAGE value="added frequentie" />
+    <option name="LAST_COMMIT_MESSAGE" value="added frequentie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
