@@ -32,12 +32,17 @@ class Joystick:
         for event in self.device.read_loop():
             if event.type == 0 and 288 <= event.code < 300:
                 yield "b{}".format(event.code),event.value
-            if event.type == 3:
+                print(event.value)
+            elif event.type == 3:
                 axisindex = [0,1,2,5,16,17].index(event.code)
                 if event.code >= 16:
                     self.axisvalues[axisindex] = event.value
                 else:
                     self.axisvalues[axisindex] = -(event.value<63) + (event.value<192)
+                print("LLL")
+            else:
+                print("unknown event")
+                print(event)
 
 
 
