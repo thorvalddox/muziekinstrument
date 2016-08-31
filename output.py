@@ -22,6 +22,7 @@ class Soundhandler():
         self.fs = fs
         self.index = 0
         self.p = pyaudio.PyAudio()
+        self.update_next_wave()
         if not callback:
             self.stream = self.p.open(format=pyaudio.paFloat32,
                                   channels=1,
@@ -40,7 +41,7 @@ class Soundhandler():
         self.prevtime = 0
 
         self.invoketime = 0
-        self.update_next_wave()
+
 
         if not callback:
             self.bufferer = threading.Thread(None,self.add_to_buffer)
