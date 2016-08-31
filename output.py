@@ -84,12 +84,12 @@ class Soundhandler():
             yield (np.sin(2 * np.pi * (np.arange(ticks)) * freq / self.fs) * start * min(1,(220/freq)**2)).astype(np.float32)
         self.freqprev = self.freqlist.copy()
     def callback(self, in_data, frame_count, time_info, status):
-        data = self.get_new_data_list(frame_count,time_info["output_buffer_dac_time"])
+        data = self.get_new_data_list(frame_count)
 
         return data, pyaudio.paContinue
 
     def get_new_data_list(self,ticks,invoke=1):
-        fulldata = self.get_next_data(ticks,invoke)
+        fulldata = list(self.get_next_data(ticks,invoke))
 
         if fulldata:
             return sum(fulldata)
