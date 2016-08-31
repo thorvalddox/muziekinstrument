@@ -86,7 +86,7 @@ class Soundhandler():
 
 
     def add_to_buffer(self):
-        buffersize=self.fs/10
+        buffersize=self.fs
         self.starttime = time.time()
         previndex = 0
         while True:
