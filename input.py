@@ -46,7 +46,6 @@ class Joystick:
 
 
     def get_key(self,index):
-        print((287+index, 1))
         return self.get_code(287+index, 1)
 
     def get_free(self,idstring):
