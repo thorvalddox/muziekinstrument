@@ -1,26 +1,35 @@
 [
   {
+    "name": "sine",
+    "file": "sine440.wav",
+    "shift": 0,
+    "source": "http://onlinetonegenerator.com/"
+  },
+  {
+    "name": "flute",
+    "file": "flute.wav",
+    "shift": 5,
+    "source": "https://www.freesound.org/people/almudenagonzalezflute_8/sounds/246648/",
+    "volume": 20,
+    "start": 1.5,
+    "length": 0.7
+  },
+  {
+    "name": "square",
+    "file": "square440.wav",
+    "shift": 0,
+    "source": "http://onlinetonegenerator.com/"
+  },
+  {
+    "name": "saw",
+    "file": "saw440.wav",
+    "shift": 0,
+    "source": "http://onlinetonegenerator.com/"
+  },
+  {
     "name": "kettle",
     "file": "kettle.wav",
     "shift": -7,
-    "source":"http://soundbible.com/1437-Kettle-Whistle.html"
-  },
-  {
-    "name": "sine",
-    "file": "sine440.wav",
-    "shift": 0,
-    "source":"http://onlinetonegenerator.com/"
-  },
-  {
-    "name": "sine",
-    "file": "sine440.wav",
-    "shift": 0,
-    "source":"http://onlinetonegenerator.com/"
-  },
-  {
-    "name": "sine",
-    "file": "sine440.wav",
-    "shift": 0,
-    "source":"http://onlinetonegenerator.com/"
+    "source": "http://soundbible.com/1437-Kettle-Whistle.html"
   }
 ]

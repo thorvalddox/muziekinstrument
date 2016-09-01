@@ -131,17 +131,22 @@ def say(text):
 
 
 def main():
-    sh = Aplayer("Kettle.wav", 14)
-    auto_tune_player(sh, "150:4ceg^cgec/cdefedc/^cgegedc/egcd1c")
-    j = Joystick()
+    print("loading tunes")
     with open("tunes.json") as file:
         songs = json.load(file)
+    print("loading instruments")
+    with open("instruments.json") as file:
+        instr = json.load(file)
+    sh = Aplayer(instr[0], 14)
+    auto_tune_player(sh, "150:4ceg^cgec/cdefedc/^cgegedc/egcd1c")
+    j = Joystick()
+
     mode = 3
+    instr_index = 0
     modenames = "default", "spread", "close", "access"
 
     print("READY")
     for key in j.process():
-        print(key)
 
         if key == "d12":
             z = j.get_axis_pole(1)
@@ -155,6 +160,11 @@ def main():
         elif key == "d9":
             mode = (mode + 1) % len(modenames)
             say("mode {}".format(modenames[mode]))
+
+        elif key == "d10":
+            instr_index = (instr_index + 1) % len(instr)
+            sh.load_sound(instr[instr_index])
+            say("instrument {}".format(instr[instr_index]["name"]))
 
         if mode == 0:
             if key in "d1,d2,d3,d4,d6,d8":

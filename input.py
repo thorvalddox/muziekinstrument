@@ -8,9 +8,8 @@ def seach_joystick():
     found = False
     devices = [InputDevice(fn) for fn in list_devices()]
     for dev in devices:
-        print(dev.name)
-        if "Joystick" in dev.name or "Dual" in dev.name:
-            found = True
+        print("found:", dev.name)
+        if "Dual Action" in dev.name:
             return dev
 
     if not found:
