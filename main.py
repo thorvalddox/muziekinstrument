@@ -138,9 +138,9 @@ class Scale:
     def __init__(self,ground_letter,kind="may"):
         ground = Tune(ground_letter,-(ground_letter in "ab"),0)
         if kind=="may":
-            add = [0,2,4,5,7,9]
+            add = [0,2,4,5,7,9,11]
         elif kind=="min":
-            add = [0,2,3,5,7,10]
+            add = [0,2,3,5,7,8,10]
         elif kind=="penta":
             add = [0,2,4,7,9]
         elif kind=="quat":
@@ -155,9 +155,9 @@ class Scale:
         if len(add) == 5:
             self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4},{5:+1,7:-1})
             self.modes[1] = ModeHandler({1:1,2:2,4:4,6:0,8:3},{5:+1,7:-1})
-        if len(add) == 6:
-            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4,8:5},{5:+1,7:-1})
-            self.modes[1] = ModeHandler({1:1,2:2,3:3,4:5,6:0,8:4},{5:+1,7:-1})
+        if len(add) == 7:
+            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4,8:5,10:7},{5:+1,7:-1})
+            self.modes[1] = ModeHandler({1:1,2:2,3:3,4:5,6:0,8:4,10:7},{5:+1,7:-1})
 
     def play_note(self,sh,j,key,mode):
         self.modes[mode].play_note(sh,j,key,self.tones)
