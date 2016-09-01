@@ -156,8 +156,8 @@ class Scale:
             self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4},{5:+1,7:-1})
             self.modes[1] = ModeHandler({1:1,2:2,4:4,6:0,8:3},{5:+1,7:-1})
         if len(add) == 7:
-            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4,8:5,10:7},{5:+1,7:-1})
-            self.modes[1] = ModeHandler({1:1,2:2,3:3,4:5,6:0,8:4,10:7},{5:+1,7:-1})
+            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4,8:5,10:6},{5:+1,7:-1})
+            self.modes[1] = ModeHandler({1:1,2:2,3:3,4:5,6:0,8:4,10:6},{5:+1,7:-1})
 
     def play_note(self,sh,j,key,mode):
         self.modes[mode].play_note(sh,j,key,self.tones)
