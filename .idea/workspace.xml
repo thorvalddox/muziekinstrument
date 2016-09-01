@@ -43,8 +43,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72307694">
-              <caret line="206" column="34" selection-start-line="206" selection-start-column="34" selection-end-line="206" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.4">
+              <caret line="220" column="33" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -434,12 +434,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00113" summary="fixed stream has no lenght">
-      <created>1472654583197</created>
-      <option name="number" value="00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1472654583197</updated>
-    </task>
     <task id="LOCAL-00114" summary="reinstated callback but moved wave calculation to event queue">
       <created>1472654937656</created>
       <option name="number" value="00114" />
@@ -728,7 +722,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472738057783</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="fixed invalid default mode">
+      <created>1472738147251</created>
+      <option name="number" value="00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1472738147253</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -761,7 +761,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added frequentie" />
     <MESSAGE value="doubled framespeed" />
     <MESSAGE value="removed callback" />
     <MESSAGE value="Added shift for noncanonical values" />
@@ -786,7 +785,8 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="Added tone scales" />
     <MESSAGE value="fixed mode modes error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed mode modes error" />
+    <MESSAGE value="fixed invalid default mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed invalid default mode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -907,8 +907,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72307694">
-          <caret line="206" column="34" selection-start-line="206" selection-start-column="34" selection-end-line="206" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.4">
+          <caret line="220" column="33" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

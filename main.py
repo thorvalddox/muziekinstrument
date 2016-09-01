@@ -218,7 +218,7 @@ def main():
                 say("instrument {}".format(instr[instr_index]["name"]))
             continue
         elif key == "d11":
-            z = j.get_axis_pole(1)
+            z = j.get_axis_pole(0)
             print(z)
             if z >= 0:
                 scale = scales[z]
