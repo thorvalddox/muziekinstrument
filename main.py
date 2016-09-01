@@ -2,12 +2,11 @@ from input import Joystick
 from aplayer import Aplayer
 from collections import namedtuple
 from math import floor
-from time import sleep,time
+from time import sleep, time
 import json
 import os
 
-
-Tune = namedtuple("Tune","letter,octave,change")
+Tune = namedtuple("Tune", "letter,octave,change")
 
 
 def get_tune_idc(tune):
@@ -16,20 +15,23 @@ def get_tune_idc(tune):
         tune.octave * 12 + \
         tune.change
 
-def get_frequency(tune):
 
-    return floor(440 * 2**(get_tune_idc(tune)/12))
+def get_frequency(tune):
+    return floor(440 * 2 ** (get_tune_idc(tune) / 12))
+
 
 def get_tune(diff):
-    for t in all_tunes(-3,+3):
+    for t in all_tunes(-3, +3):
         if get_tune_idc(t) == diff:
             return t
+
 
 def build_mayor(ground):
     idc = get_tune_idc(ground)
     yield ground
-    yield get_tune(idc+4)
-    yield get_tune(idc+7)
+    yield get_tune(idc + 4)
+    yield get_tune(idc + 7)
+
 
 def build_minor(ground):
     idc = get_tune_idc(ground)
@@ -37,21 +39,25 @@ def build_minor(ground):
     yield get_tune(idc + 3)
     yield get_tune(idc + 7)
 
-def all_tunes(low,high):
-    for o in range(low,high+1):
+
+def all_tunes(low, high):
+    for o in range(low, high + 1):
         for t in "acdefg":
-            for c in [-1,0,1]:
-                yield Tune(t,o,c)
+            for c in [-1, 0, 1]:
+                yield Tune(t, o, c)
 
-def forceplay_tune(sh,tune,seconds):
-    play_chord(sh,0,[tune])
+
+def forceplay_tune(sh, tune, seconds):
+    play_chord(sh, 0, [tune])
     sleep(seconds)
-    stop_chord(sh,0)
+    stop_chord(sh, 0)
 
-def stick_keyid(defid,tunes):
-    keys = [defid,12,13]
-    for i,t in enumerate(tunes):
-        yield keys[i],t
+
+def stick_keyid(defid, tunes):
+    keys = [defid, 12, 13]
+    for i, t in enumerate(tunes):
+        yield keys[i], t
+
 
 def make_chord(sh, keyid, ground, tunetype):
     if tunetype == 1:
@@ -60,11 +66,11 @@ def make_chord(sh, keyid, ground, tunetype):
         tunes = build_minor(ground)
     else:
         tunes = [ground]
-    play_chord(sh,keyid,tunes)
+    play_chord(sh, keyid, tunes)
 
-def play_chord(sh, keyid,tunes):
 
-    for key,tune in stick_keyid(keyid,tunes):
+def play_chord(sh, keyid, tunes):
+    for key, tune in stick_keyid(keyid, tunes):
         sh.play(key, get_tune_idc(tune))
 
 
@@ -72,6 +78,7 @@ def stop_chord(sh, keyid):
     sh.stop(keyid)
     sh.stop(12)
     sh.stop(13)
+
 
 def spinsleep(seconds):
     start = time()
@@ -81,12 +88,12 @@ def spinsleep(seconds):
         pass
 
 
-def auto_tune_player(sh,string):
+def auto_tune_player(sh, string):
     if string.startswith("$"):
-        os.system("aplay {}".format(string[1:]))
+        sh.play_media(string[1:])
         return
-    speed,keys = string.split(":")
-    timeset = 60/int(speed)*2
+    speed, keys = string.split(":")
+    timeset = 60 / int(speed) * 2
     octave = 0
     octavechange = 0
     change = 0
@@ -96,25 +103,25 @@ def auto_tune_player(sh,string):
         if l in "abcdefg":
             if breaknote:
                 spinsleep(0.1)
-            forceplay_tune(sh,Tune(l,octave+octavechange,change),speed*timeset-0.1*breaknote)
+            forceplay_tune(sh, Tune(l, octave + octavechange, change), speed * timeset - 0.1 * breaknote)
 
-            #print(Tune(l, octave + octavechange, change))
+            # print(Tune(l, octave + octavechange, change))
             change = 0
             octavechange = 0
             breaknote = 1
 
         elif l in "x#$%":
-            change = 2-"x# $%".index(l)
+            change = 2 - "x# $%".index(l)
         elif l in "+-":
-            octave += 1 if l=="+" else -1
+            octave += 1 if l == "+" else -1
         elif l in "^v":
             octavechange += 1 if l == "^" else -1
         elif l in "1248":
-            speed = 1/int(l)
+            speed = 1 / int(l)
         elif l in "o'*":
-            speed = 1 / {"o":16,"'":32,"*":64}
+            speed = 1 / {"o": 16, "'": 32, "*": 64}[l]
         elif l in "/":
-            sleep(speed*timeset)
+            sleep(speed * timeset)
         elif l in "_":
             breaknote = 0
 
@@ -123,26 +130,18 @@ def say(text):
     os.system("espeak \"{}\"".format(text))
 
 
-
-
-
-
 def main():
-
-    sh = Aplayer("Kettle.wav",14)
+    sh = Aplayer("Kettle.wav", 14)
     auto_tune_player(sh, "150:4ceg^cgec/cdefedc/^cgegedc/egcd1c")
     j = Joystick()
     with open("tunes.json") as file:
         songs = json.load(file)
     mode = 3
-    modenames = "default","spread","close","access"
-    MIDDLE = 12
-    TOP = 13
+    modenames = "default", "spread", "close", "access"
 
     print("READY")
     for key in j.process():
         print(key)
-
 
         if key == "d12":
             z = j.get_axis_pole(1)
@@ -154,7 +153,7 @@ def main():
                     s = "100:4+cccccccc"
                 auto_tune_player(sh, s)
         elif key == "d9":
-            mode = (mode+1)%len(modenames)
+            mode = (mode + 1) % len(modenames)
             say("mode {}".format(modenames[mode]))
 
         if mode == 0:
@@ -164,21 +163,21 @@ def main():
                 ch = j.axis(5)
                 keyindex = int(key[1:])
                 l = " cdef g a"[keyindex]
-                make_chord(sh,keyindex,Tune(l,o,c),ch)
+                make_chord(sh, keyindex, Tune(l, o, c), ch)
             elif key in "u1,u2,u3,u4,u6,u8":
                 keyindex = int(key[1:])
-                stop_chord(sh,keyindex)
+                stop_chord(sh, keyindex)
         if mode == 1:
             if key in "d1,d2,d3,d4":
-                o = j.test_key(5) - j.test_key(7) + j.test_key(6)*3 - 3* j.test_key(8)
-                c = j.axis(4) + (key=="d4")
+                o = j.test_key(5) - j.test_key(7) + j.test_key(6) * 3 - 3 * j.test_key(8)
+                c = j.axis(4) + (key == "d4")
                 ch = j.axis(5)
                 keyindex = int(key[1:])
                 l = " bdfg"[keyindex]
-                make_chord(sh,keyindex,Tune(l,o,c),ch)
+                make_chord(sh, keyindex, Tune(l, o, c), ch)
             elif key in "u1,u2,u3,u4":
                 keyindex = int(key[1:])
-                stop_chord(sh,keyindex)
+                stop_chord(sh, keyindex)
         if mode == 3:
             if key in "d1,d2,d3,d4,d6,d8":
                 o = j.test_key(5) - j.test_key(7)
@@ -186,24 +185,11 @@ def main():
                 ch = j.axis(5)
                 keyindex = int(key[1:])
                 l = " defa c g"[keyindex]
-                make_chord(sh,keyindex,Tune(l,o,c),ch)
+                make_chord(sh, keyindex, Tune(l, o, c), ch)
             elif key in "u1,u2,u3,u4,u6,u8":
                 keyindex = int(key[1:])
-                stop_chord(sh,keyindex)
-
-
-
-
-
-
-
+                stop_chord(sh, keyindex)
 
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-

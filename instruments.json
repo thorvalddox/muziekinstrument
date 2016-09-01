@@ -1,0 +1,26 @@
+[
+  {
+    "name": "kettle",
+    "file": "kettle.wav",
+    "shift": -7,
+    "source":"http://soundbible.com/1437-Kettle-Whistle.html"
+  },
+  {
+    "name": "sine",
+    "file": "sine440.wav",
+    "shift": 0,
+    "source":"http://onlinetonegenerator.com/"
+  },
+  {
+    "name": "sine",
+    "file": "sine440.wav",
+    "shift": 0,
+    "source":"http://onlinetonegenerator.com/"
+  },
+  {
+    "name": "sine",
+    "file": "sine440.wav",
+    "shift": 0,
+    "source":"http://onlinetonegenerator.com/"
+  }
+]
