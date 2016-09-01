@@ -138,9 +138,9 @@ def main():
     with open("instruments.json") as file:
         instr = json.load(file)
     sh = Aplayer(instr[0], 14)
-    auto_tune_player(sh, "150:4ceg^cgec/cdefedc/^cgegedc/egcd1c")
+    auto_tune_player(sh, "100:4cccc")
     j = Joystick()
-
+    auto_tune_player(sh, "100:4cccc")
     mode = 3
     instr_index = 0
     modenames = "default", "spread", "close", "access"

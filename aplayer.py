@@ -51,5 +51,5 @@ class Aplayer():
 
     def play_media(self, filename):
         self.stop(0)
-        self.processes[0] = sp.Popen(("sox", filename, "-d", "gain", "30"),
+        self.processes[0] = sp.Popen(("sox", filename, "-d", "gain", "0"),
                                      shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)

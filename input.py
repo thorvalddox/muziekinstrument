@@ -49,7 +49,7 @@ class Joystick:
         x = self.axisvalues[index * 2]
         y = self.axisvalues[index * 2 + 1]
 
-        return ((0, 0), (0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, 1)).index((x, y)) - 1
+        return ((0, 0), (0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1)).index((x, y)) - 1
 
 
 if __name__ == "__main__":
