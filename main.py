@@ -195,7 +195,7 @@ def main():
     auto_tune_player(sh, "100:4cccc")
     j = Joystick()
     auto_tune_player(sh, "100:4cccc")
-    mode = 3
+    mode = 0
     instr_index = 0
     modenames = "default", "access"
     scales = [Scale("c"),Scale("g"),Scale("b","quat"),Scale("e","min"),
