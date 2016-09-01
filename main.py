@@ -150,14 +150,14 @@ class Scale:
         self.modes = [None,None]
         self.tones = [change_tune(ground,0,x) for x in add]
         if len(add) == 4:
-            self.mode[0] = ModeHandler({1:0,2:1,3:2,4:3},{5:+1,7:-1,6:+3,8:-3})
-            self.mode[1] = ModeHandler({1:0,2:1,3:2,4:3},{5:+1,7:-1,6:+3,8:-3})
+            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3},{5:+1,7:-1,6:+3,8:-3})
+            self.modes[1] = ModeHandler({1:0,2:1,3:2,4:3},{5:+1,7:-1,6:+3,8:-3})
         if len(add) == 5:
-            self.mode[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4},{5:+1,7:-1})
-            self.mode[1] = ModeHandler({1:1,2:2,4:4,6:0,8:3},{5:+1,7:-1})
+            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4},{5:+1,7:-1})
+            self.modes[1] = ModeHandler({1:1,2:2,4:4,6:0,8:3},{5:+1,7:-1})
         if len(add) == 6:
-            self.mode[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4,8:5},{5:+1,7:-1})
-            self.mode[1] = ModeHandler({1:1,2:2,3:3,4:5,6:0,8:4},{5:+1,7:-1})
+            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4,8:5},{5:+1,7:-1})
+            self.modes[1] = ModeHandler({1:1,2:2,3:3,4:5,6:0,8:4},{5:+1,7:-1})
 
     def play_note(self,sh,j,key,mode):
         self.modes[mode].play_note(sh,j,key,self.tones)
