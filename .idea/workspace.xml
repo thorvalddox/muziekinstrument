@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aplayer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/muziekinstrument.iml" afterPath="$PROJECT_DIR$/.idea/muziekinstrument.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aplayer.py" afterPath="$PROJECT_DIR$/aplayer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="muziekinstrument.iws" />
@@ -80,9 +77,11 @@
       <file leaf-file-name="aplayer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aplayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7">
-              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="0.65">
+              <caret line="13" column="120" selection-start-line="13" selection-start-column="120" selection-end-line="13" selection-end-column="120" />
+              <folding>
+                <element signature="e#25#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,21 +185,21 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="100" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="53" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="125" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="64" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="127" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="65" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="923" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="429" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="117" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="47" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="119" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="48" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="122" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="49" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="917" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="467" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -444,12 +443,6 @@
       <created>1472634570458</created>
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
-    </task>
-    <task id="LOCAL-00096" summary="fixed frame_count">
-      <created>1472653316556</created>
-      <option name="number" value="00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1472653316557</updated>
     </task>
     <task id="LOCAL-00097" summary="fixed frame_count">
       <created>1472653348471</created>
@@ -739,7 +732,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472657731382</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="sox support">
+      <created>1472909511559</created>
+      <option name="number" value="00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1472909511560</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -755,8 +754,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2572079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32744783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32744783" sideWeight="0.5030349" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32744783" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -772,7 +771,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added sleep" />
     <MESSAGE value="better debug info" />
     <MESSAGE value="fixed )" />
     <MESSAGE value="added }" />
@@ -797,7 +795,8 @@
     <MESSAGE value="locked fs" />
     <MESSAGE value="Added buffer multiplier" />
     <MESSAGE value="Added some other stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some other stuff" />
+    <MESSAGE value="sox support" />
+    <option name="LAST_COMMIT_MESSAGE" value="sox support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -912,9 +911,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aplayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding />
+        <state vertical-scroll-proportion="0.65">
+          <caret line="13" column="120" selection-start-line="13" selection-start-column="120" selection-end-line="13" selection-end-column="120" />
+          <folding>
+            <element signature="e#25#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
