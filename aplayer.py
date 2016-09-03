@@ -10,6 +10,7 @@ class Aplayer():
         self.processes = [None]*maxproc
         self.soundname = soundname
     def play(self,process_id,pitch):
+        self.stop(process_id)
         self.processes[process_id] = sp.Popen(("sox",self.soundname,"-d","pitch","{:+}".format(pitch*100-700),
                                                "gain","30"), shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin =sp.PIPE)
     def stop(self,process_id):
