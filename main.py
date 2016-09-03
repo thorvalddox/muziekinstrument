@@ -65,7 +65,7 @@ def make_chord(sh, keyid, ground, tunetype):
 def play_chord(sh, keyid,tunes):
 
     for key,tune in stick_keyid(keyid,tunes):
-        sh.play(keyid, get_tune_idc(tune))
+        sh.play(key, get_tune_idc(tune))
 
 
 def stop_chord(sh, keyid):
