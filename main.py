@@ -113,7 +113,7 @@ def say(text):
 def main():
 
     sh = Aplayer("Kettle.wav")
-    auto_tune_player(sh, "100:4cdec cdec efg_g efg_g 8gagf4ec 8gagf4ec cvgc_c cvgc_c")
+    #auto_tune_player(sh, "100:4cdec cdec efg_g efg_g 8gagf4ec 8gagf4ec cvgc_c cvgc_c")
     j = Joystick()
     with open("tunes.json") as file:
         songs = json.load(file)
@@ -141,7 +141,7 @@ def main():
         if mode == 0:
             if key in "d1,d2,d3,d4,d6,d8":
                 o = j.test_key(5) - j.test_key(7)
-                c = j.axis(5)
+                c = j.axis(4)
                 keyindex = int(key[1:])
                 l = " cdef g a"[keyindex]
                 play_chord(sh,keyindex,[Tune(l,o,c)])
