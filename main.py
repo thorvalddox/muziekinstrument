@@ -1,11 +1,11 @@
 from input import Joystick
-from output import Soundhandler
+from aplayer import Aplayer
 from collections import namedtuple
 from math import floor
 from time import sleep,time
 import json
 import os
-from waveplayer import WavePlayer
+
 
 Tune = namedtuple("Tune","letter,octave,change")
 
@@ -50,7 +50,7 @@ def forceplay_tune(sh,tune,seconds):
 
 def play_chord(sh, keyid,tunes):
     for tune in tunes:
-        sh.play(keyid,get_frequency(tune))
+        sh.play(keyid,get_tune_idc(tune))
 
 
 def stop_chord(sh, keyid):
@@ -111,12 +111,15 @@ def say(text):
 
 
 def main():
+
+    sh = Aplayer("Kettle.wav")
+    auto_tune_player(sh, "100:4cdec cdec efg_g efg_g 8gagf4ec 8gagf4ec cvgc_c cvgc_c")
     j = Joystick()
-    sh = Soundhandler(8850)
     with open("tunes.json") as file:
         songs = json.load(file)
     mode = 0
     modenames = "default","spread","close","reordered"
+
     print("READY")
     for key in j.process():
         print(key)
