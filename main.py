@@ -118,7 +118,7 @@ def main():
     with open("tunes.json") as file:
         songs = json.load(file)
     mode = 0
-    modenames = "default","spread","close","reordered"
+    modenames = "default","spread","close","access"
 
     print("READY")
     for key in j.process():
@@ -144,6 +144,26 @@ def main():
                 c = j.axis(4)
                 keyindex = int(key[1:])
                 l = " cdef g a"[keyindex]
+                play_chord(sh,keyindex,[Tune(l,o,c)])
+            elif key in "u1,u2,u3,u4,u6,u8":
+                keyindex = int(key[1:])
+                stop_chord(sh,keyindex)
+        if mode == 1:
+            if key in "d1,d2,d3,d4":
+                o = j.test_key(5) - j.test_key(7) + j.test_key(6)*3 - 3* j.test_key(8)
+                c = j.axis(4) + (key=="d4")
+                keyindex = int(key[1:])
+                l = " bdfg"[keyindex]
+                play_chord(sh,keyindex,[Tune(l,o,c)])
+            elif key in "u1,u2,u3,u4":
+                keyindex = int(key[1:])
+                stop_chord(sh,keyindex)
+        if mode == 3:
+            if key in "d1,d2,d3,d4,d6,d8":
+                o = j.test_key(5) - j.test_key(7)
+                c = j.axis(4)
+                keyindex = int(key[1:])
+                l = " dfga c g"[keyindex]
                 play_chord(sh,keyindex,[Tune(l,o,c)])
             elif key in "u1,u2,u3,u4,u6,u8":
                 keyindex = int(key[1:])
