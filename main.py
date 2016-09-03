@@ -48,6 +48,11 @@ def forceplay_tune(sh,tune,seconds):
     sleep(seconds)
     stop_chord(sh,0)
 
+def stick_keyid(defid,tunes):
+    keys = [defid,12,13]
+    for i,t in enumerate(tunes):
+        yield keys[i],t
+
 def make_chord(sh, keyid, ground, tunetype):
     if tunetype == 1:
         tunes = build_mayor(ground)
@@ -58,8 +63,8 @@ def make_chord(sh, keyid, ground, tunetype):
     play_chord(sh,keyid,tunes)
 
 def play_chord(sh, keyid,tunes):
-    keys = [keyid,12,13]
-    for key,tune in zip(keys[:len(tunes)],tunes):
+
+    for key,tune in stick_keyid(keyid,tunes):
         sh.play(keyid, get_tune_idc(tune))
 
 

@@ -43,8 +43,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0461539">
-              <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.7692308">
+              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -444,12 +444,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00103" summary="Added debug info">
-      <created>1472653904218</created>
-      <option name="number" value="00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1472653904219</updated>
-    </task>
     <task id="LOCAL-00104" summary="added sleep">
       <created>1472654014841</created>
       <option name="number" value="00104" />
@@ -738,7 +732,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472912228191</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="Added chords">
+      <created>1472913276919</created>
+      <option name="number" value="00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1472913276920</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -771,7 +771,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reinstated callback but moved wave calculation to event queue" />
     <MESSAGE value="fixed not defined" />
     <MESSAGE value="fixed defualt argument" />
     <MESSAGE value="fixed recuresion" />
@@ -796,7 +795,8 @@
     <MESSAGE value="Added close and access mode" />
     <MESSAGE value="fixed wrong key pitch" />
     <MESSAGE value="Added startup tune" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added startup tune" />
+    <MESSAGE value="Added chords" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added chords" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -911,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0461539">
-          <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.7692308">
+          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
