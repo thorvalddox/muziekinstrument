@@ -130,7 +130,7 @@ def say(text):
 def main():
 
     sh = Aplayer("Kettle.wav",14)
-    auto_tune_player(sh, "70:4ceg^cgec/cdefedc/^cgegedc/egcd1c")
+    auto_tune_player(sh, "150:4ceg^cgec/cdefedc/^cgegedc/egcd1c")
     j = Joystick()
     with open("tunes.json") as file:
         songs = json.load(file)
