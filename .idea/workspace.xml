@@ -43,8 +43,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72307694">
-              <caret line="165" column="25" selection-start-line="165" selection-start-column="25" selection-end-line="165" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.63076925">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -444,12 +444,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00101" summary="fixed threading">
-      <created>1472653632172</created>
-      <option name="number" value="00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1472653632173</updated>
-    </task>
     <task id="LOCAL-00102" summary="fixed threading">
       <created>1472653800647</created>
       <option name="number" value="00102" />
@@ -738,7 +732,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472911718080</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="fixed wrong key pitch">
+      <created>1472911907008</created>
+      <option name="number" value="00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1472911907008</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -771,7 +771,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="doubled buffer size" />
     <MESSAGE value="fixed stream has no lenght" />
     <MESSAGE value="reinstated callback but moved wave calculation to event queue" />
     <MESSAGE value="fixed not defined" />
@@ -796,7 +795,8 @@
     <MESSAGE value="Added some songs" />
     <MESSAGE value="changed base pitch" />
     <MESSAGE value="Added close and access mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added close and access mode" />
+    <MESSAGE value="fixed wrong key pitch" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed wrong key pitch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -911,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72307694">
-          <caret line="165" column="25" selection-start-line="165" selection-start-column="25" selection-end-line="165" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.63076925">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
