@@ -163,7 +163,7 @@ def main():
                 o = j.test_key(5) - j.test_key(7)
                 c = j.axis(4)
                 keyindex = int(key[1:])
-                l = " dfga c g"[keyindex]
+                l = " defa c g"[keyindex]
                 play_chord(sh,keyindex,[Tune(l,o,c)])
             elif key in "u1,u2,u3,u4,u6,u8":
                 keyindex = int(key[1:])
