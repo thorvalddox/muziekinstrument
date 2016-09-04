@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="fixed Attributeerror">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -44,11 +43,11 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49723756">
-              <caret line="142" column="23" selection-start-line="142" selection-start-column="23" selection-end-line="142" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.29834256">
+              <caret line="159" column="21" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1473008113810" expanded="true" signature="3135:4334" placeholder="..." />
+                <marker date="1473008293178" expanded="true" signature="3135:4336" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -451,12 +450,6 @@
       <option name="number" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00117" summary="fixed defualt argument">
-      <created>1472655146220</created>
-      <option name="number" value="00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1472655146220</updated>
-    </task>
     <task id="LOCAL-00118" summary="fixed defualt argument">
       <created>1472655202645</created>
       <option name="number" value="00118" />
@@ -745,13 +738,20 @@
       <option name="project" value="LOCAL" />
       <updated>1472746799536</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="fixed Attributeerror">
+      <created>1473008125929</created>
+      <option name="number" value="00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1473008125931</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="743" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32744783" sideWeight="0.4908953" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -767,7 +767,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.4939302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -778,7 +777,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed correct use of multiplier" />
     <MESSAGE value="locked fs" />
     <MESSAGE value="Added buffer multiplier" />
     <MESSAGE value="Added some other stuff" />
@@ -803,7 +801,8 @@
     <MESSAGE value="fixed analog error" />
     <MESSAGE value="added 7-based scale in favor of 6-based scale" />
     <MESSAGE value="fixed index out of bounds&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed index out of bounds&#10;" />
+    <MESSAGE value="fixed Attributeerror" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed Attributeerror" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -826,7 +825,7 @@
           <caret line="153" column="24" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1473008113810" expanded="true" signature="3135:4334" placeholder="..." />
+            <marker date="1473008293178" expanded="true" signature="3135:4336" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -881,7 +880,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1473008113810" expanded="true" signature="3135:4334" placeholder="..." />
+            <marker date="1473008293178" expanded="true" signature="3135:4336" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -928,7 +927,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1473008113810" expanded="true" signature="3135:4334" placeholder="..." />
+            <marker date="1473008293178" expanded="true" signature="3135:4336" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -975,7 +974,7 @@
           <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1473008113810" expanded="true" signature="3135:4334" placeholder="..." />
+            <marker date="1473008293178" expanded="true" signature="3135:4336" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1014,7 +1013,7 @@
           <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1473008113810" expanded="true" signature="3135:4334" placeholder="..." />
+            <marker date="1473008293178" expanded="true" signature="3135:4336" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1083,11 +1082,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49723756">
-          <caret line="142" column="23" selection-start-line="142" selection-start-column="23" selection-end-line="142" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.29834256">
+          <caret line="159" column="21" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1473008113810" expanded="true" signature="3135:4334" placeholder="..." />
+            <marker date="1473008293178" expanded="true" signature="3135:4336" placeholder="..." />
           </folding>
         </state>
       </provider>
