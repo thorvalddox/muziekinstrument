@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;input.py&#10;&#9;main.py&#10;&#9;output.py&#10;&#9;tunes.json&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/muziekinstrument.iml" afterPath="$PROJECT_DIR$/.idea/muziekinstrument.iml" />
+    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tunes.json" afterPath="$PROJECT_DIR$/tunes.json" />
     </list>
     <ignored path="muziekinstrument.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,8 +53,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="146" column="66" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="66" />
+            <state relative-caret-position="170">
+              <caret line="142" column="49" selection-start-line="142" selection-start-column="49" selection-end-line="142" selection-end-column="49" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -463,13 +460,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00117" summary="fixed defualt argument">
-      <created>1472655146220</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1472655146220</updated>
-    </task>
     <task id="LOCAL-00118" summary="fixed defualt argument">
       <created>1472655202645</created>
       <option name="number" value="00118" />
@@ -806,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472985252176</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="Changed modes&#10;&#10;len(scale) specific -&gt; scale.kind specific&#10;&#10;swapped button 10 and 8 from minor scale">
+      <created>1472993874778</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1472993874778</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -839,7 +836,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed correct use of multiplier" />
     <MESSAGE value="locked fs" />
     <MESSAGE value="Added buffer multiplier" />
     <MESSAGE value="Added some other stuff" />
@@ -864,7 +860,8 @@
     <MESSAGE value="fixed analog error" />
     <MESSAGE value="added 7-based scale in favor of 6-based scale" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;input.py&#10;&#9;main.py&#10;&#9;output.py&#10;&#9;tunes.json&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;input.py&#10;&#9;main.py&#10;&#9;output.py&#10;&#9;tunes.json&#10;" />
+    <MESSAGE value="Changed modes&#10;&#10;len(scale) specific -&gt; scale.kind specific&#10;&#10;swapped button 10 and 8 from minor scale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed modes&#10;&#10;len(scale) specific -&gt; scale.kind specific&#10;&#10;swapped button 10 and 8 from minor scale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1093,8 +1090,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="146" column="66" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="66" />
+        <state relative-caret-position="170">
+          <caret line="142" column="49" selection-start-line="142" selection-start-column="49" selection-end-line="142" selection-end-column="49" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
