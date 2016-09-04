@@ -139,25 +139,26 @@ class Scale:
         ground = Tune(ground_letter,-(ground_letter in "ab"),0)
         if kind=="may":
             add = [0,2,4,5,7,9,11]
+            self.modes[0] = ModeHandler({1: 0, 2: 1, 3: 2, 4: 3, 6: 4, 8: 5, 10: 6}, {5: +1, 7: -1})
+            self.modes[1] = ModeHandler({1: 1, 2: 2, 3: 3, 4: 5, 6: 0, 8: 4, 10: 6}, {5: +1, 7: -1})
         elif kind=="min":
             add = [0,2,3,5,7,8,10]
+            self.modes[0] = ModeHandler({1: 0, 2: 1, 3: 2, 4: 3, 6: 4, 8: 5, 10: 6}, {5: +1, 7: -1})
+            self.modes[1] = ModeHandler({1: 1, 2: 2, 3: 3, 4: 6, 6: 0, 8: 4, 10: 5}, {5: +1, 7: -1})
         elif kind=="penta":
             add = [0,2,4,7,9]
+            self.modes[0] = ModeHandler({1: 0, 2: 1, 3: 2, 4: 3, 6: 4}, {5: +1, 7: -1})
+            self.modes[1] = ModeHandler({1: 1, 2: 2, 4: 4, 6: 0, 8: 3}, {5: +1, 7: -1})
         elif kind=="quat":
             add = [0,3,6,9]
+            self.modes[0] = ModeHandler({1: 0, 2: 1, 3: 2, 4: 3}, {5: +1, 7: -1, 6: +3, 8: -3})
+            self.modes[1] = ModeHandler({1: 0, 2: 1, 3: 2, 4: 3}, {5: +1, 7: -1, 6: +3, 8: -3})
         else:
             add = 0
         self.modes = [None,None]
         self.tones = [change_tune(ground,0,x) for x in add]
-        if len(add) == 4:
-            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3},{5:+1,7:-1,6:+3,8:-3})
-            self.modes[1] = ModeHandler({1:0,2:1,3:2,4:3},{5:+1,7:-1,6:+3,8:-3})
-        if len(add) == 5:
-            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4},{5:+1,7:-1})
-            self.modes[1] = ModeHandler({1:1,2:2,4:4,6:0,8:3},{5:+1,7:-1})
-        if len(add) == 7:
-            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4,8:5,10:6},{5:+1,7:-1})
-            self.modes[1] = ModeHandler({1:1,2:2,3:3,4:5,6:0,8:4,10:6},{5:+1,7:-1})
+
+
 
     def play_note(self,sh,j,key,mode):
         self.modes[mode].play_note(sh,j,key,self.tones)
