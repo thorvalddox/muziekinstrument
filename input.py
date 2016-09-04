@@ -1,5 +1,6 @@
 import time
 import sys
+import threading
 from evdev import InputDevice, list_devices, ecodes
 
 
@@ -7,9 +8,8 @@ def seach_joystick():
     found = False
     devices = [InputDevice(fn) for fn in list_devices()]
     for dev in devices:
-        print(dev.name)
-        if "Joystick" in dev.name or "Dual" in dev.name:
-            found = True
+        print("found:", dev.name)
+        if "Dual Action" in dev.name:
             return dev
 
     if not found:
@@ -17,59 +17,42 @@ def seach_joystick():
         sys.exit()
 
 
-
 class Joystick:
-    def __init__(self,index=0):
+    def __init__(self, index=0):
+        print("Setting up Joystick")
         self.device = seach_joystick()
-        self.codes = {}
+        self.axisvalues = [0, 0, 0, 0, 0, 0]
+        self.keys = [0] * 12
+
+        # self.proc = threading.Thread(None, self.process)
+        # self.proc.start()
 
     def process(self):
         for event in self.device.read_loop():
-            self.codes[(event.code,event.type)] = event.value
-            print((event.code,event.type),event.value)
+            if event.type == 1 and 288 <= event.code < 300:
+                self.keys[event.code - 288] = event.value
+                yield "{}{}".format("ud"[event.value], event.code - 287)
+            elif event.type == 3:
+                axisindex = [0, 1, 2, 5, 16, 17].index(event.code)
+                if event.code >= 16:
+                    self.axisvalues[axisindex] = event.value
+                else:
+                    self.axisvalues[axisindex] = -(event.value < 63) + (event.value > 192)
 
-    def get_code(self,code,type_):
-        return self.codes.get((code,type),0)
+    def test_key(self, index):
+        return self.keys[index - 1]
 
+    def axis(self, index):
+        return self.axisvalues[index]
 
-    def get_hat(self,index,up):
-        return self.get_code(16+index, 3) == [-1,1][up]
+    def get_axis_pole(self, index):
+        x = self.axisvalues[index * 2]
+        y = self.axisvalues[index * 2 + 1]
 
-    def get_axis(self,index,up):
-        axis = [0,1,2,5][index]
-        return (self.get_code(axis,3)-127)/255* [-1,1][up] > 0.7
-
-
-    def get_key(self,index):
-        return self.get_code(287+index, 1)
-
-    def get_free(self,idstring):
-        if idstring[0] == "b":
-            return self.get_key(int(idstring[1:])-1)
-        elif idstring[0] == "l":
-            return self.get_axis(0,idstring[1] in "+dl") and self.get_axis(1,idstring[1] in "+dl")
-        elif idstring[0] == "r":
-            return self.get_axis(2, idstring[1] in "+dl") and self.get_axis(3, idstring[1] in "+dl")
-        elif idstring[0] == "h":
-            return self.get_hat(0, idstring[1] in "+dl") and self.get_axis(1, idstring[1] in "+dl")
-
-
-    def get_axis_pole(self,axis):
-        if axis == "l":
-            x = self.get_axis(0,True) - self.get_axis(0,False)
-            y = self.get_axis( 1, True) - self.get_axis( 1, False)
-        if axis == "r":
-            x = self.get_axis(2, True) - self.get_axis(2, False)
-            y = self.get_axis(3, True) - self.get_axis(3, False)
-        if axis == "h":
-            x = self.get_hat(0, True) - self.get_hat(0, False)
-            y = self.get_hat(1, True) - self.get_hat(1, False)
-        return ((0,0),(0,-1),(1,-1),(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,1)).index((x,y)) - 1
-
+        return ((0, 0), (0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1)).index((x, y)) - 1
 
 
 if __name__ == "__main__":
     s = Joystick()
     while True:
         s.process()
-

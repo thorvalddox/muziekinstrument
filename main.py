@@ -1,12 +1,12 @@
 from input import Joystick
-from output import Soundhandler
+from aplayer import Aplayer
 from collections import namedtuple
 from math import floor
-from time import sleep,time
+from time import sleep, time
 import json
-from waveplayer import WavePlayer
+import os
 
-Tune = namedtuple("Tune","letter,octave,change")
+Tune = namedtuple("Tune", "letter,octave,change")
 
 
 def get_tune_idc(tune):
@@ -15,20 +15,23 @@ def get_tune_idc(tune):
         tune.octave * 12 + \
         tune.change
 
-def get_frequency(tune):
 
-    return floor(440 * 2**(get_tune_idc(tune)/12))
+def get_frequency(tune):
+    return floor(440 * 2 ** (get_tune_idc(tune) / 12))
+
 
 def get_tune(diff):
-    for t in all_tunes(-3,+3):
+    for t in all_tunes(-3, +3):
         if get_tune_idc(t) == diff:
             return t
+
 
 def build_mayor(ground):
     idc = get_tune_idc(ground)
     yield ground
-    yield get_tune(idc+4)
-    yield get_tune(idc+7)
+    yield get_tune(idc + 4)
+    yield get_tune(idc + 7)
+
 
 def build_minor(ground):
     idc = get_tune_idc(ground)
@@ -36,27 +39,47 @@ def build_minor(ground):
     yield get_tune(idc + 3)
     yield get_tune(idc + 7)
 
-def all_tunes(low,high):
-    for o in range(low,high+1):
+
+def all_tunes(low, high):
+    for o in range(low, high + 1):
         for t in "acdefg":
-            for c in [-1,0,1]:
-                yield Tune(t,o,c)
-
-def forceplay_tune(sh,tune,time):
-    play_chord(sh,[tune])
-    spinsleep(time*(0.5))
-    stop_chord(sh,[tune])
-
-def play_chord(sh,tunes):
-    ground = tunes[0]
-    for tune in tunes:
-        sh.play(ground,get_frequency(tune))
+            for c in [-1, 0, 1]:
+                yield Tune(t, o, c)
 
 
-def stop_chord(sh, tunes):
-    ground = tunes[0]
-    for tune in tunes:
-        sh.stop(ground, get_frequency(tune))
+def forceplay_tune(sh, tune, seconds):
+    play_chord(sh, 0, [tune])
+    sleep(seconds)
+    stop_chord(sh, 0)
+
+
+def stick_keyid(defid, tunes):
+    keys = [defid, 12, 13]
+    for i, t in enumerate(tunes):
+        yield keys[i], t
+
+
+def make_chord(sh, keyid, ground, tunetype):
+    if tunetype == 1:
+        tunes = build_mayor(ground)
+    elif tunetype == -1:
+        tunes = build_minor(ground)
+    else:
+        tunes = [ground]
+    play_chord(sh, keyid, tunes)
+
+
+def play_chord(sh, keyid, tunes):
+    for key, tune in stick_keyid(keyid, tunes):
+        sh.play(key, get_tune_idc(tune))
+
+
+def stop_chord(sh, keyid):
+    sh.stop(keyid)
+    sh.stop(12)
+    sh.stop(13)
+    sh.stop(0)
+
 
 def spinsleep(seconds):
     start = time()
@@ -66,14 +89,12 @@ def spinsleep(seconds):
         pass
 
 
-def auto_tune_player(sh,string):
+def auto_tune_player(sh, string):
     if string.startswith("$"):
-        w = WavePlayer(string[1:])
-        w.play()
-        w.wait()
+        sh.play_media(string[1:])
         return
-    speed,keys = string.split(":")
-    timeset = 60/int(speed)*4
+    speed, keys = string.split(":")
+    timeset = 60 / int(speed) * 2
     octave = 0
     octavechange = 0
     change = 0
@@ -83,81 +104,130 @@ def auto_tune_player(sh,string):
         if l in "abcdefg":
             if breaknote:
                 spinsleep(0.1)
-            forceplay_tune(sh,Tune(l,octave+octavechange,change),speed*timeset-0.1*breaknote)
+            forceplay_tune(sh, Tune(l, octave + octavechange, change), speed * timeset - 0.1 * breaknote)
 
-            #print(Tune(l, octave + octavechange, change))
+            # print(Tune(l, octave + octavechange, change))
             change = 0
             octavechange = 0
             breaknote = 1
 
         elif l in "x#$%":
-            change = 2-"x# $%".index(l)
+            change = 2 - "x# $%".index(l)
         elif l in "+-":
-            octave += 1 if l=="+" else -1
+            octave += 1 if l == "+" else -1
         elif l in "^v":
             octavechange += 1 if l == "^" else -1
         elif l in "1248":
-            speed = 1/int(l)
+            speed = 1 / int(l)
         elif l in "o'*":
-            speed = 1 / {"o":16,"'":32,"*":64}
+            speed = 1 / {"o": 16, "'": 32, "*": 64}[l]
         elif l in "/":
-            spinsleep(speed*timeset)
+            sleep(speed * timeset)
         elif l in "_":
             breaknote = 0
 
 
+def say(text):
+    os.system("espeak \"{}\"".format(text))
+
+
+def change_tune(tune,ocswap,cswap):
+    return Tune(tune.letter,tune.octave + ocswap,tune.change + cswap)
+
+class Scale:
+    def __init__(self,ground_letter,kind="may"):
+        ground = Tune(ground_letter,-(ground_letter in "ab"),0)
+        if kind=="may":
+            add = [0,2,4,5,7,9,11]
+        elif kind=="min":
+            add = [0,2,3,5,7,8,10]
+        elif kind=="penta":
+            add = [0,2,4,7,9]
+        elif kind=="quat":
+            add = [0,3,6,9]
+        else:
+            add = 0
+        self.modes = [None,None]
+        self.tones = [change_tune(ground,0,x) for x in add]
+        if len(add) == 4:
+            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3},{5:+1,7:-1,6:+3,8:-3})
+            self.modes[1] = ModeHandler({1:0,2:1,3:2,4:3},{5:+1,7:-1,6:+3,8:-3})
+        if len(add) == 5:
+            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4},{5:+1,7:-1})
+            self.modes[1] = ModeHandler({1:1,2:2,4:4,6:0,8:3},{5:+1,7:-1})
+        if len(add) == 7:
+            self.modes[0] = ModeHandler({1:0,2:1,3:2,4:3,6:4,8:5,10:6},{5:+1,7:-1})
+            self.modes[1] = ModeHandler({1:1,2:2,3:3,4:5,6:0,8:4,10:6},{5:+1,7:-1})
+
+    def play_note(self,sh,j,key,mode):
+        self.modes[mode].play_note(sh,j,key,self.tones)
 
 
 
+class ModeHandler:
+    def __init__(self,notebuttons,octavedict):
+        self.notebuttons = notebuttons #dict button:index
+        self.octavedict = octavedict #dict button:shift
+    def play_note(self,sh,j,key,tones):
+        keyindex = int(key[1:])
+        keykind = key[0]
+        if keyindex not in self.notebuttons.keys():
+            return
+        if keykind == "d":
+            o = sum(j.test_key(k)*v for k,v in self.octavedict.items())
+            c = j.axis(4)
+            ch = j.axis(5)
 
-
-
+            basetune = tones[self.notebuttons[keyindex]]
+            make_chord(sh, keyindex, change_tune(basetune,o,c), ch)
+        else:
+            keyindex = int(key[1:])
+            stop_chord(sh, keyindex)
 
 def main():
-    j = Joystick()
-    sh = Soundhandler()
+    print("loading tunes")
     with open("tunes.json") as file:
         songs = json.load(file)
+    print("loading instruments")
+    with open("instruments.json") as file:
+        instr = json.load(file)
+    sh = Aplayer(instr[0], 14)
+    auto_tune_player(sh, "100:4cccc")
+    j = Joystick()
+    auto_tune_player(sh, "100:4cccc")
+    mode = 0
+    instr_index = 0
+    modenames = "default", "access"
+    scales = [Scale("c"),Scale("g"),Scale("b","quat"),Scale("e","min"),
+              Scale("a","min"),Scale("d","min"),Scale("c","penta"),Scale("f")]
+    scale = scales[0]
     print("READY")
-    while True:
-        j.process()
-
-        if j.get_free("b12"):
-            z = j.get_axis_pole("r")
+    for key in j.process():
+        if key == "d12":
+            z = j.get_axis_pole(1)
+            print(z)
             if z >= 0:
                 try:
                     s = songs[z]
                 except IndexError:
                     s = "100:4+cccccccc"
                 auto_tune_player(sh, s)
-
-
-
-        for t in all_tunes(-1,2):
-            if t.octave != j.get_free("b5") - j.get_free("b7"):
-                stop_chord(sh,[t])
-            elif not j.get_free({"c":"b1","d":"b2","e":"b3","f":"b4","g":"b6","a":"b8"}[t.letter]):
-                stop_chord(sh, [t])
-            elif t.change != j.get_hat(0,True) - j.get_hat(0,False):
-                stop_chord(sh, [t])
             else:
-                if j.get_hat(1,True):
-                    play_chord(sh,list(build_mayor(t)))
-                elif j.get_hat(1,False):
-                    play_chord(sh, list(build_minor(t)))
-                else:
-                    play_chord(sh, [t])
-
-
-
-
+                instr_index = (instr_index + 1) % len(instr)
+                sh.load_sound(instr[instr_index])
+                say("instrument {}".format(instr[instr_index]["name"]))
+            continue
+        elif key == "d11":
+            z = j.get_axis_pole(0)
+            print(z)
+            if z >= 0:
+                scale = scales[z]
+            else:
+                mode = (mode + 1) % len(modenames)
+                say("mode {}".format(modenames[mode]))
+            continue
+        scale.play_note(sh,j,key,mode)
 
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
