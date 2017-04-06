@@ -43,10 +43,10 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#1#28#0" expanded="true" />
+                <element signature="e#2#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00170" summary="fixed invalid string formatting">
-      <created>1491477299092</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1491477299092</updated>
-    </task>
     <task id="LOCAL-00171" summary="Added keyfilter">
       <created>1491477763384</created>
       <option name="number" value="00171" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491491667056</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="fixed stupid error">
+      <created>1491491895590</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1491491895590</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed &#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 74, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 71, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 30, in play&#10;    sp.play(0,0)&#10;  File &quot;/home/pi/Documents/muziekinstrument/aplayer.py&quot;, line 29, in play&#10;    old_proc.kill()&#10;AttributeError: 'NoneType' object has no attribute 'kill'&#10;" />
     <MESSAGE value="fixed intro not stopping" />
     <MESSAGE value="edited intruments;json" />
     <MESSAGE value="inscreased spinsleep" />
@@ -874,7 +873,8 @@
     <MESSAGE value="removed variance" />
     <MESSAGE value="fixed indices" />
     <MESSAGE value="fixed stupid error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed stupid error" />
+    <MESSAGE value="deleted useless import" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted useless import" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,10 +1214,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#1#28#0" expanded="true" />
+            <element signature="e#2#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

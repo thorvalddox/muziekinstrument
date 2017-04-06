@@ -1,12 +1,9 @@
 
-from aplayer import Aplayer
+
 from input import Keypad
 from time import time,sleep
 import subprocess as sp
-import os, shutil
-from random import randrange
-
-import json
+import os
 
 
 def say(text):
