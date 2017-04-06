@@ -4,18 +4,27 @@ import threading
 from evdev import InputDevice, list_devices, ecodes
 
 
-def seach_joystick():
-    found = False
+def seach_device(idstr):
     devices = [InputDevice(fn) for fn in list_devices()]
     for dev in devices:
         print("found:", dev.name)
-        if "Dual Action" in dev.name:
+        if idstr in dev.name:
             return dev
 
-    if not found:
-        print('Joystick not found. Aborting ...')
-        sys.exit()
+    print('Joystick not found. Aborting ...')
+    raise AssertionError("Device not found")
 
+
+def seach_joystick():
+    return seach_device("Dual Action")
+
+
+def seach_keypad():
+    return seach_device("Keypad")
+
+def test_device(dev):
+    for event in dev.read_loop():
+        print("{<10} {>5} {>5}".format(event.type,event.code,event.value))
 
 class Joystick:
     def __init__(self, index=0):
@@ -53,7 +62,9 @@ class Joystick:
 
 
 if __name__ == "__main__":
-    seach_joystick()
+    d = seach_keypad()
+    if sys.argv[1] == "test":
+        test_device(d)
     #s = Joystick()
     #while True:
     #    s.process()
