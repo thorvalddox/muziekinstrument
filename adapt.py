@@ -35,7 +35,7 @@ class SongBuilder():
         except FileNotFoundError:
             pass
         print("building full song")
-        sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base0_{}.wav".format(index) for index in self.song) + ('sounds/result.wav',),
+        sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}.wav".format(index) for index in self.song) + ('sounds/result.wav',),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
         print("done building song")
     def play(self):
@@ -55,14 +55,14 @@ def filebuilder():
     procs.append(sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
              shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     #create sound
-    procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/base0.wav".format(vars), "trim", "6", "1"),
+    procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/base.wav".format(vars), "trim", "6", "1"),
              shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
 
     #create notes
 
     for c in range(20):
         pitch = [0,2,4,7,9][c % 5]+12*(c//5)-12
-        procs.append(sp.Popen(("sox", "sounds/base.wav", "sounds/base0_{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
+        procs.append(sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     print("waiting for processes")
     #print(procs)
