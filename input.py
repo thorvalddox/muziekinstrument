@@ -24,7 +24,7 @@ def seach_keypad():
 
 def test_device(dev):
     for event in dev.read_loop():
-        print("{<10} {>5} {>5}".format(event.type,event.code,event.value))
+        print("{:<10} {:>5} {:>5}".format(event.type,event.code,event.value))
 
 class Joystick:
     def __init__(self, index=0):
