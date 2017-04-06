@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/input.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="202">
-              <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+              <caret line="46" column="74" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -460,13 +460,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00124" summary="fixed waves fitting in 1024 buffer">
-      <created>1472655680557</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1472655680557</updated>
-    </task>
     <task id="LOCAL-00125" summary="fixed prevlist">
       <created>1472655776421</created>
       <option name="number" value="00125" />
@@ -803,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491477936558</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Returns numbers as strings">
+      <created>1491478273415</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1491478273415</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -836,7 +836,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed base pitch" />
     <MESSAGE value="Added close and access mode" />
     <MESSAGE value="fixed wrong key pitch" />
     <MESSAGE value="Added startup tune" />
@@ -861,7 +860,8 @@
     <MESSAGE value="fixed invalid string formatting" />
     <MESSAGE value="Added keyfilter" />
     <MESSAGE value="Re added old test without filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Re added old test without filter" />
+    <MESSAGE value="Returns numbers as strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Returns numbers as strings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1192,7 +1192,7 @@
     <entry file="file://$PROJECT_DIR$/input.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
-          <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+          <caret line="46" column="74" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
