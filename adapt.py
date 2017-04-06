@@ -32,11 +32,11 @@ class SongBuilder():
         channel = False
         for s in self.song:
             mp.play(channel,s)
-            spinsleep(0.3)
+            spinsleep(0.1)
             sp.stop(0)
             mp.stop(not channel)
             channel ^= True
-            spinsleep(1)
+            spinsleep(0.9)
         spinsleep(6)
         mp.stop(0)
         mp.stop(1)
