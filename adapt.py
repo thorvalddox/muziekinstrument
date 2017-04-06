@@ -30,7 +30,10 @@ class SongBuilder():
                 index = "0123456789".index(key)
                 self.song.append(index)
     def concat(self):
-        os.unlink('sounds/result.wav')
+        try:
+            os.unlink('sounds/result.wav')
+        except FileExistsError:
+            pass
         print("building full song")
         sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}_{}.wav".format(randrange(6),index) for index in self.song) + ('sounds/result.wav',),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
