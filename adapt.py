@@ -3,7 +3,7 @@ from aplayer import Aplayer
 from input import Keypad
 from time import time,sleep
 import subprocess as sp
-import os
+import os, shutil
 import json
 
 
@@ -50,6 +50,11 @@ class SongBuilder():
 
 
 def filebuilder():
+    folder = 'sounds/'
+    for the_file in os.listdir(folder):
+        file_path = os.path.join(folder, the_file)
+        if os.path.isfile(file_path):
+            os.unlink(file_path)
     print("buidling sound files")
     procs = []
     #create intro
@@ -64,7 +69,7 @@ def filebuilder():
         procs.append(sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
                  shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     print("waiting for processes")
-    [p.wait for p in procs()]
+    [p.wait() for p in procs]
     print("done building soundfiles")
 
 def spinsleep(seconds):
