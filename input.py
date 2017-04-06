@@ -23,8 +23,28 @@ def seach_keypad():
     return seach_device("Keypad")
 
 def test_device(dev):
+    print(" type| code|   value")
     for event in dev.read_loop():
-        print("{:<10} {:>5} {:>5}".format(event.type,event.code,event.value))
+        print("{:>5}|{:>5}|{:>10}".format(event.type,event.code,event.value))
+
+
+class Keypad:
+    def __init__(self):
+        print("Setting up Keypad")
+        self.device = seach_keypad()
+    def key_gen(self):
+        for event in self.device.read_loop():
+            if event.type != 1:
+                #check if event is a key related event
+                continue
+            elif event.value != 1:
+                #check if ky is pressed (as opposed to released)
+                continue
+            elif event.code == 69:
+                #check if key is nit general
+                continue
+            yield event.code
+
 
 class Joystick:
     def __init__(self, index=0):
@@ -62,9 +82,10 @@ class Joystick:
 
 
 if __name__ == "__main__":
-    d = seach_keypad()
+
     if sys.argv[1] == "test":
-        test_device(d)
+        for c in Keypad().key_gen():
+            print(c)
     #s = Joystick()
     #while True:
     #    s.process()
