@@ -71,8 +71,10 @@ def spinsleep(seconds):
 
 
 def main():
+    say("starting music server")
     filebuilder()
     s = SongBuilder(Keypad())
+    say("ready for some music")
     while True:
         s.build()
         s.concat()
