@@ -3,6 +3,7 @@ from aplayer import Aplayer
 from input import Keypad
 from time import sleep
 import os
+import json
 
 
 def say(text):
@@ -40,8 +41,13 @@ class SongBuilder():
 
 
 def main():
-    player_start = Aplayer("deepfry", 1)
-    player_main = Aplayer("deepfry2",1)
+    with open("instruments.json") as file:
+        instr = json.load(file)
+    ilist = {}
+    for i in instr:
+        ilist[i["name"]] = i
+    player_start = Aplayer(ilist["deepfry"], 1)
+    player_main = Aplayer(ilist["deepfry2"],1)
     s = SongBuilder(Keypad())
     while True:
         s.build()
