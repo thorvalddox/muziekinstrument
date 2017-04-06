@@ -33,7 +33,6 @@ class SongBuilder():
         for s in self.song:
             mp.play(0,s)
             sleep(1)
-            mp.stop(0)
 
 
 
@@ -46,8 +45,8 @@ def main():
     ilist = {}
     for i in instr:
         ilist[i["name"]] = i
-    player_start = Aplayer(ilist["deepfry"], 1)
-    player_main = Aplayer(ilist["deepfry2"],1)
+    player_start = Aplayer(ilist["deepfry"], 1,50)
+    player_main = Aplayer(ilist["deepfry2"],1,50)
     s = SongBuilder(Keypad())
     while True:
         s.build()

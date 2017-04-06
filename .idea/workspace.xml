@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state relative-caret-position="202">
+              <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00127" summary="fixed prevlist">
-      <created>1472656068726</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1472656068726</updated>
-    </task>
     <task id="LOCAL-00128" summary="added buffer">
       <created>1472656177706</created>
       <option name="number" value="00128" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491484184524</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Fixed invalid sound info">
+      <created>1491484462510</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1491484462510</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added startup tune" />
     <MESSAGE value="Added chords" />
     <MESSAGE value="Fixed generator has no len" />
     <MESSAGE value="Sped up intro tune" />
@@ -874,7 +873,8 @@
     <MESSAGE value="Returns numbers as strings" />
     <MESSAGE value="Added return and dot key" />
     <MESSAGE value="Added song programmer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added song programmer" />
+    <MESSAGE value="Fixed invalid sound info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed invalid sound info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        <state relative-caret-position="202">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
