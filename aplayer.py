@@ -35,7 +35,7 @@ class Aplayer():
         old_proc = self.processes[process_id]
         self.processes[process_id] = sp.Popen((tuple(self.get_args(pitch))),
                                               shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
-        spinsleep(0.3)
+        spinsleep(1)
         if old_proc is not None:
             old_proc.kill()
     def get_args(self,pitch):

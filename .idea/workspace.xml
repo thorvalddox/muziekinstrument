@@ -97,8 +97,8 @@
       <file leaf-file-name="aplayer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aplayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="136">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
               </folding>
@@ -557,13 +557,6 @@
       <option name="project" value="LOCAL" />
       <updated>1472913739177</updated>
     </task>
-    <task id="LOCAL-00161" summary="fixed mode modes error">
-      <created>1472738057782</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1472738057783</updated>
-    </task>
     <task id="LOCAL-00162" summary="fixed invalid default mode">
       <created>1472738147251</created>
       <option name="number" value="00162" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491487016103</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="Added spinsleep before killing process to give replacement time to start">
+      <created>1491487126681</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1491487126681</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Returns numbers as strings" />
     <MESSAGE value="Added return and dot key" />
     <MESSAGE value="Added song programmer" />
     <MESSAGE value="Fixed invalid sound info" />
@@ -874,7 +873,8 @@
     <MESSAGE value="fixed intro not stopping" />
     <MESSAGE value="edited intruments;json" />
     <MESSAGE value="inscreased spinsleep" />
-    <option name="LAST_COMMIT_MESSAGE" value="inscreased spinsleep" />
+    <MESSAGE value="Added spinsleep before killing process to give replacement time to start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added spinsleep before killing process to give replacement time to start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aplayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="136">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
           <folding>
             <element signature="e#25#48#0" expanded="true" />
           </folding>
