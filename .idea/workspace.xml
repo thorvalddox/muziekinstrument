@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+            <state relative-caret-position="186">
+              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00150" summary="fixed wrong key pitch">
-      <created>1472911907008</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1472911907008</updated>
-    </task>
     <task id="LOCAL-00151" summary="Added startup tune">
       <created>1472912228191</created>
       <option name="number" value="00151" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491489560223</updated>
     </task>
-    <option name="localTasksCounter" value="207" />
+    <task id="LOCAL-00207" summary="Added play command">
+      <created>1491489577098</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1491489577098</updated>
+    </task>
+    <option name="localTasksCounter" value="208" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="shorted ending sequence" />
     <MESSAGE value="Added stuff" />
     <MESSAGE value="Corrected channel smooting" />
     <MESSAGE value="fixed error&#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 71, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 68, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 37, in play&#10;    mp.stop(not channel,s)&#10;TypeError: stop() takes 2 positional arguments but 3 were given&#10;" />
@@ -874,7 +873,8 @@
     <MESSAGE value="more debug" />
     <MESSAGE value="changed shell to false" />
     <MESSAGE value="Added concats in builder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added concats in builder" />
+    <MESSAGE value="Added play command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added play command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+        <state relative-caret-position="186">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
