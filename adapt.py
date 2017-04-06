@@ -27,6 +27,7 @@ class SongBuilder():
             if key in "0123456789":
                 index = "0123456789".index(key)
                 self.song.append(index)
+    def concat(self):
         print("building full song")
         sp.Popen(("sox",)+ tuple("base{}.wav".format(index) for index in self.song) + ('result.wav',),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
@@ -74,6 +75,7 @@ def main():
     s = SongBuilder(Keypad())
     while True:
         s.build()
+        s.concat()
         s.play()
 
 
