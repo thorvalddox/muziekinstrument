@@ -37,6 +37,7 @@ class SongBuilder():
             spinsleep(1)
         spinsleep(6)
         mp.stop(0)
+        mp.stop(1)
         sp.stop(0)
 
 
@@ -58,6 +59,7 @@ def main():
         ilist[i["name"]] = i
     player_start = Aplayer(ilist["deepfry"],1,25)
     player_main = Aplayer(ilist["deepfry2"],2,25)
+    say("ready")
     s = SongBuilder(Keypad())
     while True:
         s.build()
