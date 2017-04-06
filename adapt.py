@@ -29,6 +29,8 @@ class SongBuilder():
     def play(self,sp,mp,influence=1):
         sp.play(0,0)
         spinsleep(6)
+        sp.stop(0)
+        mp.play(0,0)
         channel = False
         # for s in self.song:
         #     mp.play(channel,s)

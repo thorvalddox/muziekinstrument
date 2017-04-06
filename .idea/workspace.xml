@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aplayer.py" afterPath="$PROJECT_DIR$/aplayer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adapt.py" afterPath="$PROJECT_DIR$/adapt.py" />
     </list>
     <ignored path="muziekinstrument.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adapt.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+            <state relative-caret-position="152">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -94,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aplayer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aplayer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aplayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+            <state relative-caret-position="186">
+              <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
               </folding>
@@ -129,8 +129,8 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/input.py" />
         <option value="$PROJECT_DIR$/instruments.json" />
-        <option value="$PROJECT_DIR$/adapt.py" />
         <option value="$PROJECT_DIR$/aplayer.py" />
+        <option value="$PROJECT_DIR$/adapt.py" />
       </list>
     </option>
   </component>
@@ -557,13 +557,6 @@
       <option name="project" value="LOCAL" />
       <updated>1472913739177</updated>
     </task>
-    <task id="LOCAL-00157" summary="removed obsolete files">
-      <created>1472720436583</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1472720436585</updated>
-    </task>
     <task id="LOCAL-00158" summary="Added instruments">
       <created>1472727011674</created>
       <option name="number" value="00158" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491486724541</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="fixed &#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 74, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 71, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 30, in play&#10;    sp.play(0,0)&#10;  File &quot;/home/pi/Documents/muziekinstrument/aplayer.py&quot;, line 29, in play&#10;    old_proc.kill()&#10;AttributeError: 'NoneType' object has no attribute 'kill'&#10;">
+      <created>1491486789905</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1491486789906</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added keypad test" />
     <MESSAGE value="fixed invalid string formatting" />
     <MESSAGE value="Added keyfilter" />
     <MESSAGE value="Re added old test without filter" />
@@ -874,7 +873,8 @@
     <MESSAGE value="upped influence again" />
     <MESSAGE value="lowered influence" />
     <MESSAGE value="changed processing in other file so a porcess is only killed after a new process on the same thread has already started" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed processing in other file so a porcess is only killed after a new process on the same thread has already started" />
+    <MESSAGE value="fixed &#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 74, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 71, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 30, in play&#10;    sp.play(0,0)&#10;  File &quot;/home/pi/Documents/muziekinstrument/aplayer.py&quot;, line 29, in play&#10;    old_proc.kill()&#10;AttributeError: 'NoneType' object has no attribute 'kill'&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed &#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 74, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 71, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 30, in play&#10;    sp.play(0,0)&#10;  File &quot;/home/pi/Documents/muziekinstrument/aplayer.py&quot;, line 29, in play&#10;    old_proc.kill()&#10;AttributeError: 'NoneType' object has no attribute 'kill'&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1202,22 +1202,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adapt.py">
+    <entry file="file://$PROJECT_DIR$/aplayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="186">
+          <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
           <folding>
-            <element signature="e#1#28#0" expanded="true" />
+            <element signature="e#25#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aplayer.py">
+    <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="152">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding>
-            <element signature="e#25#48#0" expanded="true" />
+            <element signature="e#1#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
