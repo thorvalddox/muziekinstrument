@@ -1,7 +1,7 @@
 
 from aplayer import Aplayer
 from input import Keypad
-from time import sleep
+from time import time,sleep
 import os
 import json
 
@@ -28,14 +28,20 @@ class SongBuilder():
                 self.song.append([0,2,4,7,9][index % 5]+12*(index//5)-12)
     def play(self,sp,mp):
         sp.play(0,0)
-        sleep(6)
+        spinsleep(6)
         sp.stop(0)
         for s in self.song:
             mp.play(0,s)
-            sleep(1)
+            spinsleep(1)
 
 
 
+def spinsleep(seconds):
+    start = time()
+    if seconds > 1:
+        sleep(seconds - 1)
+    while time() < start + seconds:
+        pass
 
 
 
