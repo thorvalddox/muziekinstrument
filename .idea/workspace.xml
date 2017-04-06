@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="220">
+              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -77,7 +77,7 @@
       <file leaf-file-name="instruments.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/instruments.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="714">
               <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
               <folding />
             </state>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00137" summary="removed callback">
-      <created>1472657174585</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1472657174586</updated>
-    </task>
     <task id="LOCAL-00138" summary="Added shift for noncanonical values">
       <created>1472657291146</created>
       <option name="number" value="00138" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491485704071</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="shortened tune">
+      <created>1491485781362</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1491485781362</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed mode modes error" />
     <MESSAGE value="fixed invalid default mode" />
     <MESSAGE value="fixed analog error" />
     <MESSAGE value="added 7-based scale in favor of 6-based scale" />
@@ -874,7 +873,8 @@
     <MESSAGE value="Corrected channel smooting" />
     <MESSAGE value="fixed error&#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 71, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 68, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 37, in play&#10;    mp.stop(not channel,s)&#10;TypeError: stop() takes 2 positional arguments but 3 were given&#10;" />
     <MESSAGE value="fixed sound lenghts in json file." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed sound lenghts in json file." />
+    <MESSAGE value="shortened tune" />
+    <option name="LAST_COMMIT_MESSAGE" value="shortened tune" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1194,6 +1194,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/instruments.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-646">
@@ -1204,18 +1212,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instruments.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        <state relative-caret-position="220">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>

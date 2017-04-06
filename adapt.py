@@ -34,7 +34,7 @@ class SongBuilder():
             mp.play(channel,s)
             spinsleep(0.1)
             sp.stop(0)
-            mp.stop(not channel)
+            #mp.stop(not channel)
             channel ^= True
             spinsleep(0.9)
         spinsleep(6)
