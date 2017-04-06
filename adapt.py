@@ -32,7 +32,7 @@ class SongBuilder():
     def concat(self):
         try:
             os.unlink('sounds/result.wav')
-        except FileExistsError:
+        except FileNotFoundError:
             pass
         print("building full song")
         sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}_{}.wav".format(randrange(6),index) for index in self.song) + ('sounds/result.wav',),
