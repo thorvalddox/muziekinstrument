@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00172" summary="Re added old test without filter">
-      <created>1491477936558</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1491477936558</updated>
-    </task>
     <task id="LOCAL-00173" summary="Returns numbers as strings">
       <created>1491478273415</created>
       <option name="number" value="00173" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491491968451</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="Fixed race condition">
+      <created>1491493116364</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1491493116364</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed intro not stopping" />
     <MESSAGE value="edited intruments;json" />
     <MESSAGE value="inscreased spinsleep" />
     <MESSAGE value="Added spinsleep before killing process to give replacement time to start" />
@@ -874,7 +873,8 @@
     <MESSAGE value="fixed indices" />
     <MESSAGE value="fixed stupid error" />
     <MESSAGE value="deleted useless import" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted useless import" />
+    <MESSAGE value="Fixed race condition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed race condition" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        <state relative-caret-position="221">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>

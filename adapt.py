@@ -47,7 +47,7 @@ def filebuilder():
         if os.path.isfile(file_path):
             os.remove(file_path)
     print("buidling sound files")
-    sleep(1)
+    sleep(10)
     procs = []
     #create intro
     procs.append(sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
