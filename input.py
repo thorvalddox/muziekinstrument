@@ -53,6 +53,7 @@ class Joystick:
 
 
 if __name__ == "__main__":
-    s = Joystick()
-    while True:
-        s.process()
+    seach_joystick()
+    #s = Joystick()
+    #while True:
+    #    s.process()
