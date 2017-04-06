@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="186">
+              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -65,7 +65,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-646">
+            <state relative-caret-position="-748">
               <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -97,7 +97,7 @@
       <file leaf-file-name="aplayer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aplayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
+            <state relative-caret-position="271">
               <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00139" summary="fixed correct use of multiplier">
-      <created>1472657359554</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1472657359555</updated>
-    </task>
     <task id="LOCAL-00140" summary="locked fs">
       <created>1472657399958</created>
       <option name="number" value="00140" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491485967659</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Added and changed influence parameter">
+      <created>1491486077193</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1491486077193</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed analog error" />
     <MESSAGE value="added 7-based scale in favor of 6-based scale" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;input.py&#10;&#9;main.py&#10;&#9;output.py&#10;&#9;tunes.json&#10;" />
     <MESSAGE value="Changed modes&#10;&#10;len(scale) specific -&gt; scale.kind specific&#10;&#10;swapped button 10 and 8 from minor scale" />
@@ -874,7 +873,8 @@
     <MESSAGE value="fixed sound lenghts in json file." />
     <MESSAGE value="shortened tune" />
     <MESSAGE value="maxed verflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="maxed verflow" />
+    <MESSAGE value="Added and changed influence parameter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and changed influence parameter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1184,16 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aplayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding>
-            <element signature="e#25#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/instruments.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -1202,9 +1192,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aplayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding>
+            <element signature="e#25#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
+        <state relative-caret-position="-748">
           <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        <state relative-caret-position="186">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
