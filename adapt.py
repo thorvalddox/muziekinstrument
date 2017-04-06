@@ -69,6 +69,7 @@ def filebuilder():
         procs.append(sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
                  shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     print("waiting for processes")
+    print(procs)
     [p.wait() for p in procs]
     print("done building soundfiles")
 
