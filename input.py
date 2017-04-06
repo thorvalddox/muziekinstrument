@@ -86,6 +86,8 @@ if __name__ == "__main__":
     if sys.argv[1] == "test":
         for c in Keypad().key_gen():
             print(c)
+    if sys.argv[1] == "testraw":
+        test_device(seach_keypad())
     #s = Joystick()
     #while True:
     #    s.process()
