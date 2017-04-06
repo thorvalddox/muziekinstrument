@@ -48,19 +48,23 @@ class SongBuilder():
         mp.stop(1)
         sp.stop(0)
 
+
 def filebuilder():
     print("buidling sound files")
+    procs = []
     #create intro
-    sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
-             shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+    procs.append(sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
+             shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     #create sound
-    sp.Popen(("sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "7"),
-             shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+    procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "7"),
+             shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     #create notes
     for c in range(20):
         pitch = [0,2,4,7,9][c % 5]+12*(c//5)-12
-        sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
-                 shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+        procs.append(sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
+                 shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
+    print("waiting for processes")
+    [p.wait for p in procs()]
     print("done building soundfiles")
 
 def spinsleep(seconds):
