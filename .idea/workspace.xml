@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adapt.py" afterPath="$PROJECT_DIR$/adapt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instruments.json" afterPath="$PROJECT_DIR$/instruments.json" />
     </list>
     <ignored path="muziekinstrument.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adapt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+            <state relative-caret-position="254">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instruments.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="instruments.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/instruments.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+            <state relative-caret-position="211">
+              <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -128,9 +128,9 @@
         <option value="$PROJECT_DIR$/tunes.json" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/input.py" />
-        <option value="$PROJECT_DIR$/instruments.json" />
         <option value="$PROJECT_DIR$/aplayer.py" />
         <option value="$PROJECT_DIR$/adapt.py" />
+        <option value="$PROJECT_DIR$/instruments.json" />
       </list>
     </option>
   </component>
@@ -557,13 +557,6 @@
       <option name="project" value="LOCAL" />
       <updated>1472913739177</updated>
     </task>
-    <task id="LOCAL-00158" summary="Added instruments">
-      <created>1472727011674</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1472727011674</updated>
-    </task>
     <task id="LOCAL-00159" summary="fixes">
       <created>1472728667697</created>
       <option name="number" value="00159" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491486789906</updated>
     </task>
-    <option name="localTasksCounter" value="195" />
+    <task id="LOCAL-00195" summary="fixed intro not stopping">
+      <created>1491486880258</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1491486880258</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed invalid string formatting" />
     <MESSAGE value="Added keyfilter" />
     <MESSAGE value="Re added old test without filter" />
     <MESSAGE value="Returns numbers as strings" />
@@ -874,7 +873,8 @@
     <MESSAGE value="lowered influence" />
     <MESSAGE value="changed processing in other file so a porcess is only killed after a new process on the same thread has already started" />
     <MESSAGE value="fixed &#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 74, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 71, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 30, in play&#10;    sp.play(0,0)&#10;  File &quot;/home/pi/Documents/muziekinstrument/aplayer.py&quot;, line 29, in play&#10;    old_proc.kill()&#10;AttributeError: 'NoneType' object has no attribute 'kill'&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed &#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 74, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 71, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 30, in play&#10;    sp.play(0,0)&#10;  File &quot;/home/pi/Documents/muziekinstrument/aplayer.py&quot;, line 29, in play&#10;    old_proc.kill()&#10;AttributeError: 'NoneType' object has no attribute 'kill'&#10;" />
+    <MESSAGE value="fixed intro not stopping" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed intro not stopping" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1194,14 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instruments.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aplayer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1214,11 +1206,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        <state relative-caret-position="254">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instruments.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
