@@ -28,7 +28,7 @@ class SongBuilder():
                 self.song.append(index)
     def concat(self):
         try:
-            os.unlink('sounds/result.wav')
+            os.remove('sounds/result.wav')
         except FileNotFoundError:
             pass
         print("building full song")
@@ -45,8 +45,9 @@ def filebuilder():
     for the_file in os.listdir(folder):
         file_path = os.path.join(folder, the_file)
         if os.path.isfile(file_path):
-            os.unlink(file_path)
+            os.remove(file_path)
     print("buidling sound files")
+    sleep(1)
     procs = []
     #create intro
     procs.append(sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
