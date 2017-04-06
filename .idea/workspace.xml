@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00149" summary="Added close and access mode">
-      <created>1472911718079</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1472911718080</updated>
-    </task>
     <task id="LOCAL-00150" summary="fixed wrong key pitch">
       <created>1472911907008</created>
       <option name="number" value="00150" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491489045426</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="Added concats in builder">
+      <created>1491489560223</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1491489560223</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added extra channel to compensate for empty pauses" />
     <MESSAGE value="shorted ending sequence" />
     <MESSAGE value="Added stuff" />
     <MESSAGE value="Corrected channel smooting" />
@@ -874,7 +873,8 @@
     <MESSAGE value="Fixed file interactions" />
     <MESSAGE value="more debug" />
     <MESSAGE value="changed shell to false" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed shell to false" />
+    <MESSAGE value="Added concats in builder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added concats in builder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>

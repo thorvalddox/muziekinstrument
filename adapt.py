@@ -72,6 +72,7 @@ def main():
     s = SongBuilder(Keypad())
     while True:
         s.build()
+        s.play()
 
 
 if __name__=="__main__":
