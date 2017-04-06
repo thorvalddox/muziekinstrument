@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aplayer.py" afterPath="$PROJECT_DIR$/aplayer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adapt.py" afterPath="$PROJECT_DIR$/adapt.py" />
     </list>
     <ignored path="muziekinstrument.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adapt.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+            <state relative-caret-position="288">
+              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -94,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aplayer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aplayer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aplayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="374">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
               </folding>
@@ -129,8 +129,8 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/input.py" />
         <option value="$PROJECT_DIR$/instruments.json" />
-        <option value="$PROJECT_DIR$/adapt.py" />
         <option value="$PROJECT_DIR$/aplayer.py" />
+        <option value="$PROJECT_DIR$/adapt.py" />
       </list>
     </option>
   </component>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00141" summary="Added buffer multiplier">
-      <created>1472657521812</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1472657521812</updated>
-    </task>
     <task id="LOCAL-00142" summary="Added buffer multiplier">
       <created>1472657566041</created>
       <option name="number" value="00142" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491486201486</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="Added debug flags">
+      <created>1491486289752</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1491486289752</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;input.py&#10;&#9;main.py&#10;&#9;output.py&#10;&#9;tunes.json&#10;" />
     <MESSAGE value="Changed modes&#10;&#10;len(scale) specific -&gt; scale.kind specific&#10;&#10;swapped button 10 and 8 from minor scale" />
     <MESSAGE value="Deleted test.txt&#10;&#10;large file that does nothing" />
     <MESSAGE value="changed input to check for other devices then joystick" />
@@ -874,7 +873,8 @@
     <MESSAGE value="maxed verflow" />
     <MESSAGE value="Added and changed influence parameter" />
     <MESSAGE value="upped influence" />
-    <option name="LAST_COMMIT_MESSAGE" value="upped influence" />
+    <MESSAGE value="Added debug flags" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added debug flags" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1192,16 +1192,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adapt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="e#1#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-748">
@@ -1214,10 +1204,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aplayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#25#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adapt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+          <folding>
+            <element signature="e#1#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
