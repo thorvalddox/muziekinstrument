@@ -137,6 +137,9 @@ def change_tune(tune,ocswap,cswap):
 class Scale:
     def __init__(self,ground_letter,kind="may"):
         ground = Tune(ground_letter,-(ground_letter in "ab"),0)
+        self.modes = [None,None]
+
+
         if kind=="may":
             add = [0,2,4,5,7,9,11]
             self.modes[0] = ModeHandler({1: 0, 2: 1, 3: 2, 4: 3, 6: 4, 8: 5, 10: 6}, {5: +1, 7: -1})
@@ -154,10 +157,8 @@ class Scale:
             self.modes[0] = ModeHandler({1: 0, 2: 1, 3: 2, 4: 3}, {5: +1, 7: -1, 6: +3, 8: -3})
             self.modes[1] = ModeHandler({1: 0, 2: 1, 3: 2, 4: 3}, {5: +1, 7: -1, 6: +3, 8: -3})
         else:
-            add = 0
-        self.modes = [None,None]
+            add = [0]
         self.tones = [change_tune(ground,0,x) for x in add]
-
 
 
     def play_note(self,sh,j,key,mode):
