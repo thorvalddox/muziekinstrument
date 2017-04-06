@@ -2,6 +2,7 @@
 from aplayer import Aplayer
 from input import Keypad
 from time import time,sleep
+import subprocess as sp
 import os
 import json
 
@@ -25,7 +26,7 @@ class SongBuilder():
                 self.song.pop()
             if key in "0123456789":
                 index = "0123456789".index(key)
-                self.song.append([0,2,4,7,9][index % 5]+12*(index//5)-12)
+                self.song.append(index)
     def play(self,sp,mp,influence=1):
         sp.play(0,0)
         spinsleep(6)
@@ -47,6 +48,18 @@ class SongBuilder():
         mp.stop(1)
         sp.stop(0)
 
+def filebuilder():
+    #create intro
+    sp.Popen(("Sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
+             shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+    #create sound
+    sp.Popen(("Sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "7"),
+             shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+    #create notes
+    for c in range(20):
+        pitch = [0,2,4,7,9][c % 5]+12*(c//5)-12
+        sp.Popen(("Sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
+                 shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 
 
 def spinsleep(seconds):
@@ -59,18 +72,11 @@ def spinsleep(seconds):
 
 
 def main():
-    with open("instruments.json") as file:
-        instr = json.load(file)
-    ilist = {}
-    for i in instr:
-        ilist[i["name"]] = i
-    player_start = Aplayer(ilist["deepfry"],1,25)
-    player_main = Aplayer(ilist["deepfry2"],2,25)
-    say("ready")
+    filebuilder()
     s = SongBuilder(Keypad())
     while True:
         s.build()
-        s.play(player_start,player_main)
+
 
 if __name__=="__main__":
     main()
