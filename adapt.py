@@ -29,10 +29,12 @@ class SongBuilder():
     def play(self,sp,mp):
         sp.play(0,0)
         spinsleep(6)
-        sp.stop(0)
         channel = False
         for s in self.song:
             mp.play(channel,s)
+            spinsleep(0.1)
+            sp.stop(0)
+            mp.stop(not channel,s)
             channel ^= True
             spinsleep(1)
         spinsleep(6)
