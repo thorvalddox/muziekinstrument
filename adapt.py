@@ -29,7 +29,7 @@ class SongBuilder():
                 self.song.append(index)
     def concat(self):
         print("building full song")
-        sp.Popen(("sox",)+ tuple("sounds/base{}.wav".format(index) for index in self.song) + ('sounds/result.wav',),
+        sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}.wav".format(index) for index in self.song) + ('sounds/result.wav',),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
         print("done building song")
     def play(self):

@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+            <state relative-caret-position="255">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00153" summary="Fixed generator has no len">
-      <created>1472913470029</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1472913470030</updated>
-    </task>
     <task id="LOCAL-00154" summary="Sped up intro tune">
       <created>1472913517631</created>
       <option name="number" value="00154" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491489761598</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <task id="LOCAL-00210" summary="fixed incorrect paths">
+      <created>1491489841936</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1491489841937</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed error&#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 71, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 68, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 37, in play&#10;    mp.stop(not channel,s)&#10;TypeError: stop() takes 2 positional arguments but 3 were given&#10;" />
     <MESSAGE value="fixed sound lenghts in json file." />
     <MESSAGE value="shortened tune" />
     <MESSAGE value="maxed verflow" />
@@ -874,7 +873,8 @@
     <MESSAGE value="Added play command" />
     <MESSAGE value="Added buildin debug messages" />
     <MESSAGE value="Added concat command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added concat command" />
+    <MESSAGE value="fixed incorrect paths" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed incorrect paths" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        <state relative-caret-position="255">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
