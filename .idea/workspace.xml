@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="67" column="41" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+            <state relative-caret-position="254">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00148" summary="changed base pitch">
-      <created>1472911159213</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1472911159213</updated>
-    </task>
     <task id="LOCAL-00149" summary="Added close and access mode">
       <created>1472911718079</created>
       <option name="number" value="00149" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491488998778</updated>
     </task>
-    <option name="localTasksCounter" value="205" />
+    <task id="LOCAL-00205" summary="changed shell to false">
+      <created>1491489045426</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1491489045426</updated>
+    </task>
+    <option name="localTasksCounter" value="206" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="corrected instruments.json" />
     <MESSAGE value="Added extra channel to compensate for empty pauses" />
     <MESSAGE value="shorted ending sequence" />
     <MESSAGE value="Added stuff" />
@@ -874,7 +873,8 @@
     <MESSAGE value="Added process lisener" />
     <MESSAGE value="Fixed file interactions" />
     <MESSAGE value="more debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="more debug" />
+    <MESSAGE value="changed shell to false" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed shell to false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="67" column="41" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+        <state relative-caret-position="254">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>

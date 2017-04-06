@@ -27,26 +27,11 @@ class SongBuilder():
             if key in "0123456789":
                 index = "0123456789".index(key)
                 self.song.append(index)
-    def play(self,sp,mp,influence=1):
-        sp.play(0,0)
-        spinsleep(6)
-        sp.stop(0)
-        mp.play(0,0)
-        channel = False
-        # for s in self.song:
-        #     mp.play(channel,s)
-        #     spinsleep(influence)
-        #     sp.stop(0)
-        #     mp.stop(not channel)
-        #     channel ^= True
-        #     spinsleep(1-influence)
-        for s in self.song:
-            mp.play(0,s)
-            spinsleep(5)
-        spinsleep(6)
-        mp.stop(0)
-        mp.stop(1)
-        sp.stop(0)
+        sp.Popen(("sox",)+ tuple("base{}.wav".format(index) for index in self.song) + ('result.wav',),
+                 shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
+    def play(self):
+        sp.Popen(("aplay",'result.wav',),
+                 shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
 
 
 def filebuilder():
@@ -61,7 +46,7 @@ def filebuilder():
     procs.append(sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
              shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     #create sound
-    procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "7"),
+    procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "1"),
              shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     #create notes
     for c in range(20):
@@ -69,7 +54,7 @@ def filebuilder():
         procs.append(sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     print("waiting for processes")
-    print(procs)
+    #print(procs)
     [p.wait() for p in procs]
     print("done building soundfiles")
 
