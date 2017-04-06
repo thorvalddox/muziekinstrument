@@ -31,5 +31,17 @@
     "file": "kettle.wav",
     "shift": -7,
     "source": "http://soundbible.com/1437-Kettle-Whistle.html"
+  },
+  {
+    "name": "deepfry",
+    "file": "deepfry.wav",
+    "shift": 0,
+    "source": "recorded"
+  },
+  {
+    "name": "deepfry2",
+    "file": "deepfry.wav",
+    "shift": 7,
+    "source": "recorded"
   }
 ]
