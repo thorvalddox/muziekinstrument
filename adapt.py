@@ -51,8 +51,8 @@ def main():
     ilist = {}
     for i in instr:
         ilist[i["name"]] = i
-    player_start = Aplayer(ilist["deepfry"], 1,50)
-    player_main = Aplayer(ilist["deepfry2"],1,50)
+    player_start = Aplayer(ilist["deepfry"], 1,25)
+    player_main = Aplayer(ilist["deepfry2"],1,25)
     s = SongBuilder(Keypad())
     while True:
         s.build()
