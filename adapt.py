@@ -26,7 +26,7 @@ class SongBuilder():
             if key in "0123456789":
                 index = "0123456789".index(key)
                 self.song.append([0,2,4,7,9][index % 5]+12*(index//5)-12)
-    def play(self,sp,mp,influence=1):
+    def play(self,sp,mp,influence=0.01):
         sp.play(0,0)
         spinsleep(6)
         channel = False

@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+            <state relative-caret-position="135">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00142" summary="Added buffer multiplier">
-      <created>1472657566041</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1472657566042</updated>
-    </task>
     <task id="LOCAL-00143" summary="Added some other stuff">
       <created>1472657654384</created>
       <option name="number" value="00143" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491486289752</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="upped influence again">
+      <created>1491486448818</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1491486448818</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed modes&#10;&#10;len(scale) specific -&gt; scale.kind specific&#10;&#10;swapped button 10 and 8 from minor scale" />
     <MESSAGE value="Deleted test.txt&#10;&#10;large file that does nothing" />
     <MESSAGE value="changed input to check for other devices then joystick" />
     <MESSAGE value="Added keypad test" />
@@ -874,7 +873,8 @@
     <MESSAGE value="Added and changed influence parameter" />
     <MESSAGE value="upped influence" />
     <MESSAGE value="Added debug flags" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added debug flags" />
+    <MESSAGE value="upped influence again" />
+    <option name="LAST_COMMIT_MESSAGE" value="upped influence again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="135">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
