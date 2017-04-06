@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+            <state relative-caret-position="237">
+              <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -557,13 +557,6 @@
       <option name="project" value="LOCAL" />
       <updated>1472913739177</updated>
     </task>
-    <task id="LOCAL-00163" summary="fixed analog error">
-      <created>1472738587288</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1472738587289</updated>
-    </task>
     <task id="LOCAL-00164" summary="added 7-based scale in favor of 6-based scale">
       <created>1472746429582</created>
       <option name="number" value="00164" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491487189210</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <task id="LOCAL-00200" summary="created filebuilder">
+      <created>1491488404951</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1491488404951</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added song programmer" />
     <MESSAGE value="Fixed invalid sound info" />
     <MESSAGE value="changed jumping" />
     <MESSAGE value="chenged sleep by spinsleep" />
@@ -874,7 +873,8 @@
     <MESSAGE value="inscreased spinsleep" />
     <MESSAGE value="Added spinsleep before killing process to give replacement time to start" />
     <MESSAGE value="even more time" />
-    <option name="LAST_COMMIT_MESSAGE" value="even more time" />
+    <MESSAGE value="created filebuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="created filebuilder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+        <state relative-caret-position="237">
+          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>

@@ -49,18 +49,19 @@ class SongBuilder():
         sp.stop(0)
 
 def filebuilder():
+    print("buidling sound files")
     #create intro
-    sp.Popen(("Sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
+    sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
              shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
     #create sound
-    sp.Popen(("Sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "7"),
+    sp.Popen(("sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "7"),
              shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
     #create notes
     for c in range(20):
         pitch = [0,2,4,7,9][c % 5]+12*(c//5)-12
-        sp.Popen(("Sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
+        sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
                  shell=True, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
-
+    print("done building soundfiles")
 
 def spinsleep(seconds):
     start = time()
