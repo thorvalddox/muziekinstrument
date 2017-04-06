@@ -2,8 +2,17 @@ __author__ = 'thorvald'
 
 import subprocess as sp
 import os
+from time import time,sleep
 
 devnull = open(os.devnull, 'wb')
+
+def spinsleep(seconds):
+    start = time()
+    if seconds > 1:
+        sleep(seconds - 1)
+    while time() < start + seconds:
+        pass
+
 
 
 class Aplayer():
@@ -26,6 +35,7 @@ class Aplayer():
         old_proc = self.processes[process_id]
         self.processes[process_id] = sp.Popen((tuple(self.get_args(pitch))),
                                               shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+        spinsleep(0.3)
         if old_proc is not None:
             old_proc.kill()
     def get_args(self,pitch):
