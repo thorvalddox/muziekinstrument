@@ -22,11 +22,11 @@ class Aplayer():
         self.volume = sound.get("volume",0)
 
     def play(self, process_id, pitch):
-        self.stop(process_id)
-
+        #self.stop(process_id)
+        old_proc = self.processes[process_id]
         self.processes[process_id] = sp.Popen((tuple(self.get_args(pitch))),
                                               shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
-        print("started", process_id)
+        old_proc.kill()
     def get_args(self,pitch):
         yield "sox"
         yield self.filename
@@ -44,7 +44,6 @@ class Aplayer():
 
     def stop(self, process_id):
         if self.processes[process_id] is not None:
-            print("stopped",process_id)
             self.processes[process_id].kill()
             self.processes[process_id] = None
 
