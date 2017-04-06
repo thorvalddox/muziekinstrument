@@ -41,7 +41,7 @@ class SongBuilder():
         #     spinsleep(1-influence)
         for s in self.song:
             mp.play(0,s)
-            spinsleep(1)
+            spinsleep(5)
         spinsleep(6)
         mp.stop(0)
         mp.stop(1)
