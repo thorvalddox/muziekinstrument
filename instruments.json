@@ -36,14 +36,14 @@
     "name": "deepfry",
     "file": "deepfry.wav",
     "shift": 0,
-    "lenght": 1,
+    "lenght": 2,
     "source": "recorded"
   },
   {
     "name": "deepfry2",
     "file": "deepfry.wav",
     "shift": 0,
-    "start": 6,
+    "start": 7,
     "lenght": 1,
     "source": "recorded"
   }

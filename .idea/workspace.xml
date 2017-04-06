@@ -4,6 +4,7 @@
     <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adapt.py" afterPath="$PROJECT_DIR$/adapt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instruments.json" afterPath="$PROJECT_DIR$/instruments.json" />
     </list>
     <ignored path="muziekinstrument.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adapt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state relative-caret-position="237">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -74,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instruments.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="instruments.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/instruments.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+            <state relative-caret-position="238">
+              <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -129,8 +130,8 @@
         <option value="$PROJECT_DIR$/tunes.json" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/input.py" />
-        <option value="$PROJECT_DIR$/instruments.json" />
         <option value="$PROJECT_DIR$/adapt.py" />
+        <option value="$PROJECT_DIR$/instruments.json" />
       </list>
     </option>
   </component>
@@ -473,13 +474,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00135" summary="added frequentie">
-      <created>1472656614507</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1472656614508</updated>
-    </task>
     <task id="LOCAL-00136" summary="doubled framespeed">
       <created>1472657067677</created>
       <option name="number" value="00136" />
@@ -816,7 +810,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491485541053</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="fixed error&#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 71, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 68, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 37, in play&#10;    mp.stop(not channel,s)&#10;TypeError: stop() takes 2 positional arguments but 3 were given&#10;">
+      <created>1491485622904</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1491485622904</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +850,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixes" />
     <MESSAGE value="Added tone scales" />
     <MESSAGE value="fixed mode modes error" />
     <MESSAGE value="fixed invalid default mode" />
@@ -874,7 +874,8 @@
     <MESSAGE value="shorted ending sequence" />
     <MESSAGE value="Added stuff" />
     <MESSAGE value="Corrected channel smooting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected channel smooting" />
+    <MESSAGE value="fixed error&#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 71, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 68, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 37, in play&#10;    mp.stop(not channel,s)&#10;TypeError: stop() takes 2 positional arguments but 3 were given&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error&#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 71, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 68, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 37, in play&#10;    mp.stop(not channel,s)&#10;TypeError: stop() takes 2 positional arguments but 3 were given&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1184,11 +1185,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instruments.json">
+    <entry file="file://$PROJECT_DIR$/aplayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="118">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding>
+            <element signature="e#25#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1202,23 +1205,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aplayer.py">
+    <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="237">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
           <folding>
-            <element signature="e#25#48#0" expanded="true" />
+            <element signature="e#1#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adapt.py">
+    <entry file="file://$PROJECT_DIR$/instruments.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding>
-            <element signature="e#1#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
