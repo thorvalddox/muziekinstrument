@@ -30,9 +30,14 @@ class SongBuilder():
         sp.play(0,0)
         spinsleep(6)
         sp.stop(0)
+        channel = False
         for s in self.song:
-            mp.play(0,s)
+            mp.play(channel,s)
+            channel ^= True
             spinsleep(1)
+        spinsleep(12)
+        mp.stop(0)
+        sp.stop(0)
 
 
 
@@ -51,8 +56,8 @@ def main():
     ilist = {}
     for i in instr:
         ilist[i["name"]] = i
-    player_start = Aplayer(ilist["deepfry"], 1,25)
-    player_main = Aplayer(ilist["deepfry2"],1,25)
+    player_start = Aplayer(ilist["deepfry"],1,25)
+    player_main = Aplayer(ilist["deepfry2"],2,25)
     s = SongBuilder(Keypad())
     while True:
         s.build()
