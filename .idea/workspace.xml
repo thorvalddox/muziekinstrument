@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="53" column="17" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="17" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00173" summary="Returns numbers as strings">
-      <created>1491478273415</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1491478273415</updated>
-    </task>
     <task id="LOCAL-00174" summary="Added return and dot key">
       <created>1491478371077</created>
       <option name="number" value="00174" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491493116364</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="lenghtened sleep">
+      <created>1491493257453</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1491493257453</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,7 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="edited intruments;json" />
     <MESSAGE value="inscreased spinsleep" />
     <MESSAGE value="Added spinsleep before killing process to give replacement time to start" />
     <MESSAGE value="even more time" />
@@ -874,7 +873,8 @@
     <MESSAGE value="fixed stupid error" />
     <MESSAGE value="deleted useless import" />
     <MESSAGE value="Fixed race condition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed race condition" />
+    <MESSAGE value="lenghtened sleep" />
+    <option name="LAST_COMMIT_MESSAGE" value="lenghtened sleep" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="17" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>
