@@ -55,7 +55,7 @@ def filebuilder():
     procs.append(sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
              shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     #create sound
-    procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/base.wav".format(vars), "trim", "6", "1"),
+    procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "1"),
              shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
 
     #create notes

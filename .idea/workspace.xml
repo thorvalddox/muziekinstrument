@@ -43,8 +43,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="65" column="77" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
+            <state relative-caret-position="153">
+              <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -473,13 +473,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00169" summary="Added keypad test">
-      <created>1491477239150</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1491477239150</updated>
-    </task>
     <task id="LOCAL-00170" summary="fixed invalid string formatting">
       <created>1491477299092</created>
       <option name="number" value="00170" />
@@ -816,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491491572172</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="fixed indices">
+      <created>1491491667056</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1491491667056</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -849,8 +849,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="lowered influence" />
-    <MESSAGE value="changed processing in other file so a porcess is only killed after a new process on the same thread has already started" />
     <MESSAGE value="fixed &#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 74, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 71, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 30, in play&#10;    sp.play(0,0)&#10;  File &quot;/home/pi/Documents/muziekinstrument/aplayer.py&quot;, line 29, in play&#10;    old_proc.kill()&#10;AttributeError: 'NoneType' object has no attribute 'kill'&#10;" />
     <MESSAGE value="fixed intro not stopping" />
     <MESSAGE value="edited intruments;json" />
@@ -874,7 +872,9 @@
     <MESSAGE value="fixed deleting unexistant file" />
     <MESSAGE value="catching the coreect error this time" />
     <MESSAGE value="removed variance" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed variance" />
+    <MESSAGE value="fixed indices" />
+    <MESSAGE value="fixed stupid error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed stupid error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="65" column="77" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
+        <state relative-caret-position="153">
+          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
