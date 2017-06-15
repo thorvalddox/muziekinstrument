@@ -6,7 +6,8 @@ from random import randrange
 
 
 def say(text):
-    os.system("espeak \"{}\"".format(text))
+    sp.Popen(("espeak", text,),
+             shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 
 
 class SongBuilder:
