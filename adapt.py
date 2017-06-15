@@ -39,6 +39,9 @@ class SongBuilder():
         sp.Popen(("aplay",'sounds/result.wav',),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 
+def play_song(key):
+    sp.Popen(("aplay",'sounds/song{}.wav'.format(key),),
+             shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 
 def easy_song_builder(s):
     d = {"c":0,"d":2,"e":4,"f":5,"g":7,"a":8,"b":10,"h":9}
@@ -49,19 +52,27 @@ def easy_song_builder(s):
 class Premade_sound():
     all_ = {}
     def __init__(self,key,tune):
-        self.songb = SongBuilder()
         if isinstance(tune, str):
             tune = easy_song_builder(tune)
-        self.songb.song = tune
-        self.songb.concat()
+        self.song = tune
+        self.concat("sounds/song{}.wav".format(key))
         Premade_sound.all_[key] = self
+    def concat(self,filename):
+        try:
+            os.remove(filename)
+        except FileNotFoundError:
+            pass
+        print("building full song")
+        sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}_tune{:02}.wav".format(randrange(4,10),index) for index in self.song) + (filename,),
+                 shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
+        print("done building song")
     def __call__(self):
         self.songb.play()
     @staticmethod
     def listen(keypad):
         for key in keypad.key_gen():
             if key in "0123456789":
-                Premade_sound.all_[key]()
+                play_song(key)
             if key == ".":
                 Filebuilder()
 
