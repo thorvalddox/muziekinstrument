@@ -12,10 +12,10 @@ def say(text):
 
 
 class SongBuilder():
-    def __init__(self,keypad):
+    def __init__(self):
         self.song = []
-        self.keypad = keypad
-        self.keygen = self.keypad.key_gen
+        #self.keypad = keypad
+        #self.keygen = self.keypad.key_gen
     def build(self):
         self.song = []
         for key in self.keygen():
@@ -140,6 +140,7 @@ def main():
     Filebuilder()
     #s = SongBuilder(Keypad())
     k = Keypad()
+    print("Init keypad")
     Premade_sound("0","gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
     say("ready for some music")
     Premade_sound.listen(k)

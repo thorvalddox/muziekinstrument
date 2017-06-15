@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="147" column="24" lean-forward="true" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
+            <state relative-caret-position="179">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00180" summary="Added extra channel to compensate for empty pauses">
-      <created>1491485098372</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1491485098372</updated>
-    </task>
     <task id="LOCAL-00181" summary="shorted ending sequence">
       <created>1491485167845</created>
       <option name="number" value="00181" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497520917941</updated>
     </task>
-    <option name="localTasksCounter" value="229" />
+    <task id="LOCAL-00229" summary="Changed input style">
+      <created>1497524536761</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1497524536761</updated>
+    </task>
+    <option name="localTasksCounter" value="230" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="more debug" />
     <MESSAGE value="changed shell to false" />
     <MESSAGE value="Added concats in builder" />
     <MESSAGE value="Added play command" />
@@ -880,7 +879,8 @@
     <MESSAGE value="Fixed incorrectly creating base files" />
     <MESSAGE value="Simplified sound filenames" />
     <MESSAGE value="Fixed not creating all variants (generator/list mismatch)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed not creating all variants (generator/list mismatch)" />
+    <MESSAGE value="Changed input style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed input style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="147" column="24" lean-forward="true" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
+        <state relative-caret-position="179">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>
