@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="442">
+              <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00181" summary="shorted ending sequence">
-      <created>1491485167845</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1491485167845</updated>
-    </task>
     <task id="LOCAL-00182" summary="Added stuff">
       <created>1491485305496</created>
       <option name="number" value="00182" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497524536761</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="Fixed songbuilder requesting keypad">
+      <created>1497524659279</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1497524659279</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed shell to false" />
     <MESSAGE value="Added concats in builder" />
     <MESSAGE value="Added play command" />
     <MESSAGE value="Added buildin debug messages" />
@@ -880,7 +879,8 @@
     <MESSAGE value="Simplified sound filenames" />
     <MESSAGE value="Fixed not creating all variants (generator/list mismatch)" />
     <MESSAGE value="Changed input style" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed input style" />
+    <MESSAGE value="Fixed songbuilder requesting keypad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed songbuilder requesting keypad" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="442">
+          <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>

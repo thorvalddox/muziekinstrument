@@ -74,10 +74,13 @@ class Filebuilder:
                 os.remove(file_path)
         self.procs = []
         self.variants = []
+        print("creating intro")
         self.create_intro()
+        print("creating base sounds")
         for i in range(4,10):
             self.create_base_sound(i)
         self.wait()
+        print("creating tunes")
         self.repitch_sound(list(range(12*4+1)))
     def wait(self):
         [p.wait() for p in self.procs]
