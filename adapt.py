@@ -152,7 +152,7 @@ class Filebuilder:
 
     def build_songs(self):
         print("building songs")
-        Premade_sound("0", "gggc aaaf CCDa ggCh  aaaa hhhh CCCC EECC  hhhh aaaa gggg gggg")
+        Premade_sound("0", "gggc aaaf CCDa ggCh  aahh CCEC hhaa gggg")
 
 
 def filebuilder():
