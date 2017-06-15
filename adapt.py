@@ -1,21 +1,20 @@
-
-
 from input import Keypad
-from time import time,sleep
+from time import time, sleep
 import subprocess as sp
 import os
 from random import randrange
+
 
 def say(text):
     os.system("espeak \"{}\"".format(text))
 
 
-
-class SongBuilder():
-    def __init__(self):
+class SongBuilder:
+    def __init__(self, keypad):
         self.song = []
-        #self.keypad = keypad
-        #self.keygen = self.keypad.key_gen
+        self.keypad = keypad
+        self.keygen = self.keypad.key_gen
+
     def build(self):
         self.song = []
         for key in self.keygen():
@@ -26,43 +25,54 @@ class SongBuilder():
             if key in "0123456789":
                 index = "0123456789".index(key)
                 self.song.append(index)
+
     def concat(self):
         try:
             os.remove('sounds/result.wav')
         except FileNotFoundError:
             pass
         print("building full song")
-        sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}_tune{:02}.wav".format(randrange(4,10),index) for index in self.song) + ('sounds/result.wav',),
+        sp.Popen(("sox", "sounds/intro.wav") + tuple(
+            "sounds/base{}_tune{:02}.wav".format(randrange(4, 10), index) for index in self.song) + (
+                 'sounds/result.wav',),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
         print("done building song")
+
     def play(self):
-        sp.Popen(("aplay",'sounds/result.wav',),
+        sp.Popen(("aplay", 'sounds/result.wav',),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 
+
 def play_song(key):
-    sp.Popen(("aplay",'sounds/song{}.wav'.format(key),),
+    sp.Popen(("aplay", 'sounds/song{}.wav'.format(key),),
              shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 
+
 def easy_song_builder(s):
-    d = {"c":0,"d":2,"e":4,"f":5,"g":7,"a":8,"b":10,"h":9}
-    d.update([(k.upper(),v+12) for k,v in d.items()])
+    d = {"c": 0, "d": 2, "e": 4, "f": 5, "g": 7, "a": 8, "b": 10, "h": 9}
+    d.update([(k.upper(), v + 12) for k, v in d.items()])
     for i in s:
         yield d[i]
 
-def raw_concat(result,*songs):
+
+def raw_concat(result, *songs):
     assert len(songs) < 24
     return sp.Popen(("sox",) + tuple(songs) + (result,),
-             shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+                    shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+
 
 class Premade_sound():
     all_ = {}
-    def __init__(self,key,tune):
+
+    def __init__(self, key, tune):
         if isinstance(tune, str):
             tune = easy_song_builder(tune)
+        tune = list(tune)
         self.song = tune
         self.concat("sounds/song{}.wav".format(key))
         Premade_sound.all_[key] = self
-    def concat(self,filename):
+
+    def concat(self, filename):
         try:
             os.remove(filename)
         except FileNotFoundError:
@@ -70,14 +80,11 @@ class Premade_sound():
         print("building full song")
         number_of_batches = len(self.song) // 16
         for i in range(number_of_batches):
-            print("combining batch",i)
+            print("combining batch", i)
             raw_concat("sounds/songtemp{}.wav".format(i)).wait()
-        raw_concat(filename,"sounds/intro.wav",*("sounds/songtemp{}.wav".format(i) for i in range(number_of_batches)))
+        raw_concat(filename, "sounds/intro.wav", *("sounds/songtemp{}.wav".format(i) for i in range(number_of_batches)))
         print("done building song")
 
-
-    def __call__(self):
-        self.songb.play()
     @staticmethod
     def listen(keypad):
         for key in keypad.key_gen():
@@ -85,7 +92,6 @@ class Premade_sound():
                 play_song(key)
             if key == ".":
                 Filebuilder()
-
 
 
 class Filebuilder:
@@ -101,37 +107,41 @@ class Filebuilder:
         print("creating intro")
         self.create_intro()
         print("creating base sounds")
-        for i in range(4,10):
+        for i in range(4, 10):
             self.create_base_sound(i)
         self.wait()
         print("creating tunes")
-        self.repitch_sound(list(range(12*4+1)))
+        self.repitch_sound(list(range(12 * 4 + 1)))
         self.wait()
         self.build_songs()
         self.wait()
         print("done initializing")
+
     def wait(self):
         [p.wait() for p in self.procs]
-    def new_proc(self,*args):
+
+    def new_proc(self, *args):
         self.procs.append(sp.Popen(args,
-                              shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
+                                   shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
+
     def create_intro(self):
         self.new_proc("sox", "deepfry.wav", "sounds/intro.wav", "trim", "0", "6")
-    def create_base_sound(self,index):
+
+    def create_base_sound(self, index):
         self.new_proc("sox", "deepfry.wav", "sounds/base{}.wav".format(index), "trim", "{}".format(index), "1")
         self.variants.append(index)
-    def repitch_sound(self,pitches):
+
+    def repitch_sound(self, pitches):
         for index in self.variants:
             self.wait()
-            print("processing batch ",index)
-            for i,pitch in enumerate(pitches):
-                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index,i),
-                              "pitch", "{:+}".format((pitch-12) * 100))
+            print("processing batch ", index)
+            for i, pitch in enumerate(pitches):
+                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index, i),
+                              "pitch", "{:+}".format((pitch - 12) * 100))
+
     def build_songs(self):
         print("building songs")
         Premade_sound("0", "gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
-
-
 
 
 def filebuilder():
@@ -141,25 +151,27 @@ def filebuilder():
         if os.path.isfile(file_path):
             os.remove(file_path)
     print("buidling sound files")
-    procs = []
-    #create intro
-    procs.append(sp.Popen(("sox","deepfry.wav","sounds/intro.wav","trim","0","6"),
-             shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
-    #create sound
+    procs = list()
+    # create intro
+    procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/intro.wav", "trim", "0", "6"),
+                          shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
+    # create sound
     procs.append(sp.Popen(("sox", "deepfry.wav", "sounds/base.wav", "trim", "6", "1"),
-             shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
+                          shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
 
     [p.wait() for p in procs]
-    #create notes
+    # create notes
 
     for c in range(20):
-        pitch = [0,2,4,7,9][c % 5]+12*(c//5)-12
-        procs.append(sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch*100)),
-                 shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
+        pitch = [0, 2, 4, 7, 9][c % 5] + 12 * (c // 5) - 12
+        procs.append(
+            sp.Popen(("sox", "sounds/base.wav", "sounds/base{}.wav".format(c), "pitch", "{:+}".format(pitch * 100)),
+                     shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE))
     print("waiting for processes")
-    #print(procs)
+    # print(procs)
     [p.wait() for p in procs]
     print("done building soundfiles")
+
 
 def spinsleep(seconds):
     start = time()
@@ -169,17 +181,15 @@ def spinsleep(seconds):
         pass
 
 
-
 def main():
+    # filebuilder()
 
-    #filebuilder()
-
-    #s = SongBuilder(Keypad())
+    # s = SongBuilder(Keypad())
     print("Init keypad")
     k = Keypad()
     say("ready for some music")
     Premade_sound.listen(k)
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
