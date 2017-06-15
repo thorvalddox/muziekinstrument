@@ -49,7 +49,7 @@ def easy_song_builder(s):
 class Premade_sound():
     all_ = {}
     def __init__(self,key,tune):
-        self.songb = SongBuilder(...)
+        self.songb = SongBuilder()
         if isinstance(tune, str):
             tune = easy_song_builder(tune)
         self.songb.song = tune
