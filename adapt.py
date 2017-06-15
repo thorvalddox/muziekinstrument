@@ -2,8 +2,9 @@ from input import Keypad
 from time import time, sleep
 import subprocess as sp
 import os
-from random import randrange
+from random import choice
 
+ALLOWED_SECONDS = [6,7,8,9,10,11,12,13,14,15]
 
 def say(text):
     sp.Popen(("espeak", text,),
@@ -91,9 +92,10 @@ class Premade_sound():
         batches = chunks(self.song,16)
         for i,b in enumerate(batches):
             raw_concat("sounds/songtemp{}.wav".format(i),
-                       *("sounds/base{}_tune{:02}.wav".format(randrange(4, 10), s) for s in b)).wait()
+                       *("sounds/base{}_tune{:02}.wav".format(choice(ALLOWED_SECONDS), s) for s in b)).wait()
         raw_concat(filename, "sounds/intro.wav",
-                   *("sounds/songtemp{}.wav".format(i) for i in range(len(self.song)//16))).wait()
+                   *(tuple("sounds/songtemp{}.wav".format(i) for i in range(len(self.song)//16)) +
+                     ("sounds/outtro.wav",))).wait()
         print("done building song")
 
     @staticmethod
@@ -118,7 +120,7 @@ class Filebuilder:
         print("creating intro")
         self.create_intro()
         print("creating base sounds")
-        for i in range(4, 10):
+        for i in ALLOWED_SECONDS:
             self.create_base_sound(i)
         self.wait()
         print("creating tunes")
@@ -137,6 +139,7 @@ class Filebuilder:
 
     def create_intro(self):
         self.new_proc("sox", "deepfry.wav", "sounds/intro.wav", "trim", "0", "6")
+        self.new_proc("sox", "deepfry.wav", "sounds/outtro.wav", "trim", "25", "6")
 
     def create_base_sound(self, index):
         self.new_proc("sox", "deepfry.wav", "sounds/base{}.wav".format(index), "trim", "{}".format(index), "1")
