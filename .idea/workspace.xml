@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
+            <state relative-caret-position="238">
+              <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00197" summary="inscreased spinsleep">
-      <created>1491487016103</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1491487016103</updated>
-    </task>
     <task id="LOCAL-00198" summary="Added spinsleep before killing process to give replacement time to start">
       <created>1491487126681</created>
       <option name="number" value="00198" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497527438772</updated>
     </task>
-    <option name="localTasksCounter" value="246" />
+    <task id="LOCAL-00246" summary="delete random variance">
+      <created>1497527768026</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1497527768026</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,8 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed indices" />
-    <MESSAGE value="fixed stupid error" />
     <MESSAGE value="deleted useless import" />
     <MESSAGE value="Fixed race condition" />
     <MESSAGE value="lenghtened sleep" />
@@ -880,7 +878,9 @@
     <MESSAGE value="upgraded say()" />
     <MESSAGE value="fixed invalid pitch numbers" />
     <MESSAGE value="fixed invalid pitch numbers for real" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed invalid pitch numbers for real" />
+    <MESSAGE value="delete random variance" />
+    <MESSAGE value="Try fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
+        <state relative-caret-position="238">
+          <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>

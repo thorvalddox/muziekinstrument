@@ -60,6 +60,7 @@ def easy_song_builder(s):
 
 
 def raw_concat(result, *songs):
+    print("sox",*(songs + (result,)))
     assert len(songs) < 24
     return sp.Popen(("sox",) + tuple(songs) + (result,),
                     shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
