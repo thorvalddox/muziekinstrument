@@ -53,7 +53,10 @@ def easy_song_builder(s):
     d = {"c": 0, "d": 2, "e": 4, "f": 5, "g": 7, "a": 8, "b": 10, "h": 9}
     d.update([(k.upper(), v + 12) for k, v in d.items()])
     for i in s:
-        yield d[i]
+        try:
+            yield d[i]
+        except KeyError:
+            pass
 
 
 def raw_concat(result, *songs):
@@ -142,12 +145,12 @@ class Filebuilder:
             self.wait()
             print("processing batch ", index)
             for i, pitch in enumerate(pitches):
-                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index, i),
+                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(pitch, i),
                               "pitch", "{:+}".format((pitch - 12) * 100))
 
     def build_songs(self):
         print("building songs")
-        Premade_sound("0", "gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
+        Premade_sound("0", "gggc aaaf CCDa ggCh  aaaa hhhh CCCC EECC  hhhh aaaa gggg gggg")
 
 
 def filebuilder():

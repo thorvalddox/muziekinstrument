@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            <state relative-caret-position="374">
+              <caret line="148" column="73" lean-forward="true" selection-start-line="148" selection-start-column="73" selection-end-line="148" selection-end-column="73" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00194" summary="fixed &#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 74, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 71, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 30, in play&#10;    sp.play(0,0)&#10;  File &quot;/home/pi/Documents/muziekinstrument/aplayer.py&quot;, line 29, in play&#10;    old_proc.kill()&#10;AttributeError: 'NoneType' object has no attribute 'kill'&#10;">
-      <created>1491486789905</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1491486789906</updated>
-    </task>
     <task id="LOCAL-00195" summary="fixed intro not stopping">
       <created>1491486880258</created>
       <option name="number" value="00195" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497526983152</updated>
     </task>
-    <option name="localTasksCounter" value="243" />
+    <task id="LOCAL-00243" summary="upgraded say()">
+      <created>1497527055889</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1497527055889</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed deleting unexistant file" />
     <MESSAGE value="catching the coreect error this time" />
     <MESSAGE value="removed variance" />
     <MESSAGE value="fixed indices" />
@@ -880,7 +879,8 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="reformat" />
     <MESSAGE value="deleted unnesesairy pitches" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted unnesesairy pitches" />
+    <MESSAGE value="upgraded say()" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgraded say()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="374">
+          <caret line="148" column="73" lean-forward="true" selection-start-line="148" selection-start-column="73" selection-end-line="148" selection-end-column="73" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
