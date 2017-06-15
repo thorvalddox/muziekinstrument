@@ -3,6 +3,7 @@ from time import time, sleep
 import subprocess as sp
 import os
 from random import choice
+from math import ceil
 
 ALLOWED_SECONDS = [6,7,8,9]
 
@@ -94,7 +95,7 @@ class Premade_sound():
             raw_concat("sounds/songtemp{}.wav".format(i),
                        *("sounds/base{}_tune{:02}.wav".format(choice(ALLOWED_SECONDS), s) for s in b)).wait()
         raw_concat(filename, "sounds/intro.wav",
-                   *(tuple("sounds/songtemp{}.wav".format(i) for i in range(len(self.song)//16)) +
+                   *(tuple("sounds/songtemp{}.wav".format(i) for i in range(int(ceil(len(self.song)/16)))) +
                      ("sounds/outtro.wav",))).wait()
         print("done building song")
 
@@ -156,7 +157,7 @@ class Filebuilder:
     def build_songs(self):
         print("building songs")
         Premade_sound("0", "gggd bbbg DDED aaDC  bbCC DDEC bbaa gggg")
-        Premade_sound("1", "gabggabg bCDDbCDD DCbgDCbg gdg gdg")
+        Premade_sound("1", "gabggabg bCDDbCDD DCbgDCbg gdgg gdgg")
         Premade_sound("2", "cegC aCgg ffee dggg cegC aCgg ffee ddcc")
         Premade_sound("3", "cgag fedc gfed gfed cgag fedc")
         Premade_sound("4", "CEGECC bbCCFF bDFDbb CCEEGG CEGECC bbCCFF bDFDbb CCEECC")
