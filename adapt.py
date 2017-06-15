@@ -50,7 +50,7 @@ def play_song(key):
 
 
 def easy_song_builder(s):
-    d = {"c": 0, "d": 2, "e": 4, "f": 5, "g": 7, "a": 8, "b": 10, "h": 9}
+    d = {"c": 0, "d": 2, "e": 4, "f": 5, "g": 7, "a": 9, "b": 11, "h": 10}
     d.update([(k.upper(), v + 12) for k, v in d.items()])
     for i in s:
         try:
