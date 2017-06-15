@@ -143,7 +143,7 @@ class Filebuilder:
         self.new_proc("sox", "deepfry.wav", "sounds/outtro.wav", "trim", "19", "6")
 
     def create_base_sound(self, index):
-        self.new_proc("sox", "deepfry.wav", "sounds/base{}.wav".format(index), "trim", "{}".format(index), "1")
+        self.new_proc("sox", "deepfry.wav", "sounds/base{}.wav".format(index), "trim", "{}".format(index), "0.5")
         self.variants.append(index)
 
     def repitch_sound(self, pitches):
@@ -159,7 +159,7 @@ class Filebuilder:
         Premade_sound("0", "gggd bbbg DDED aaDC  bbCC DDEC bbaa gggg")
         Premade_sound("1", "gabggabg bCDDbCDD DCbgDCbg gdgg gdgg")
         Premade_sound("2", "cegC aCgg ffee dggg cegC aCgg ffee ddcc")
-        Premade_sound("3", "cgag fedc gfed gfed cgag fedc")
+        Premade_sound("3", "ccggaagg ffeeddcc ggffeedd ggffeedd ccggaagg ffeeddcc")
         Premade_sound("4", "CEGECC bbDDFF bDFDbb CCEEGG CEGECC bbDDFF bDFDbb CCEECC")
         Premade_sound("5", "gcafecdd gcabCDCC")
         Premade_sound("6", "cegCCgecdfaaCafaggccggccgahaggcc")
