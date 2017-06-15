@@ -116,7 +116,7 @@ class Filebuilder:
             self.create_base_sound(i)
         self.wait()
         print("creating tunes")
-        self.repitch_sound(list(range(12 * 4 + 1)))
+        self.repitch_sound(list(easy_song_builder("cdefgabhCDEFGABH")))
         self.wait()
         self.build_songs()
         self.wait()
