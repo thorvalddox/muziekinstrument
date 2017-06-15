@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state relative-caret-position="315">
+              <caret line="152" column="30" lean-forward="true" selection-start-line="152" selection-start-column="30" selection-end-line="152" selection-end-column="30" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00186" summary="shortened tune">
-      <created>1491485781362</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1491485781362</updated>
-    </task>
     <task id="LOCAL-00187" summary="maxed verflow">
       <created>1491485967659</created>
       <option name="number" value="00187" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497524941244</updated>
     </task>
-    <option name="localTasksCounter" value="235" />
+    <task id="LOCAL-00235" summary="Fixd spelling error">
+      <created>1497525019125</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1497525019125</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed incorrect paths" />
     <MESSAGE value="ReAdded intro" />
     <MESSAGE value="Added startup info" />
     <MESSAGE value="Made sounds more natural" />
@@ -880,7 +879,8 @@
     <MESSAGE value="Added wait so tunes are finished becofe concat" />
     <MESSAGE value="Fixed argument" />
     <MESSAGE value="Even more debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Even more debug" />
+    <MESSAGE value="Fixd spelling error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixd spelling error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="315">
+          <caret line="152" column="30" lean-forward="true" selection-start-line="152" selection-start-column="30" selection-end-line="152" selection-end-column="30" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>

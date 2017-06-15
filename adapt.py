@@ -62,11 +62,14 @@ class Premade_sound():
         for key in keypad.key_gen():
             if key in "0123456789":
                 Premade_sound.all_[key]()
+            if key == ".":
+                Filebuilder()
 
 
 
 class Filebuilder:
     def __init__(self):
+        say("reinitializing music file structure")
         folder = 'sounds/'
         for the_file in os.listdir(folder):
             file_path = os.path.join(folder, the_file)
@@ -101,6 +104,8 @@ class Filebuilder:
             for i,pitch in enumerate(pitches):
                 self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index,i),
                               "pitch", "{:+}".format(pitch * 100))
+    def build_songs(self):
+        Premade_sound("0", "gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
 
 
 
@@ -142,14 +147,12 @@ def spinsleep(seconds):
 
 
 def main():
-    say("starting music server")
+
     #filebuilder()
-    Filebuilder()
+
     #s = SongBuilder(Keypad())
-    k = Keypad()
     print("Init keypad")
-    print("Building songs")
-    Premade_sound("0","gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
+    k = Keypad()
     say("ready for some music")
     Premade_sound.listen(k)
 
