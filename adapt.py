@@ -61,7 +61,7 @@ class Filebuilder:
     def create_intro(self):
         self.new_proc("sox", "deepfry.wav", "sounds/intro.wav", "trim", "0", "6")
     def create_base_sound(self,index):
-        self.new_proc("sox", "deepfry.wav", "sounds/base{}.wav".format(index), "trim", index, "1")
+        self.new_proc("sox", "deepfry.wav", "sounds/base{}.wav".format(index), "trim", "{}".format(index), "1")
         self.variants.append(index)
     def repitch_sound(self,pitches):
         for index in self.variants:

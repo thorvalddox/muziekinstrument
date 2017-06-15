@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="wait for base.wav to be created untill sounds are based on it.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adapt.py" afterPath="$PROJECT_DIR$/adapt.py" />
     </list>
@@ -43,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="59" column="62" lean-forward="false" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
+            <state relative-caret-position="417">
+              <caret line="69" column="66" lean-forward="true" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -455,13 +454,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00175" summary="Added song programmer">
-      <created>1491484184524</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1491484184524</updated>
-    </task>
     <task id="LOCAL-00176" summary="Fixed invalid sound info">
       <created>1491484462510</created>
       <option name="number" value="00176" />
@@ -798,7 +790,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491493504663</updated>
     </task>
-    <option name="localTasksCounter" value="224" />
+    <task id="LOCAL-00224" summary="Added randomised sounds to prevent repetitive noise">
+      <created>1497520435311</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1497520435313</updated>
+    </task>
+    <option name="localTasksCounter" value="225" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -843,7 +842,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added spinsleep before killing process to give replacement time to start" />
     <MESSAGE value="even more time" />
     <MESSAGE value="created filebuilder" />
     <MESSAGE value="Added process lisener" />
@@ -868,7 +866,8 @@
     <MESSAGE value="Fixed race condition" />
     <MESSAGE value="lenghtened sleep" />
     <MESSAGE value="wait for base.wav to be created untill sounds are based on it." />
-    <option name="LAST_COMMIT_MESSAGE" value="wait for base.wav to be created untill sounds are based on it." />
+    <MESSAGE value="Added randomised sounds to prevent repetitive noise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added randomised sounds to prevent repetitive noise" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1326,8 +1325,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="59" column="62" lean-forward="false" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
+        <state relative-caret-position="417">
+          <caret line="69" column="66" lean-forward="true" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>
