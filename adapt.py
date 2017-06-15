@@ -4,7 +4,7 @@ import subprocess as sp
 import os
 from random import choice
 
-ALLOWED_SECONDS = [6,7,8,9,10,11,12,13,14,15]
+ALLOWED_SECONDS = [6,7,8,9]
 
 def say(text):
     sp.Popen(("espeak", text,),
@@ -139,7 +139,7 @@ class Filebuilder:
 
     def create_intro(self):
         self.new_proc("sox", "deepfry.wav", "sounds/intro.wav", "trim", "0", "6")
-        self.new_proc("sox", "deepfry.wav", "sounds/outtro.wav", "trim", "25", "6")
+        self.new_proc("sox", "deepfry.wav", "sounds/outtro.wav", "trim", "19", "6")
 
     def create_base_sound(self, index):
         self.new_proc("sox", "deepfry.wav", "sounds/base{}.wav".format(index), "trim", "{}".format(index), "1")
