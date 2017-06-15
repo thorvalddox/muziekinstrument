@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="145" column="111" lean-forward="false" selection-start-line="145" selection-start-column="111" selection-end-line="145" selection-end-column="111" />
+            <state relative-caret-position="425">
+              <caret line="160" column="29" lean-forward="false" selection-start-line="160" selection-start-column="29" selection-end-line="160" selection-end-column="29" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00211" summary="ReAdded intro">
-      <created>1491489943862</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1491489943862</updated>
-    </task>
     <task id="LOCAL-00212" summary="Added startup info">
       <created>1491490360729</created>
       <option name="number" value="00212" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497533596995</updated>
     </task>
-    <option name="localTasksCounter" value="260" />
+    <task id="LOCAL-00260" summary="shortened trim speed">
+      <created>1497534235586</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1497534235586</updated>
+    </task>
+    <option name="localTasksCounter" value="261" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Simplified sound filenames" />
     <MESSAGE value="Fixed not creating all variants (generator/list mismatch)" />
     <MESSAGE value="Changed input style" />
     <MESSAGE value="Fixed songbuilder requesting keypad" />
@@ -880,7 +879,8 @@
     <MESSAGE value="More songs" />
     <MESSAGE value="Fixed missing last batch if smaller then 16 tunes" />
     <MESSAGE value="removed variance" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed variance" />
+    <MESSAGE value="shortened trim speed" />
+    <option name="LAST_COMMIT_MESSAGE" value="shortened trim speed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="145" column="111" lean-forward="false" selection-start-line="145" selection-start-column="111" selection-end-line="145" selection-end-column="111" />
+        <state relative-caret-position="425">
+          <caret line="160" column="29" lean-forward="false" selection-start-line="160" selection-start-column="29" selection-end-line="160" selection-end-column="29" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
