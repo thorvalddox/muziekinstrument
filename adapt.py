@@ -107,6 +107,8 @@ class Filebuilder:
         print("creating tunes")
         self.repitch_sound(list(range(12*4+1)))
         self.wait()
+        self.build_songs()
+        self.wait()
         print("done initializing")
     def wait(self):
         [p.wait() for p in self.procs]
@@ -126,6 +128,7 @@ class Filebuilder:
                 self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index,i),
                               "pitch", "{:+}".format((pitch-12) * 100))
     def build_songs(self):
+        print("building songs")
         Premade_sound("0", "gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
 
 
