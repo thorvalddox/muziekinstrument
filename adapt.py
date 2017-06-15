@@ -60,6 +60,11 @@ def raw_concat(result, *songs):
     return sp.Popen(("sox",) + tuple(songs) + (result,),
                     shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 
+def chunks(l, n):
+    """Yield successive n-sized chunks from l."""
+    for i in range(0, len(l), n):
+        yield l[i:i + n]
+
 
 class Premade_sound():
     all_ = {}
@@ -78,11 +83,11 @@ class Premade_sound():
         except FileNotFoundError:
             pass
         print("building full song")
-        number_of_batches = len(self.song) // 16
-        for i in range(number_of_batches):
-            print("combining batch", i)
-            raw_concat("sounds/songtemp{}.wav".format(i)).wait()
-        raw_concat(filename, "sounds/intro.wav", *("sounds/songtemp{}.wav".format(i) for i in range(number_of_batches)))
+        batches = chunks(self.song,16)
+        for i,b in enumerate(batches):
+            raw_concat("sounds/songtemp{}.wav".format(i),
+                       *("sounds/base{}_tune{:02}.wav".format(randrange(4, 10), s) for s in b)).wait()
+        raw_concat(filename, "sounds/intro.wav", *("sounds/songtemp{}.wav".format(i) for i,_ in enumerate(batches))).wait()
         print("done building song")
 
     @staticmethod
