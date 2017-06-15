@@ -40,6 +40,31 @@ class SongBuilder():
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
 
 
+def easy_song_builder(s):
+    d = {"c":0,"d":2,"e":4,"f":5,"g":7,"a":8,"b":10,"h":9}
+    d.update([(k.upper(),v+12) for k,v in d.items()])
+    for i in s:
+        yield d[i]
+
+class Premade_sound():
+    all_ = {}
+    def __init__(self,key,tune):
+        self.songb = SongBuilder(...)
+        if isinstance(tune, str):
+            tune = easy_song_builder(tune)
+        self.songb.song = tune
+        self.songb.concat()
+        Premade_sound.all_[key] = self
+    def __call__(self):
+        self.songb.play()
+    @staticmethod
+    def listen(keypad):
+        for key in keypad.keygen():
+            if key in "0123456789":
+                Premade_sound.all_[key]()
+
+
+
 class Filebuilder:
     def __init__(self):
         folder = 'sounds/'
@@ -53,7 +78,7 @@ class Filebuilder:
         for i in range(4,10):
             self.create_base_sound(i)
         self.wait()
-        self.repitch_sound([[0,2,4,7,9][c % 5]+12*(c//5)-12 for c in range(20)])
+        self.repitch_sound(list(range(12*4+1)))
     def wait(self):
         [p.wait() for p in self.procs]
     def new_proc(self,*args):
@@ -113,12 +138,11 @@ def main():
     say("starting music server")
     #filebuilder()
     Filebuilder()
-    s = SongBuilder(Keypad())
+    #s = SongBuilder(Keypad())
+    k = Keypad()
+    Premade_sound("0","gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
     say("ready for some music")
-    while True:
-        s.build()
-        s.concat()
-        s.play()
+    Premade_sound.listen(k)
 
 
 if __name__=="__main__":
