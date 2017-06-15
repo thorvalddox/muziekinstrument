@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="55" column="19" lean-forward="false" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+            <state relative-caret-position="128">
+              <caret line="34" column="70" lean-forward="false" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -454,13 +454,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00177" summary="changed jumping">
-      <created>1491484550968</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1491484550968</updated>
-    </task>
     <task id="LOCAL-00178" summary="chenged sleep by spinsleep">
       <created>1491484702983</created>
       <option name="number" value="00178" />
@@ -797,7 +790,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497520515381</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="Fixed incorrectly creating base files">
+      <created>1497520687808</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1497520687808</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -842,7 +842,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created filebuilder" />
     <MESSAGE value="Added process lisener" />
     <MESSAGE value="Fixed file interactions" />
     <MESSAGE value="more debug" />
@@ -867,7 +866,8 @@
     <MESSAGE value="wait for base.wav to be created untill sounds are based on it." />
     <MESSAGE value="Added randomised sounds to prevent repetitive noise" />
     <MESSAGE value="Fixed passing ints to Subprocesses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed passing ints to Subprocesses" />
+    <MESSAGE value="Fixed incorrectly creating base files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed incorrectly creating base files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1325,8 +1325,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="55" column="19" lean-forward="false" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+        <state relative-caret-position="128">
+          <caret line="34" column="70" lean-forward="false" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>
