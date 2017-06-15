@@ -90,7 +90,7 @@ class Premade_sound():
         batches = chunks(self.song,16)
         for i,b in enumerate(batches):
             raw_concat("sounds/songtemp{}.wav".format(i),
-                       *("sounds/base{}_tune{:02}.wav".format(randrange(4, 10), s) for s in b)).wait()
+                       *("sounds/base{}_tune{:02}.wav".format(7, s) for s in b)).wait()
         raw_concat(filename, "sounds/intro.wav", *("sounds/songtemp{}.wav".format(i) for i,_ in enumerate(batches))).wait()
         print("done building song")
 

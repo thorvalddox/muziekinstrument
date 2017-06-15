@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="147" column="121" lean-forward="false" selection-start-line="147" selection-start-column="121" selection-end-line="147" selection-end-column="121" />
+            <state relative-caret-position="255">
+              <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00196" summary="edited intruments;json">
-      <created>1491486946281</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1491486946281</updated>
-    </task>
     <task id="LOCAL-00197" summary="inscreased spinsleep">
       <created>1491487016103</created>
       <option name="number" value="00197" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497527361580</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary="fixed invalid pitch numbers for real">
+      <created>1497527438772</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1497527438772</updated>
+    </task>
+    <option name="localTasksCounter" value="246" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed variance" />
     <MESSAGE value="fixed indices" />
     <MESSAGE value="fixed stupid error" />
     <MESSAGE value="deleted useless import" />
@@ -880,7 +879,8 @@
     <MESSAGE value="deleted unnesesairy pitches" />
     <MESSAGE value="upgraded say()" />
     <MESSAGE value="fixed invalid pitch numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed invalid pitch numbers" />
+    <MESSAGE value="fixed invalid pitch numbers for real" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed invalid pitch numbers for real" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="147" column="121" lean-forward="false" selection-start-line="147" selection-start-column="121" selection-end-line="147" selection-end-column="121" />
+        <state relative-caret-position="255">
+          <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
