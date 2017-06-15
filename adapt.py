@@ -52,6 +52,7 @@ class Filebuilder:
         self.create_intro()
         for i in range(4,10):
             self.create_base_sound(i)
+        self.wait()
         self.repitch_sound([0,2,4,7,9][c % 5]+12*(c//5)-12 for c in range(20))
     def wait(self):
         [p.wait() for p in self.procs]
@@ -65,8 +66,8 @@ class Filebuilder:
         self.variants.append(index)
     def repitch_sound(self,pitches):
         for index in self.variants:
-            for pitch in pitches:
-                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_{}.wav".format(index,pitch),
+            for i,pitch in enumerate(pitches):
+                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_{}.wav".format(index,i),
                               "pitch", "{:+}".format(pitch * 100))
 
 
