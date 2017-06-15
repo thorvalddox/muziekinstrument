@@ -49,6 +49,11 @@ def easy_song_builder(s):
     for i in s:
         yield d[i]
 
+def raw_concat(result,*songs):
+    assert len(songs) < 24
+    return sp.Popen(("sox",) + tuple(songs) + (result,),
+             shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE)
+
 class Premade_sound():
     all_ = {}
     def __init__(self,key,tune):
@@ -63,9 +68,14 @@ class Premade_sound():
         except FileNotFoundError:
             pass
         print("building full song")
-        sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}_tune{:02}.wav".format(randrange(4,10),index) for index in self.song) + (filename,),
-                 shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
+        number_of_batches = len(self.song) // 16
+        for i in range(number_of_batches):
+            print("combining batch",i)
+            raw_concat("sounds/songtemp{}.wav".format(i)).wait()
+        raw_concat(filename,"sounds/intro.wav",*("sounds/songtemp{}.wav".format(i) for i in range(number_of_batches)))
         print("done building song")
+
+
     def __call__(self):
         self.songb.play()
     @staticmethod
@@ -114,7 +124,7 @@ class Filebuilder:
             print("processing batch ",index)
             for i,pitch in enumerate(pitches):
                 self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index,i),
-                              "pitch", "{:+}".format(pitch * 100))
+                              "pitch", "{:+}".format((pitch-12) * 100))
     def build_songs(self):
         Premade_sound("0", "gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
 
