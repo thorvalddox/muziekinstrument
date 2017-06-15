@@ -32,7 +32,7 @@ class SongBuilder():
         except FileNotFoundError:
             pass
         print("building full song")
-        sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}_tune{}.wav".format(randrange(4,10),index) for index in self.song) + ('sounds/result.wav',),
+        sp.Popen(("sox","sounds/intro.wav")+ tuple("sounds/base{}_tune{:02}.wav".format(randrange(4,10),index) for index in self.song) + ('sounds/result.wav',),
                  shell=False, stdout=sp.PIPE, stderr=sp.PIPE, stdin=sp.PIPE).wait()
         print("done building song")
     def play(self):
@@ -53,7 +53,7 @@ class Filebuilder:
         for i in range(4,10):
             self.create_base_sound(i)
         self.wait()
-        self.repitch_sound([0,2,4,7,9][c % 5]+12*(c//5)-12 for c in range(20))
+        self.repitch_sound([[0,2,4,7,9][c % 5]+12*(c//5)-12 for c in range(20)])
     def wait(self):
         [p.wait() for p in self.procs]
     def new_proc(self,*args):
@@ -67,7 +67,7 @@ class Filebuilder:
     def repitch_sound(self,pitches):
         for index in self.variants:
             for i,pitch in enumerate(pitches):
-                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{}.wav".format(index,i),
+                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index,i),
                               "pitch", "{:+}".format(pitch * 100))
 
 
