@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+            <state relative-caret-position="383">
+              <caret line="148" column="25" lean-forward="false" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00182" summary="Added stuff">
-      <created>1491485305496</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1491485305496</updated>
-    </task>
     <task id="LOCAL-00183" summary="Corrected channel smooting">
       <created>1491485541053</created>
       <option name="number" value="00183" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497524659279</updated>
     </task>
-    <option name="localTasksCounter" value="231" />
+    <task id="LOCAL-00231" summary="Added more debug messgaes">
+      <created>1497524742939</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1497524742939</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added concats in builder" />
     <MESSAGE value="Added play command" />
     <MESSAGE value="Added buildin debug messages" />
     <MESSAGE value="Added concat command" />
@@ -880,7 +879,8 @@
     <MESSAGE value="Fixed not creating all variants (generator/list mismatch)" />
     <MESSAGE value="Changed input style" />
     <MESSAGE value="Fixed songbuilder requesting keypad" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed songbuilder requesting keypad" />
+    <MESSAGE value="Added more debug messgaes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more debug messgaes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+        <state relative-caret-position="383">
+          <caret line="148" column="25" lean-forward="false" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>

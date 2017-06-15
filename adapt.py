@@ -82,6 +82,8 @@ class Filebuilder:
         self.wait()
         print("creating tunes")
         self.repitch_sound(list(range(12*4+1)))
+        self.wait()
+        print("done initializing")
     def wait(self):
         [p.wait() for p in self.procs]
     def new_proc(self,*args):
@@ -144,6 +146,7 @@ def main():
     #s = SongBuilder(Keypad())
     k = Keypad()
     print("Init keypad")
+    print("Building songs")
     Premade_sound("0","gggcaaafCCDaggChaaaahhhhCCCCEECChhhhaaaagggggggg")
     say("ready for some music")
     Premade_sound.listen(k)
