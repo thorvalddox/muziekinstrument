@@ -145,7 +145,7 @@ class Filebuilder:
             self.wait()
             print("processing batch ", index)
             for i, pitch in enumerate(pitches):
-                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(pitch, i),
+                self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index, pitch),
                               "pitch", "{:+}".format((pitch - 12) * 100))
 
     def build_songs(self):
