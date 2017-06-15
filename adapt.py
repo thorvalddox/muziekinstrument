@@ -59,7 +59,7 @@ class Premade_sound():
         self.songb.play()
     @staticmethod
     def listen(keypad):
-        for key in keypad.keygen():
+        for key in keypad.key_gen():
             if key in "0123456789":
                 Premade_sound.all_[key]()
 
