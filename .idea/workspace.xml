@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="98" column="23" lean-forward="true" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+            <state relative-caret-position="238">
+              <caret line="95" column="19" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00199" summary="even more time">
-      <created>1491487189210</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1491487189210</updated>
-    </task>
     <task id="LOCAL-00200" summary="created filebuilder">
       <created>1491488404951</created>
       <option name="number" value="00200" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497527999581</updated>
     </task>
-    <option name="localTasksCounter" value="248" />
+    <task id="LOCAL-00248" summary="fixed sox command">
+      <created>1497528094178</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1497528094179</updated>
+    </task>
+    <option name="localTasksCounter" value="249" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="deleted useless import" />
     <MESSAGE value="Fixed race condition" />
     <MESSAGE value="lenghtened sleep" />
     <MESSAGE value="wait for base.wav to be created untill sounds are based on it." />
@@ -880,7 +879,8 @@
     <MESSAGE value="fixed invalid pitch numbers for real" />
     <MESSAGE value="delete random variance" />
     <MESSAGE value="Try fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try fix" />
+    <MESSAGE value="fixed sox command" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed sox command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="98" column="23" lean-forward="true" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+        <state relative-caret-position="238">
+          <caret line="95" column="19" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
