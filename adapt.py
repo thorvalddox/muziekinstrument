@@ -5,7 +5,7 @@ import os
 from random import choice
 from math import ceil
 
-ALLOWED_SECONDS = [6,7,8,9]
+ALLOWED_SECONDS = [7,]
 
 def say(text):
     sp.Popen(("espeak", text,),
