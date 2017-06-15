@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="More songs">
+    <list default="true" id="962fb033-ac16-43a8-8b3e-d67190879762" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adapt.py" afterPath="$PROJECT_DIR$/adapt.py" />
     </list>
@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="97" column="104" lean-forward="true" selection-start-line="97" selection-start-column="104" selection-end-line="97" selection-end-column="104" />
+            <state relative-caret-position="340">
+              <caret line="167" column="8" lean-forward="true" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00208" summary="Added buildin debug messages">
-      <created>1491489684436</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1491489684436</updated>
-    </task>
     <task id="LOCAL-00209" summary="Added concat command">
       <created>1491489761598</created>
       <option name="number" value="00209" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497530379834</updated>
     </task>
-    <option name="localTasksCounter" value="257" />
+    <task id="LOCAL-00257" summary="Fixed missing last batch if smaller then 16 tunes">
+      <created>1497530697048</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1497530697048</updated>
+    </task>
+    <option name="localTasksCounter" value="258" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed passing ints to Subprocesses" />
     <MESSAGE value="Fixed incorrectly creating base files" />
     <MESSAGE value="Simplified sound filenames" />
     <MESSAGE value="Fixed not creating all variants (generator/list mismatch)" />
@@ -880,7 +879,8 @@
     <MESSAGE value="fixed lang zal ze leven tunes" />
     <MESSAGE value="fixed cuts" />
     <MESSAGE value="More songs" />
-    <option name="LAST_COMMIT_MESSAGE" value="More songs" />
+    <MESSAGE value="Fixed missing last batch if smaller then 16 tunes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed missing last batch if smaller then 16 tunes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="97" column="104" lean-forward="true" selection-start-line="97" selection-start-column="104" selection-end-line="97" selection-end-column="104" />
+        <state relative-caret-position="340">
+          <caret line="167" column="8" lean-forward="true" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>

@@ -160,9 +160,14 @@ class Filebuilder:
         Premade_sound("1", "gabggabg bCDDbCDD DCbgDCbg gdgg gdgg")
         Premade_sound("2", "cegC aCgg ffee dggg cegC aCgg ffee ddcc")
         Premade_sound("3", "cgag fedc gfed gfed cgag fedc")
-        Premade_sound("4", "CEGECC bbCCFF bDFDbb CCEEGG CEGECC bbCCFF bDFDbb CCEECC")
+        Premade_sound("4", "CEGECC bbDDFF bDFDbb CCEEGG CEGECC bbDDFF bDFDbb CCEECC")
         Premade_sound("5", "gcafecdd gcabCDCC")
-        Premade_sound("6", "aageaage abCaggee")
+        Premade_sound("6", "cegCCgecdfaaCafaggccggccgahaggcc")
+        Premade_sound("7", "defadefaggfeddaadefadefaggfedddd")
+        Premade_sound("8", "aCa bDb CEC DDb aCa bDb FED CCC")
+
+
+
 
 
 def filebuilder():
