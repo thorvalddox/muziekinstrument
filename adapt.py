@@ -96,6 +96,8 @@ class Filebuilder:
         self.variants.append(index)
     def repitch_sound(self,pitches):
         for index in self.variants:
+            self.wait()
+            print("processing batch ",index)
             for i,pitch in enumerate(pitches):
                 self.new_proc("sox", "sounds/base{}.wav".format(index), "sounds/base{}_tune{:02}.wav".format(index,i),
                               "pitch", "{:+}".format(pitch * 100))

@@ -42,8 +42,8 @@
       <file leaf-file-name="adapt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adapt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+            <state relative-caret-position="272">
+              <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
               <folding>
                 <element signature="e#2#26#0" expanded="true" />
               </folding>
@@ -467,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472634570458</updated>
     </task>
-    <task id="LOCAL-00184" summary="fixed error&#10;&#10;&#10;Traceback (most recent call last):&#10;  File &quot;adapt.py&quot;, line 71, in &lt;module&gt;&#10;    main()&#10;  File &quot;adapt.py&quot;, line 68, in main&#10;    s.play(player_start,player_main)&#10;  File &quot;adapt.py&quot;, line 37, in play&#10;    mp.stop(not channel,s)&#10;TypeError: stop() takes 2 positional arguments but 3 were given&#10;">
-      <created>1491485622904</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1491485622904</updated>
-    </task>
     <task id="LOCAL-00185" summary="fixed sound lenghts in json file.">
       <created>1491485704071</created>
       <option name="number" value="00185" />
@@ -810,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497524838226</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <task id="LOCAL-00233" summary="Fixed argument">
+      <created>1497524867266</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1497524867266</updated>
+    </task>
+    <option name="localTasksCounter" value="234" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -855,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added buildin debug messages" />
     <MESSAGE value="Added concat command" />
     <MESSAGE value="fixed incorrect paths" />
     <MESSAGE value="ReAdded intro" />
@@ -880,7 +879,8 @@
     <MESSAGE value="Fixed songbuilder requesting keypad" />
     <MESSAGE value="Added more debug messgaes" />
     <MESSAGE value="Added wait so tunes are finished becofe concat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added wait so tunes are finished becofe concat" />
+    <MESSAGE value="Fixed argument" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed argument" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adapt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        <state relative-caret-position="272">
+          <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
           <folding>
             <element signature="e#2#26#0" expanded="true" />
           </folding>
